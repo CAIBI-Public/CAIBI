@@ -22,6 +22,13 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
+      - name: Report live deployment fingerprint
+        run: |
+          echo "=== caibi.app response headers ==="
+          curl --silent --show-error --location --head https://caibi.app/ || true
+          echo "=== build-info.json ==="
+          curl --silent --show-error --location --write-out '\nHTTP %{http_code}\n' https://caibi.app/build-info.json || true
+
       - name: Fetch deployed validated datasets
         id: fetch
         continue-on-error: true
