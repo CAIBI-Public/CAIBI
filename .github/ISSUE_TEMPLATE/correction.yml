@@ -1,0 +1,60 @@
+name: Catalogue correction
+description: Correct or challenge a public CAIBI project or assessment record.
+title: "Correction: "
+labels: []
+body:
+  - type: input
+    id: slug
+    attributes:
+      label: Project or equipment slug
+      description: The stable public record identifier, if known.
+      placeholder: watchy
+    validations:
+      required: true
+  - type: dropdown
+    id: voice
+    attributes:
+      label: Evidence voice
+      description: Which part of the public record needs attention?
+      options:
+        - SOURCE
+        - CAIBI
+        - BUILDERS
+    validations:
+      required: true
+  - type: input
+    id: claim
+    attributes:
+      label: Field or claim
+      placeholder: Cost, source URL, CAIBI verdict, build difficulty...
+    validations:
+      required: true
+  - type: textarea
+    id: correction
+    attributes:
+      label: What needs correcting?
+      description: State the proposed correction or challenge concisely.
+    validations:
+      required: true
+  - type: input
+    id: evidence
+    attributes:
+      label: Public source or evidence URL
+      description: Link to the original source, independent evidence or your public build write-up where possible.
+      placeholder: https://
+    validations:
+      required: false
+  - type: textarea
+    id: context
+    attributes:
+      label: Additional context
+      description: Explain anything needed to understand the evidence or disagreement.
+    validations:
+      required: false
+  - type: checkboxes
+    id: privacy
+    attributes:
+      label: Public submission
+      options:
+        - label: I understand this issue is public and I have not included private contact details or sensitive personal information.
+          required: true
