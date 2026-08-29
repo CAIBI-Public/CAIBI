@@ -1,0 +1,93 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://caibi.app/schema/project-v1.schema.json",
+  "title": "CAIBI Public Project Dataset v1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["contractVersion", "generatedAt", "records"],
+  "properties": {
+    "contractVersion": { "const": "1.0" },
+    "generatedAt": { "type": "string", "format": "date-time" },
+    "records": { "type": "array", "items": { "$ref": "#/$defs/project" } }
+  },
+  "$defs": {
+    "source": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["name", "url", "kind"],
+      "properties": {
+        "name": { "type": "string", "minLength": 1 },
+        "url": { "type": "string", "format": "uri", "pattern": "^https?://" },
+        "kind": { "enum": ["creator", "repository", "documentation", "manufacturer", "article", "video", "other"] }
+      }
+    },
+    "media": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["url"],
+      "properties": {
+        "url": { "type": "string", "format": "uri" },
+        "alt": { "type": "string" },
+        "sourceUrl": { "type": "string", "format": "uri" },
+        "rightsBasis": { "type": "string" }
+      }
+    },
+    "resource": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["name", "url", "type"],
+      "properties": {
+        "name": { "type": "string", "minLength": 1 },
+        "url": { "type": "string", "format": "uri", "pattern": "^https?://" },
+        "type": { "enum": ["repo", "docs", "files", "article", "video", "community", "other"] },
+        "note": { "type": "string" }
+      }
+    },
+    "assessment": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["verdict", "reason", "evidenceStatus", "aiCanHelp", "aiCantDo"],
+      "properties": {
+        "verdict": { "enum": ["RECOMMENDED", "WORTH_CONSIDERING", "FOR_THE_BUILD", "BUY_INSTEAD", "NOT_READY"] },
+        "reason": { "type": "string", "minLength": 1 },
+        "cost": { "type": "string" },
+        "time": { "type": "string" },
+        "difficulty": { "type": "integer", "minimum": 1, "maximum": 5 },
+        "aiLeverage": { "type": "integer", "minimum": 1, "maximum": 5 },
+        "evidenceStatus": { "type": "string", "minLength": 1 },
+        "aiCanHelp": { "type": "array", "items": { "type": "string", "minLength": 1 } },
+        "aiCantDo": { "type": "array", "items": { "type": "string", "minLength": 1 } },
+        "mainCatch": { "type": "string" },
+        "checkedOn": { "type": "string" }
+      }
+    },
+    "project": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["slug", "name", "category", "summary", "source", "pipelineStage", "tags"],
+      "properties": {
+        "slug": { "type": "string", "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$" },
+        "name": { "type": "string", "minLength": 1 },
+        "category": { "type": "string", "minLength": 1 },
+        "summary": { "type": "string", "minLength": 1 },
+        "source": { "$ref": "#/$defs/source" },
+        "pipelineStage": { "enum": ["FOUND", "REVIEWED SOURCE", "ASSESSMENT CANDIDATE", "ASSESSED"] },
+        "tags": { "type": "array", "items": { "type": "string", "minLength": 1 }, "uniqueItems": true },
+        "media": { "type": "array", "items": { "$ref": "#/$defs/media" } },
+        "assessment": { "$ref": "#/$defs/assessment" },
+        "resources": { "type": "array", "items": { "$ref": "#/$defs/resource" } },
+        "lastChecked": { "type": "string" }
+      },
+      "allOf": [
+        {
+          "if": { "properties": { "pipelineStage": { "const": "ASSESSED" } }, "required": ["pipelineStage"] },
+          "then": { "required": ["assessment"] }
+        },
+        {
+          "if": { "not": { "properties": { "pipelineStage": { "const": "ASSESSED" } }, "required": ["pipelineStage"] } },
+          "then": { "not": { "required": ["assessment"] } }
+        }
+      ]
+    }
+  }
+}
