@@ -4,10 +4,6 @@ on:
   workflow_dispatch:
   schedule:
     - cron: '17 */4 * * *'
-  push:
-    branches: [main]
-    paths:
-      - '.github/workflows/sync-catalogue.yml'
 
 concurrency:
   group: caibi-public-catalogue-sync
@@ -21,17 +17,37 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - name: Fetch validated public datasets
+
+      - name: Fetch deployed validated datasets
+        id: fetch
+        continue-on-error: true
         run: |
-          mkdir -p data
-          curl --fail --location --retry 3 --retry-delay 5 https://caibi.app/catalogue/projects.json -o data/projects.json
-          curl --fail --location --retry 3 --retry-delay 5 https://caibi.app/catalogue/builder-evidence.json -o data/builder-evidence.json
+          mkdir -p /tmp/caibi-sync
+          curl --fail --location --retry 3 --retry-delay 5 https://caibi.app/catalogue/projects.json -o /tmp/caibi-sync/projects.json
+          curl --fail --location --retry 3 --retry-delay 5 https://caibi.app/catalogue/builder-evidence.json -o /tmp/caibi-sync/builder-evidence.json
+
+      - name: Keep last validated snapshot when deployment is unavailable
+        if: steps.fetch.outcome != 'success'
+        run: |
+          echo "caibi.app catalogue endpoints are not currently fetchable."
+          echo "Keeping the last validated public snapshot already committed in data/."
+          exit 0
+
       - name: Validate public envelope
+        if: steps.fetch.outcome == 'success'
         run: |
-          jq -e '.contractVersion == "1.0" and (.generatedAt | type == "string") and (.records | type == "array")' data/projects.json >/dev/null
-          jq -e '.contractVersion == "1.0" and (.generatedAt | type == "string") and (.records | type == "array")' data/builder-evidence.json >/dev/null
-          jq -e 'all(.records[]; (.slug | type == "string") and (.source.url | startswith("http")))' data/projects.json >/dev/null
+          jq -e '.contractVersion == "1.0" and (.generatedAt | type == "string") and (.records | type == "array") and (.records | length > 0)' /tmp/caibi-sync/projects.json >/dev/null
+          jq -e '.contractVersion == "1.0" and (.generatedAt | type == "string") and (.records | type == "array")' /tmp/caibi-sync/builder-evidence.json >/dev/null
+          jq -e 'all(.records[]; (.slug | type == "string") and (.source.url | startswith("http")))' /tmp/caibi-sync/projects.json >/dev/null
+
+      - name: Install validated datasets
+        if: steps.fetch.outcome == 'success'
+        run: |
+          cp /tmp/caibi-sync/projects.json data/projects.json
+          cp /tmp/caibi-sync/builder-evidence.json data/builder-evidence.json
+
       - name: Commit catalogue changes
+        if: steps.fetch.outcome == 'success'
         run: |
           if git diff --quiet -- data/projects.json data/builder-evidence.json; then
             echo "Public catalogue is already current."
