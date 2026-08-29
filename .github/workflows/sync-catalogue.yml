@@ -1,0 +1,36 @@
+name: Sync CAIBI catalogue
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '17 */4 * * *'
+
+permissions:
+  contents: write
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Fetch validated public datasets
+        run: |
+          mkdir -p data
+          curl --fail --location --retry 3 --retry-delay 5 https://caibi.app/catalogue/projects.json -o data/projects.json
+          curl --fail --location --retry 3 --retry-delay 5 https://caibi.app/catalogue/builder-evidence.json -o data/builder-evidence.json
+      - name: Validate public envelope
+        run: |
+          jq -e '.contractVersion == "1.0" and (.generatedAt | type == "string") and (.records | type == "array")' data/projects.json >/dev/null
+          jq -e '.contractVersion == "1.0" and (.generatedAt | type == "string") and (.records | type == "array")' data/builder-evidence.json >/dev/null
+          jq -e 'all(.records[]; (.slug | type == "string") and (.source.url | startswith("http")))' data/projects.json >/dev/null
+      - name: Commit catalogue changes
+        run: |
+          if git diff --quiet -- data/projects.json data/builder-evidence.json; then
+            echo "Public catalogue is already current."
+            exit 0
+          fi
+          git config user.name "CAIBI Catalogue Bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add data/projects.json data/builder-evidence.json
+          git commit -m "Sync validated CAIBI public catalogue"
+          git push
