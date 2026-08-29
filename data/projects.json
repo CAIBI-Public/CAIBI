@@ -1,1 +1,2886 @@
-{"contractVersion":"1.0","generatedAt":"2026-08-29T15:31:49.189Z","records":[{"slug":"ai-on-the-edge-device","name":"AI-on-the-edge-device","category":"Home & automation","summary":"An ESP32-CAM project that reads existing water, gas or electricity meters and publishes the readings digitally.","source":{"name":"jomjol","url":"https://github.com/jomjol/AI-on-the-edge-device","kind":"repository"},"pipelineStage":"ASSESSED","tags":["Home & automation","ESP32-CAM","USEFUL","REUSE"],"assessment":{"verdict":"RECOMMENDED","reason":"It adds digital reporting to a meter that already works. The value is in avoiding replacement hardware and extracting more use from the equipment you already have.","cost":"Varies","time":"Varies","difficulty":3,"aiLeverage":4,"evidenceStatus":"Strong","aiCanHelp":["Recognition","Configuration help","Troubleshooting"],"aiCantDo":["Mount the camera rigidly in front of the real meter","Create stable lighting and remove glare from the physical installation","Choose and adjust the final camera angle and distance","Verify that the recognised reading matches the actual meter over time"],"mainCatch":"Mounting, lighting and camera alignment are part of the system. Recognition software cannot compensate for a poor physical installation.","checkedOn":"17 Aug 2026"},"lastChecked":"17 Aug 2026"},{"slug":"circular-knitic","name":"Circular Knitic","category":"Textiles & craft","summary":"An open hardware circular knitting machine built with 3D printed parts, laser-cut acrylic, Arduino control and conventional knitting needles.","source":{"name":"Varvara Guljajeva & Mar Canet","url":"https://github.com/var-mar/circular_knitic","kind":"repository"},"pipelineStage":"ASSESSED","tags":["Textiles & craft","3D printer","Laser cutting","Arduino","Textile tools","TEXTILES","CUSTOM","LEARN"],"assessment":{"verdict":"FOR_THE_BUILD","reason":"This is exactly the kind of project that broadens AI-assisted making beyond electronics. The machine itself is physical textile fabrication, while AI can help adapt patterns, parametric parts, control logic and obsolete sourcing.","cost":"Not currently published","time":"One-day workshop route published","difficulty":4,"aiLeverage":3,"evidenceStatus":"Moderate","aiCanHelp":["Interpret legacy documentation","Arduino changes","Parametric part edits","Pattern and process planning"],"aiCantDo":["Source knitting hardware","Print precisely","Laser cut acrylic","Assemble mechanics","Thread and tune the machine"],"mainCatch":"The source is mature rather than current, and it explicitly depends on precise high-quality printing plus large 5mm and 6mm acrylic parts. Mechanical accuracy is the project.","checkedOn":"29 Aug 2026"},"lastChecked":"29 Aug 2026"},{"slug":"clawd-mochi","name":"Clawd Mochi","category":"Electronics","summary":"A small ESP32-C3 desk companion with animated faces, web controls and a published low-cost parts list.","source":{"name":"Yousif Amanuel","url":"https://github.com/yousifamanuel/clawd-mochi","kind":"repository"},"pipelineStage":"ASSESSED","tags":["Electronics","3D printer","ESP32","LEARN","COOL","CUSTOM"],"assessment":{"verdict":"RECOMMENDED","reason":"Cheap, compact and easy to modify. It is a good example of AI-assisted embedded work becoming approachable without turning into a large electronics project.","cost":"$7–8","time":"~1 hour","difficulty":2,"aiLeverage":4,"evidenceStatus":"Strong","aiCanHelp":["Firmware changes","UI changes","Debugging"],"aiCantDo":["Print and finish the enclosure","Wire the display to the ESP32-C3 correctly","Route and secure the electronics inside the case","Judge whether the finished object looks and feels tidy enough to keep on a desk"],"mainCatch":"The concept is simple enough that finish quality matters. A rough print and untidy wiring quickly make it feel like a prototype.","checkedOn":"17 Aug 2026"},"lastChecked":"17 Aug 2026"},{"slug":"esp32-air-quality-monitor","name":"ESP32 Air Quality Monitor","category":"Science & measurement","summary":"A small ESP32 instrument showing temperature, humidity, pressure and a comfort label on an OLED display.","source":{"name":"Schematik","url":"https://www.schematik.io/projects/build-an-esp32-air-quality-monitor","kind":"creator"},"pipelineStage":"ASSESSED","tags":["Science & measurement","ESP32","Measurement & testing","LEARN","USEFUL","PLATFORM"],"assessment":{"verdict":"RECOMMENDED","reason":"It is a low-risk first sensor build with a useful result and obvious expansion routes into logging, Wi-Fi, automation and more visible indicators.","cost":"Not published","time":"25 minutes","difficulty":2,"aiLeverage":3,"evidenceStatus":"Strong","aiCanHelp":["Firmware changes","Threshold logic","Wi-Fi expansion","Troubleshooting"],"aiCantDo":["Place the sensor where heat and poor airflow do not bias the reading","Wire and power the I2C devices correctly","Check the displayed values against real room conditions","Design a ventilated enclosure that does not compromise the measurement"],"mainCatch":"Sensor placement affects the measurement. Putting the BME280 beside heat-producing electronics or sealing it in an unventilated enclosure undermines the result.","checkedOn":"27 Aug 2026"},"lastChecked":"27 Aug 2026"},{"slug":"gridfinity-rebuilt","name":"Gridfinity Rebuilt","category":"Workshop","summary":"A parametric OpenSCAD implementation of Gridfinity bins with configurable sizes, compartments, tabs, bases and print options.","source":{"name":"kennetek","url":"https://github.com/kennetek/gridfinity-rebuilt-openscad","kind":"repository"},"pipelineStage":"ASSESSED","tags":["Workshop","3D printer","USEFUL","CUSTOM","PLATFORM"],"assessment":{"verdict":"RECOMMENDED","reason":"It converts a useful storage standard into something configurable. AI can help generate or modify parameter sets without turning every custom bin into a CAD exercise.","cost":"Filament","time":"Print-dependent","difficulty":2,"aiLeverage":4,"evidenceStatus":"Strong","aiCanHelp":["Parameter changes","OpenSCAD edits","Customisation"],"aiCantDo":["Measure the real drawer, shelf and objects","Print the physical bins and baseplates","Check fit and tolerances on the actual printer","Decide whether the finished storage arrangement is convenient in use"],"mainCatch":"The design work is easy compared with print time. Large storage systems consume more filament and machine hours than the first few bins suggest.","checkedOn":"17 Aug 2026"},"lastChecked":"17 Aug 2026"},{"slug":"imagegencam","name":"ImageGenCam","category":"Photography & video","summary":"A buildable Raspberry Pi camera designed around a Codex-assisted hardware and software workflow.","source":{"name":"OpenAI","url":"https://github.com/openai/imagegencam","kind":"repository"},"pipelineStage":"ASSESSED","tags":["Photography & video","3D printer","Raspberry Pi","CUSTOM","LEARN","PLATFORM"],"assessment":{"verdict":"RECOMMENDED","reason":"There is no obvious finished-product equivalent. The point is the combination of custom hardware, image generation and a build process that deliberately gives an AI coding agent meaningful work.","cost":"Not published","time":"Not published","difficulty":3,"aiLeverage":5,"evidenceStatus":"Strong","aiCanHelp":["Code","Configuration","Iteration","Troubleshooting"],"aiCantDo":["Buy parts","Print","Assemble","Test"],"mainCatch":"The software is only half the product. Enclosure quality, assembly and camera ergonomics still decide whether the result feels finished.","checkedOn":"17 Aug 2026"},"lastChecked":"17 Aug 2026"},{"slug":"morning-thermal-printer","name":"Morning Thermal Printer","category":"Home & automation","summary":"An ESP32 desk printer that turns weather and calendar data into a short physical morning briefing on receipt paper.","source":{"name":"Schematik","url":"https://www.schematik.io/blog/morning-thermal-printer-daily-briefing","kind":"creator"},"pipelineStage":"ASSESSED","tags":["Home & automation","ESP32","APIs & data","USEFUL","DATA","CUSTOM"],"assessment":{"verdict":"RECOMMENDED","reason":"It is a clean example of software and public data becoming a physical ritual object. The hardware is modest, while the useful customisation lives in what the device fetches and prints.","cost":"Not published","time":"45 minutes","difficulty":2,"aiLeverage":5,"evidenceStatus":"Strong","aiCanHelp":["API integration","Formatting","Calendar logic","Firmware changes","Debugging"],"aiCantDo":["Wire printer","Provide separate power","Configure credentials","Mount hardware","Verify print output"],"mainCatch":"The thermal printer needs its own stable 5V supply. Powering it from the ESP32 regulator is specifically warned against because the print head current causes brownouts.","checkedOn":"27 Aug 2026"},"lastChecked":"27 Aug 2026"},{"slug":"openflexure-microscope","name":"OpenFlexure Microscope","category":"Science & measurement","summary":"A 3D-printable microscope platform with precise flexure-based sample positioning and multiple optical configurations.","source":{"name":"OpenFlexure","url":"https://gitlab.com/openflexure/openflexure-microscope/","kind":"creator"},"pipelineStage":"ASSESSED","tags":["Science & measurement","3D printer","Optics","LEARN","MORE CAPABILITY","PLATFORM"],"assessment":{"verdict":"WORTH_CONSIDERING","reason":"It provides a serious open instrument platform rather than a classroom toy, with the option to change mechanics, optics and automation.","cost":"Configuration-dependent","time":"Multi-stage","difficulty":4,"aiLeverage":3,"evidenceStatus":"Strong","aiCanHelp":["Documentation search","Configuration help","Software changes","Troubleshooting"],"aiCantDo":["Print","Assemble mechanics","Fit optics","Calibrate"],"mainCatch":"Optics, calibration and precise assembly matter more than simply getting the printed parts to fit together.","checkedOn":"17 Aug 2026"},"lastChecked":"17 Aug 2026"},{"slug":"openmower","name":"OpenMower","category":"Robotics","summary":"A conversion that replaces the electronics in compatible robot mowers with GPS-guided, map-aware open hardware and software.","source":{"name":"Clemens Elflein","url":"https://github.com/ClemensElflein/OpenMower","kind":"repository"},"pipelineStage":"ASSESSED","tags":["Robotics","Electronics","Linux","Mechanical work","MORE CAPABILITY","REUSE","PLATFORM"],"assessment":{"verdict":"FOR_THE_BUILD","reason":"It can turn a compatible basic mower into a much more capable open platform. The case is strongest if you value control, mapping and modification rather than simply needing the grass cut.","cost":"~€700 + mower + RTK","time":"Weekend+","difficulty":5,"aiLeverage":2,"evidenceStatus":"Strong","aiCanHelp":["Configuration help","Code investigation","Diagnostics"],"aiCantDo":["Modify mower","Wire hardware","Install","Map","Test safely"],"mainCatch":"This is a substantial machine conversion involving electronics, Linux, mechanical work and outdoor safety. AI does not remove the consequences of getting those parts wrong.","checkedOn":"17 Aug 2026"},"lastChecked":"17 Aug 2026"},{"slug":"openscan-mini","name":"OpenScan Mini","category":"Science & measurement","summary":"A compact open-source photogrammetry scanner that rotates small objects through controlled camera positions to create detailed 3D models.","source":{"name":"OpenScan","url":"https://github.com/OpenScan-org/OpenScan-Doc/blob/main/docs/hardware/OpenScanMini.md","kind":"repository"},"pipelineStage":"ASSESSED","tags":["Science & measurement","3D printer","Raspberry Pi","Photography","USEFUL","DIGITISE","PLATFORM"],"assessment":{"verdict":"RECOMMENDED","reason":"It turns physical objects into reusable digital geometry with an unusually accessible open hardware route. AI can help with scan preparation, photogrammetry workflow, cleanup and adapting the printable frame.","cost":"From €232 kit / €386 fuller kit","time":"Not published","difficulty":3,"aiLeverage":4,"evidenceStatus":"Strong","aiCanHelp":["Scan workflow planning","Image and mesh troubleshooting","CAD cleanup guidance","Configuration help"],"aiCantDo":["Print parts","Assemble motors and camera","Prepare objects","Capture scans","Validate dimensions"],"mainCatch":"Scan quality still depends on lighting, surface preparation, focus, object positioning and photogrammetry processing. The hardware does not make every object easy to scan.","checkedOn":"29 Aug 2026"},"lastChecked":"29 Aug 2026"},{"slug":"parol6","name":"PAROL6 Desktop Robot Arm","category":"Robotics","summary":"A six-axis open desktop robot arm with printable structure, a published BOM, control electronics, GUI, Python API and ROS2/MoveIt routes.","source":{"name":"Source Robotics","url":"https://github.com/Source-Robotics/PAROL6-Desktop-robot-arm","kind":"repository"},"pipelineStage":"ASSESSED","tags":["Robotics","3D printer","Electronics","Mechanical assembly","Robotics software","ROBOTICS","PLATFORM","LEARN"],"assessment":{"verdict":"FOR_THE_BUILD","reason":"It is a serious robotics platform rather than a novelty arm. The open mechanics, control stack, Python API and ROS2 ecosystem give AI useful software work after the physical machine is correctly assembled.","cost":"DIY varies; €1,188.81 partial kit / €2,378.81 kit","time":"Not published","difficulty":5,"aiLeverage":4,"evidenceStatus":"Strong","aiCanHelp":["Control-code investigation","Python integration","ROS2 and MoveIt help","Diagnostics and automation logic"],"aiCantDo":["Source the BOM","Print and assemble joints","Wire power and control hardware","Calibrate axes","Test safely"],"mainCatch":"This is a high-consequence multi-axis machine. The source carries explicit serious-hazard warnings, and calibration, wiring, power, joint assembly and safe testing remain human responsibilities.","checkedOn":"29 Aug 2026"},"lastChecked":"29 Aug 2026"},{"slug":"sesame-robot","name":"Sesame Robot","category":"Robotics","summary":"A printable ESP32 quadruped using eight servos, an expressive OLED face and open animation/control software.","source":{"name":"Dorian Todd","url":"https://github.com/dorianborian/sesame-robot","kind":"repository"},"pipelineStage":"ASSESSED","tags":["Robotics","3D printer","Soldering","LEARN","COOL","PLATFORM"],"assessment":{"verdict":"WORTH_CONSIDERING","reason":"The result is a useful robotics platform rather than a one-off novelty. Hardware, movement, expressions and software can all be changed after the first build.","cost":"$50–60","time":"Weekend+","difficulty":4,"aiLeverage":3,"evidenceStatus":"Strong","aiCanHelp":["Firmware changes","Animation code","API integrations","Debugging"],"aiCantDo":["Print","Solder","Assemble","Calibrate movement"],"mainCatch":"Eight servos, printed mechanics and wiring create plenty of opportunities for small errors to become movement problems.","checkedOn":"17 Aug 2026"},"lastChecked":"17 Aug 2026"},{"slug":"smartknob","name":"SmartKnob","category":"Creative tools","summary":"An open haptic control knob that uses a brushless gimbal motor and magnetic encoder to create software-defined detents, endstops, springs and other tactile behaviours.","source":{"name":"Scott Bezek","url":"https://github.com/scottbez1/smartknob","kind":"repository"},"pipelineStage":"ASSESSED","tags":["Creative tools","PCB fabrication","SMD soldering","3D printing","ESP32","HAPTICS","CUSTOM","LEARN"],"assessment":{"verdict":"FOR_THE_BUILD","reason":"It is an unusually capable physical interface whose feel is defined in software. AI can help understand the control code, create behaviours and debug integrations, but the value only appears after a difficult electronics and mechanical build works reliably.","cost":"No stable complete build price published","time":"Time-consuming advanced build","difficulty":5,"aiLeverage":4,"evidenceStatus":"Strong","aiCanHelp":["Firmware investigation","Haptic behaviour changes","Host integrations","Debugging support","CAD and enclosure iteration"],"aiCantDo":["Order PCBs and parts","Reflow or hot-air solder fine-pitch components","Print precision parts","Assemble motor and display","Calibrate and debug hardware"],"mainCatch":"The creator explicitly says SmartKnob View is not a mature plug-and-play project. It requires very small-pitch surface-mount soldering, delicate assembly and an expectation of hardware and firmware troubleshooting.","checkedOn":"29 Aug 2026"},"lastChecked":"29 Aug 2026"},{"slug":"split-flap-display","name":"Split-Flap Display","category":"Electronics","summary":"A modular ESP32
+{
+  "contractVersion": "1.0",
+  "generatedAt": "2026-08-29T20:46:14.366Z",
+  "records": [
+    {
+      "slug": "ai-on-the-edge-device",
+      "name": "AI-on-the-edge-device",
+      "category": "Home & automation",
+      "summary": "An ESP32-CAM project that reads existing water, gas or electricity meters and publishes the readings digitally.",
+      "source": {
+        "name": "jomjol",
+        "url": "https://github.com/jomjol/AI-on-the-edge-device",
+        "kind": "repository"
+      },
+      "pipelineStage": "ASSESSED",
+      "tags": [
+        "Home & automation",
+        "ESP32-CAM",
+        "USEFUL",
+        "REUSE"
+      ],
+      "assessment": {
+        "verdict": "RECOMMENDED",
+        "reason": "It adds digital reporting to a meter that already works. The value is in avoiding replacement hardware and extracting more use from the equipment you already have.",
+        "cost": "Varies",
+        "time": "Varies",
+        "difficulty": 3,
+        "aiLeverage": 4,
+        "evidenceStatus": "Strong",
+        "aiCanHelp": [
+          "Recognition",
+          "Configuration help",
+          "Troubleshooting"
+        ],
+        "aiCantDo": [
+          "Mount the camera rigidly in front of the real meter",
+          "Create stable lighting and remove glare from the physical installation",
+          "Choose and adjust the final camera angle and distance",
+          "Verify that the recognised reading matches the actual meter over time"
+        ],
+        "mainCatch": "Mounting, lighting and camera alignment are part of the system. Recognition software cannot compensate for a poor physical installation.",
+        "checkedOn": "17 Aug 2026"
+      },
+      "resources": [
+        {
+          "name": "AI-on-the-edge-device documentation",
+          "url": "https://jomjol.github.io/AI-on-the-edge-device-docs/",
+          "type": "docs",
+          "note": "Current setup, compatibility and installation documentation."
+        }
+      ],
+      "lastChecked": "17 Aug 2026"
+    },
+    {
+      "slug": "bcn3d-moveo",
+      "name": "BCN3D Moveo Robot Arm",
+      "category": "Robotics",
+      "summary": "Open five-axis robot arm built around printed parts and commodity motion hardware, with enough mechanical depth to make AI-assisted assembly and troubleshooting genuinely useful.",
+      "source": {
+        "name": "BCN3D",
+        "url": "https://github.com/BCN3D/BCN3D-Moveo",
+        "kind": "repository"
+      },
+      "pipelineStage": "ASSESSMENT CANDIDATE",
+      "tags": [
+        "robot arm",
+        "3D printed",
+        "motion",
+        "Arduino"
+      ]
+    },
+    {
+      "slug": "cinepi-v2",
+      "name": "CinePI V2",
+      "category": "Photography & video",
+      "summary": "Open Raspberry Pi cinema-camera hardware project with published CAD and build history. The source repository is archived, so a current successor route must be verified before assessment.",
+      "source": {
+        "name": "CinePI community",
+        "url": "https://github.com/schoolpost/CinePI",
+        "kind": "repository"
+      },
+      "pipelineStage": "FOUND",
+      "tags": [
+        "cinema camera",
+        "Raspberry Pi",
+        "camera",
+        "3D printed"
+      ]
+    },
+    {
+      "slug": "circular-knitic",
+      "name": "Circular Knitic",
+      "category": "Textiles & craft",
+      "summary": "An open hardware circular knitting machine built with 3D printed parts, laser-cut acrylic, Arduino control and conventional knitting needles.",
+      "source": {
+        "name": "Varvara Guljajeva & Mar Canet",
+        "url": "https://github.com/var-mar/circular_knitic",
+        "kind": "repository"
+      },
+      "pipelineStage": "ASSESSED",
+      "tags": [
+        "Textiles & craft",
+        "3D printer",
+        "Laser cutting",
+        "Arduino",
+        "Textile tools",
+        "TEXTILES",
+        "CUSTOM",
+        "LEARN"
+      ],
+      "assessment": {
+        "verdict": "FOR THE BUILD",
+        "reason": "This is exactly the kind of project that broadens AI-assisted making beyond electronics. The machine itself is physical textile fabrication, while AI can help adapt patterns, parametric parts, control logic and obsolete sourcing.",
+        "cost": "Not currently published",
+        "time": "One-day workshop route published",
+        "difficulty": 4,
+        "aiLeverage": 3,
+        "evidenceStatus": "Moderate",
+        "aiCanHelp": [
+          "Interpret legacy documentation",
+          "Arduino changes",
+          "Parametric part edits",
+          "Pattern and process planning"
+        ],
+        "aiCantDo": [
+          "Source knitting hardware",
+          "Print precisely",
+          "Laser cut acrylic",
+          "Assemble mechanics",
+          "Thread and tune the machine"
+        ],
+        "mainCatch": "The source is mature rather than current, and it explicitly depends on precise high-quality printing plus large 5mm and 6mm acrylic parts. Mechanical accuracy is the project.",
+        "checkedOn": "29 Aug 2026"
+      },
+      "resources": [
+        {
+          "name": "Circular Knitic full documentation",
+          "url": "https://github.com/var-mar/circular_knitic/blob/master/circular_knitic_documentation.pdf",
+          "type": "docs",
+          "note": "Creator documentation covering the physical machine beyond the short repository README."
+        },
+        {
+          "name": "Circular Knitic bill of materials",
+          "url": "https://github.com/var-mar/circular_knitic/blob/master/bill_of_materials.csv",
+          "type": "files",
+          "note": "Published source BOM used to identify the original electronics, structure and knitting hardware."
+        },
+        {
+          "name": "Circular Knitic workshop tutorial",
+          "url": "https://github.com/var-mar/circular_knitic/tree/master/workshop/CircularKniticTutorial",
+          "type": "docs",
+          "note": "Creator workshop images and assembly material useful for interpreting the older main documentation."
+        }
+      ],
+      "lastChecked": "29 Aug 2026"
+    },
+    {
+      "slug": "clawd-mochi",
+      "name": "Clawd Mochi",
+      "category": "Electronics",
+      "summary": "A small ESP32-C3 desk companion with animated faces, web controls and a published low-cost parts list.",
+      "source": {
+        "name": "Yousif Amanuel",
+        "url": "https://github.com/yousifamanuel/clawd-mochi",
+        "kind": "repository"
+      },
+      "pipelineStage": "ASSESSED",
+      "tags": [
+        "Electronics",
+        "3D printer",
+        "ESP32",
+        "LEARN",
+        "COOL",
+        "CUSTOM"
+      ],
+      "assessment": {
+        "verdict": "RECOMMENDED",
+        "reason": "Cheap, compact and easy to modify. It is a good example of AI-assisted embedded work becoming approachable without turning into a large electronics project.",
+        "cost": "$7–8",
+        "time": "~1 hour",
+        "difficulty": 2,
+        "aiLeverage": 4,
+        "evidenceStatus": "Strong",
+        "aiCanHelp": [
+          "Firmware changes",
+          "UI changes",
+          "Debugging"
+        ],
+        "aiCantDo": [
+          "Print and finish the enclosure",
+          "Wire the display to the ESP32-C3 correctly",
+          "Route and secure the electronics inside the case",
+          "Judge whether the finished object looks and feels tidy enough to keep on a desk"
+        ],
+        "mainCatch": "The concept is simple enough that finish quality matters. A rough print and untidy wiring quickly make it feel like a prototype.",
+        "checkedOn": "17 Aug 2026"
+      },
+      "resources": [
+        {
+          "name": "Clawd Mochi case on MakerWorld",
+          "url": "https://makerworld.com/en/models/2559505-clawd-mochi-physical-claude-code-mascot#profileId-2820000",
+          "type": "files",
+          "note": "Published printable enclosure files linked by the creator."
+        }
+      ],
+      "lastChecked": "17 Aug 2026"
+    },
+    {
+      "slug": "cyd-weather-clock",
+      "name": "CYD Weather Clock",
+      "category": "Electronics",
+      "summary": "Cheap Yellow Display weather and clock build.",
+      "source": {
+        "name": "gahingwoo",
+        "url": "https://github.com/gahingwoo/cyd-dht22-weather-clock",
+        "kind": "repository"
+      },
+      "pipelineStage": "FOUND",
+      "tags": [
+        "ESP32",
+        "weather",
+        "touchscreen"
+      ]
+    },
+    {
+      "slug": "deej-volume-mixer",
+      "name": "deej Physical Volume Mixer",
+      "category": "Music & audio",
+      "summary": "DIY physical volume mixer that maps real sliders to application audio levels. A simple but strong example of custom controls being more useful than another app.",
+      "source": {
+        "name": "omriharel",
+        "url": "https://github.com/omriharel/deej",
+        "kind": "repository"
+      },
+      "pipelineStage": "FOUND",
+      "tags": [
+        "audio",
+        "mixer",
+        "Arduino",
+        "controls"
+      ]
+    },
+    {
+      "slug": "diy-robocars",
+      "name": "DIY Robocars",
+      "category": "Robotics",
+      "summary": "Physical autonomous vehicle community and project ecosystem.",
+      "source": {
+        "name": "DIY Robocars",
+        "url": "https://github.com/DIYRobocars",
+        "kind": "repository"
+      },
+      "pipelineStage": "FOUND",
+      "tags": [
+        "autonomous",
+        "vehicle",
+        "AI"
+      ]
+    },
+    {
+      "slug": "esp32-air-quality-monitor",
+      "name": "ESP32 Air Quality Monitor",
+      "category": "Science & measurement",
+      "summary": "A small ESP32 instrument showing temperature, humidity, pressure and a comfort label on an OLED display.",
+      "source": {
+        "name": "Schematik",
+        "url": "https://www.schematik.io/projects/build-an-esp32-air-quality-monitor",
+        "kind": "creator"
+      },
+      "pipelineStage": "ASSESSED",
+      "tags": [
+        "Science & measurement",
+        "ESP32",
+        "Measurement & testing",
+        "LEARN",
+        "USEFUL",
+        "PLATFORM"
+      ],
+      "assessment": {
+        "verdict": "RECOMMENDED",
+        "reason": "It is a low-risk first sensor build with a useful result and obvious expansion routes into logging, Wi-Fi, automation and more visible indicators.",
+        "cost": "Not published",
+        "time": "25 minutes",
+        "difficulty": 2,
+        "aiLeverage": 3,
+        "evidenceStatus": "Strong",
+        "aiCanHelp": [
+          "Firmware changes",
+          "Threshold logic",
+          "Wi-Fi expansion",
+          "Troubleshooting"
+        ],
+        "aiCantDo": [
+          "Place the sensor where heat and poor airflow do not bias the reading",
+          "Wire and power the I2C devices correctly",
+          "Check the displayed values against real room conditions",
+          "Design a ventilated enclosure that does not compromise the measurement"
+        ],
+        "mainCatch": "Sensor placement affects the measurement. Putting the BME280 beside heat-producing electronics or sealing it in an unventilated enclosure undermines the result.",
+        "checkedOn": "27 Aug 2026"
+      },
+      "resources": [
+        {
+          "name": "Adafruit BME280 guide",
+          "url": "https://learn.adafruit.com/adafruit-bme280-humidity-barometric-pressure-temperature-sensor-breakout",
+          "type": "docs",
+          "note": "Sensor reference covering wiring, addressing and measurement behaviour."
+        },
+        {
+          "name": "Adafruit SSD1306 library",
+          "url": "https://github.com/adafruit/Adafruit_SSD1306",
+          "type": "docs",
+          "note": "Display library used for the OLED output and a useful reference when resolving blank-display or address issues."
+        }
+      ],
+      "lastChecked": "27 Aug 2026"
+    },
+    {
+      "slug": "esp32-drawing-robot",
+      "name": "ESP32 Drawing Robot",
+      "category": "Robotics",
+      "summary": "Drawing robot with ESP32 control.",
+      "source": {
+        "name": "MatixYo",
+        "url": "https://github.com/MatixYo/ESP32-Drawing-Robot",
+        "kind": "repository"
+      },
+      "pipelineStage": "FOUND",
+      "tags": [
+        "ESP32",
+        "plotter",
+        "drawing"
+      ]
+    },
+    {
+      "slug": "esp32-ros2-robot",
+      "name": "ESP32 ROS2 Robot",
+      "category": "Robotics",
+      "summary": "ESP32 and ROS2 robot platform.",
+      "source": {
+        "name": "ZhaoXiangBox",
+        "url": "https://github.com/ZhaoXiangBox/esp32_ros2_robot",
+        "kind": "repository"
+      },
+      "pipelineStage": "FOUND",
+      "tags": [
+        "ESP32",
+        "ROS2",
+        "robot"
+      ]
+    },
+    {
+      "slug": "esp32-wifi-robot",
+      "name": "ESP32 WiFi Robot",
+      "category": "Robotics",
+      "summary": "WiFi controlled ESP32 robot source.",
+      "source": {
+        "name": "CoretechR",
+        "url": "https://github.com/CoretechR/ESP32-WiFi-Robot",
+        "kind": "repository"
+      },
+      "pipelineStage": "FOUND",
+      "tags": [
+        "ESP32",
+        "WiFi",
+        "robot"
+      ]
+    },
+    {
+      "slug": "esphome",
+      "name": "ESPHome Devices",
+      "category": "Home & automation",
+      "summary": "Broad ESP32 device ecosystem that deserves its own discovery treatment rather than a single project card.",
+      "source": {
+        "name": "ESPHome",
+        "url": "https://github.com/esphome/esphome",
+        "kind": "repository"
+      },
+      "pipelineStage": "FOUND",
+      "tags": [
+        "ESP32",
+        "sensors",
+        "home automation"
+      ]
+    },
+    {
+      "slug": "esptimecast",
+      "name": "ESPTimeCast",
+      "category": "Electronics",
+      "summary": "Current ESP32 information display project.",
+      "source": {
+        "name": "mfactory-osaka",
+        "url": "https://github.com/mfactory-osaka/ESPTimeCast",
+        "kind": "repository"
+      },
+      "pipelineStage": "FOUND",
+      "tags": [
+        "ESP32",
+        "display",
+        "weather"
+      ]
+    },
+    {
+      "slug": "esptimecast-vfd",
+      "name": "ESPTimeCast VFD",
+      "category": "Electronics",
+      "summary": "VFD display variant with strong physical character.",
+      "source": {
+        "name": "jeanpihet",
+        "url": "https://github.com/jeanpihet/ESPTimeCastVFD",
+        "kind": "repository"
+      },
+      "pipelineStage": "FOUND",
+      "tags": [
+        "ESP32",
+        "VFD",
+        "display"
+      ]
+    },
+    {
+      "slug": "fabscanpi",
+      "name": "FabScanPi",
+      "category": "Science & measurement",
+      "summary": "Open DIY 3D laser-scanner ecosystem combining an enclosure, turntable, camera, laser and Raspberry Pi software.",
+      "source": {
+        "name": "FabScanPi",
+        "url": "https://github.com/mariolukas/FabScanPi-Server",
+        "kind": "repository"
+      },
+      "pipelineStage": "REVIEWED SOURCE",
+      "tags": [
+        "3D scanner",
+        "Raspberry Pi",
+        "laser",
+        "turntable"
+      ]
+    },
+    {
+      "slug": "farmbot",
+      "name": "FarmBot",
+      "category": "Home & automation",
+      "summary": "Open agricultural CNC/robot platform.",
+      "source": {
+        "name": "FarmBot",
+        "url": "https://github.com/FarmBot",
+        "kind": "repository"
+      },
+      "pipelineStage": "FOUND",
+      "tags": [
+        "garden",
+        "CNC",
+        "automation"
+      ]
+    },
+    {
+      "slug": "farmbot-express",
+      "name": "FarmBot Express",
+      "category": "Garden & growing",
+      "summary": "Simplified FarmBot route that may offer a more approachable comparison with Genesis. Needs exact current hardware and documentation review before promotion.",
+      "source": {
+        "name": "FarmBot",
+        "url": "https://github.com/FarmBot",
+        "kind": "repository"
+      },
+      "pipelineStage": "FOUND",
+      "tags": [
+        "garden",
+        "robot",
+        "automation",
+        "growing"
+      ]
+    },
+    {
+      "slug": "farmbot-genesis",
+      "name": "FarmBot Genesis",
+      "category": "Garden & growing",
+      "summary": "Full physical garden robot ecosystem with mechanics, electronics, software and fabrication. A strong large-build candidate rather than a generic smart-garden project.",
+      "source": {
+        "name": "FarmBot",
+        "url": "https://github.com/FarmBot",
+        "kind": "repository"
+      },
+      "pipelineStage": "ASSESSMENT CANDIDATE",
+      "tags": [
+        "garden",
+        "CNC",
+        "robot",
+        "automation"
+      ]
+    },
+    {
+      "slug": "firepick-delta",
+      "name": "FirePick Delta",
+      "category": "Workshop",
+      "summary": "Open-source delta pick-and-place machine.",
+      "source": {
+        "name": "FirePick",
+        "url": "https://github.com/firepick1/FirePick-Delta",
+        "kind": "repository"
+      },
+      "pipelineStage": "FOUND",
+      "tags": [
+        "pick and place",
+        "delta robot",
+        "electronics"
+      ]
+    },
+    {
+      "slug": "foc-wheel-legged-robot",
+      "name": "FOC Wheel-Legged Robot",
+      "category": "Robotics",
+      "summary": "Open wheel-legged robot platform using ESP32-class control hardware.",
+      "source": {
+        "name": "Skythinker616",
+        "url": "https://github.com/Skythinker616/foc-wheel-legged-robot",
+        "kind": "repository"
+      },
+      "pipelineStage": "FOUND",
+      "tags": [
+        "ESP32",
+        "robot",
+        "motors"
+      ]
+    },
+    {
+      "slug": "freetouchdeck",
+      "name": "FreeTouchDeck",
+      "category": "Creative tools",
+      "summary": "Open touchscreen macro deck that can become a custom physical control surface rather than another generic display demo.",
+      "source": {
+        "name": "Dustin Watts",
+        "url": "https://github.com/DustinWatts/FreeTouchDeck",
+        "kind": "repository"
+      },
+      "pipelineStage": "ASSESSMENT CANDIDATE",
+      "tags": [
+        "ESP32",
+        "touchscreen",
+        "controller",
+        "desktop"
+      ]
+    },
+    {
+      "slug": "gridfinity-rebuilt",
+      "name": "Gridfinity Rebuilt",
+      "category": "Workshop",
+      "summary": "A parametric OpenSCAD implementation of Gridfinity bins with configurable sizes, compartments, tabs, bases and print options.",
+      "source": {
+        "name": "kennetek",
+        "url": "https://github.com/kennetek/gridfinity-rebuilt-openscad",
+        "kind": "repository"
+      },
+      "pipelineStage": "ASSESSED",
+      "tags": [
+        "Workshop",
+        "3D printer",
+        "USEFUL",
+        "CUSTOM",
+        "PLATFORM"
+      ],
+      "assessment": {
+        "verdict": "RECOMMENDED",
+        "reason": "It converts a useful storage standard into something configurable. AI can help generate or modify parameter sets without turning every custom bin into a CAD exercise.",
+        "cost": "Filament",
+        "time": "Print-dependent",
+        "difficulty": 2,
+        "aiLeverage": 4,
+        "evidenceStatus": "Strong",
+        "aiCanHelp": [
+          "Parameter changes",
+          "OpenSCAD edits",
+          "Customisation"
+        ],
+        "aiCantDo": [
+          "Measure the real objects and drawer space accurately",
+          "Print the part",
+          "Check physical fit and tolerances",
+          "Decide whether the result is strong, accessible and practical in real use"
+        ],
+        "mainCatch": "The design work is easy compared with print time. Large storage systems consume more filament and machine hours than the first few bins suggest.",
+        "checkedOn": "17 Aug 2026"
+      },
+      "resources": [
+        {
+          "name": "Gridfinity Rebuilt documentation",
+          "url": "https://github.com/kennetek/gridfinity-rebuilt-openscad/blob/main/docs/index.md",
+          "type": "docs",
+          "note": "Project documentation covering the parameter model and getting-started route."
+        },
+        {
+          "name": "Gridfinity bin parameters",
+          "url": "https://github.com/kennetek/gridfinity-rebuilt-openscad/blob/main/docs/bins.md",
+          "type": "docs",
+          "note": "Detailed reference for configurable bin geometry and options."
+        },
+        {
+          "name": "Gridfinity baseplate parameters",
+          "url": "https://github.com/kennetek/gridfinity-rebuilt-openscad/blob/main/docs/baseplates.md",
+          "type": "docs",
+          "note": "Detailed reference for generating compatible baseplates."
+        }
+      ],
+      "lastChecked": "17 Aug 2026"
+    },
+    {
+      "slug": "hadley-telescope",
+      "name": "Hadley Telescope",
+      "category": "Science & measurement",
+      "summary": "A 3D-printable 114/900 mm Newtonian reflector that combines inexpensive commodity optics with printed structure, metal rods and a simple mount.",
+      "source": {
+        "name": "Maff / Printables",
+        "url": "https://www.printables.com/model/224383-astronomical-telescope-hadley-an-easy-assembly-hig",
+        "kind": "creator"
+      },
+      "pipelineStage": "ASSESSED",
+      "tags": [
+        "Science & measurement",
+        "3D printer",
+        "Basic hand tools",
+        "Optics",
+        "OPTICS",
+        "LEARN",
+        "3D PRINTING"
+      ],
+      "assessment": {
+        "verdict": "RECOMMENDED",
+        "reason": "Hadley is a strong example of AI helping with a physical build without being the point of the project. The source is mature, widely replicated and deliberately designed around simple hardware, while AI can help interpret the manual, adapt metric parts, troubleshoot prints and explain collimation. The actual telescope still succeeds or fails on printed tolerances, mirror handling, alignment and the quality of the mount.",
+        "cost": "Typically about $100 to $150 depending on optics, eyepieces and mount",
+        "time": "Multi-day including printing; physical assembly is comparatively simple",
+        "difficulty": 3,
+        "aiLeverage": 3,
+        "evidenceStatus": "Strong",
+        "aiCanHelp": [
+          "Interpret the build manual",
+          "Help adapt imperial and metric hardware",
+          "Explain Newtonian alignment and collimation",
+          "Troubleshoot print tolerance and fit",
+          "Help plan mount and focuser upgrades"
+        ],
+        "aiCantDo": [
+          "Print and inspect the structural parts",
+          "Source and handle the mirrors",
+          "Assemble the optical tube",
+          "Build or fit a stable mount",
+          "Collimate on the real optics",
+          "Observe safely and verify focus"
+        ],
+        "mainCatch": "It is not just a collection of prints. You still need suitable 114/900 mm optics, a stable mount, careful mirror installation and collimation. The open frame also admits stray light, and the creator gives an explicit warning never to point the unfiltered telescope at the Sun.",
+        "checkedOn": "29 Aug 2026"
+      },
+      "resources": [
+        {
+          "name": "Hadley current Printables source",
+          "url": "https://www.printables.com/model/224383-astronomical-telescope-hadley-an-easy-assembly-hig",
+          "type": "files",
+          "note": "Creator-maintained project page with current files, manual, recommended mounts, remixes and build notes."
+        },
+        {
+          "name": "Hadley assembly and use manual",
+          "url": "https://media.printables.com/media/prints/224383/pdfs/224383-astronomical-telescope-hadley-an-easy-assembly-high-performance-newtonian-reflector-planetary-telescope-super-telephoto-lens-c639d9fc-d1cc-4989-9233-b849e50f3757.pdf",
+          "type": "docs",
+          "note": "Creator manual covering parts, printing, assembly, optics, collimation, balancing and the solar-safety warning."
+        },
+        {
+          "name": "Official metric remix",
+          "url": "https://www.printables.com/model/268580-hadley-telescope-official-metric-remix",
+          "type": "files",
+          "note": "Officially endorsed M4 metric route with full STL set, CAD and BOM plus a hardware tolerance test print."
+        },
+        {
+          "name": "Independent 2026 first-telescope build",
+          "url": "https://www.reddit.com/r/telescopes/comments/1u7b1ff/built_my_first_telescope/",
+          "type": "community",
+          "note": "Recent first-time builder reports a roughly $130 build, stable DIY wooden mount and successful Jupiter-moon observing, while discussing focuser trade-offs."
+        },
+        {
+          "name": "Independent long-term Hadley ownership",
+          "url": "https://www.reddit.com/r/telescopes/comments/1gtfzay/hadley/",
+          "type": "community",
+          "note": "Owner reports using a Hadley as the main visual telescope for a year before upgrading the focuser, finder and mount-related accessories."
+        },
+        {
+          "name": "Independent build and cost report",
+          "url": "https://www.reddit.com/r/telescopes/comments/1cxbjjw/my_first_telescope_the_hadley/",
+          "type": "community",
+          "note": "Builder reports about $150 total for kit and supplies and identifies the open-frame stray-light issue that motivates a shroud or baffle."
+        }
+      ],
+      "lastChecked": "29 Aug 2026"
+    },
+    {
+      "slug": "idda-knitting-machine",
+      "name": "Idda Knitting Machine",
+      "category": "Textiles & craft",
+      "summary": "Developing open circular knitting-machine project built around printable parts. Worth tracking as an approachable alternative route, but source maturity needs review before promotion.",
+      "source": {
+        "name": "Jon Nordby",
+        "url": "https://github.com/jonnor/idda-knitting-machine",
+        "kind": "repository"
+      },
+      "pipelineStage": "FOUND",
+      "tags": [
+        "knitting",
+        "3D printed",
+        "machine",
+        "textiles"
+      ]
+    },
+    {
+      "slug": "imagegencam",
+      "name": "ImageGenCam",
+      "category": "Photography & video",
+      "summary": "A buildable Raspberry Pi camera designed around a Codex-assisted hardware and software workflow.",
+      "source": {
+        "name": "OpenAI",
+        "url": "https://github.com/openai/imagegencam",
+        "kind": "repository"
+      },
+      "pipelineStage": "ASSESSED",
+      "tags": [
+        "Photography & video",
+        "3D printer",
+        "Raspberry Pi",
+        "CUSTOM",
+        "LEARN",
+        "PLATFORM"
+      ],
+      "assessment": {
+        "verdict": "RECOMMENDED",
+        "reason": "There is no obvious finished-product equivalent. The point is the combination of custom hardware, image generation and a build process that deliberately gives an AI coding agent meaningful work.",
+        "cost": "Not published",
+        "time": "Not published",
+        "difficulty": 3,
+        "aiLeverage": 5,
+        "evidenceStatus": "Strong",
+        "aiCanHelp": [
+          "Code",
+          "Configuration",
+          "Iteration",
+          "Troubleshooting"
+        ],
+        "aiCantDo": [
+          "Print and finish the enclosure",
+          "Fit the camera, display, battery and Raspberry Pi into the case",
+          "Check buttons, clearances and camera ergonomics in the real device",
+          "Verify that the finished camera survives normal handling"
+        ],
+        "mainCatch": "The software is only half the product. Enclosure quality, assembly and camera ergonomics still decide whether the result feels finished.",
+        "checkedOn": "17 Aug 2026"
+      },
+      "resources": [
+        {
+          "name": "ImageGenCam Codex build guide",
+          "url": "https://github.com/openai/imagegencam/tree/main/docs/codex-guide",
+          "type": "docs",
+          "note": "Project-specific Codex guidance used alongside the main README build route."
+        },
+        {
+          "name": "ImageGenCam printable case files",
+          "url": "https://github.com/openai/imagegencam/tree/main/3d%20model",
+          "type": "files",
+          "note": "Published enclosure model files for the physical camera body."
+        }
+      ],
+      "lastChecked": "17 Aug 2026"
+    },
+    {
+      "slug": "jubilee",
+      "name": "Jubilee Motion Platform",
+      "category": "Workshop",
+      "summary": "Open extensible machine platform built around automatic toolchanging. Can be configured for printing, plotting and other digital-fabrication processes rather than one fixed machine.",
+      "source": {
+        "name": "Machine Agency",
+        "url": "https://github.com/machineagency/jubilee",
+        "kind": "repository"
+      },
+      "pipelineStage": "ASSESSMENT CANDIDATE",
+      "tags": [
+        "toolchanger",
+        "motion platform",
+        "3D printer",
+        "automation"
+      ]
+    },
+    {
+      "slug": "led-sequin-wearable",
+      "name": "LED Sequin Wearable",
+      "category": "Textiles & craft",
+      "summary": "A stitched electronics workflow using conductive thread and fabric, useful for showing how digital design and code can cross into sewing rather than staying on a breadboard.",
+      "source": {
+        "name": "Adafruit Learning System",
+        "url": "https://learn.adafruit.com/adafruit-led-sequins",
+        "kind": "creator"
+      },
+      "pipelineStage": "REVIEWED SOURCE",
+      "tags": [
+        "wearable",
+        "sewing",
+        "conductive thread",
+        "lighting"
+      ]
+    },
+    {
+      "slug": "lemontron",
+      "name": "Lemontron",
+      "category": "Workshop",
+      "summary": "Open fabrication project for source review.",
+      "source": {
+        "name": "mattwach",
+        "url": "https://github.com/mattwach/lemontron",
+        "kind": "repository"
+      },
+      "pipelineStage": "FOUND",
+      "tags": [
+        "CNC",
+        "robot",
+        "fabrication"
+      ]
+    },
+    {
+      "slug": "lilygo-t-watch",
+      "name": "LilyGo T-Watch Projects",
+      "category": "Wearables",
+      "summary": "Hardware and software ecosystem for ESP32 smartwatch builds.",
+      "source": {
+        "name": "LilyGo",
+        "url": "https://github.com/Xinyuan-LilyGO/TTGO_TWatch_Library",
+        "kind": "repository"
+      },
+      "pipelineStage": "FOUND",
+      "tags": [
+        "ESP32",
+        "watch",
+        "touchscreen"
+      ]
+    },
+    {
+      "slug": "lilygo-t5-clock",
+      "name": "LilyGo T5 Clock",
+      "category": "Electronics",
+      "summary": "E-paper clock route built around LilyGo hardware.",
+      "source": {
+        "name": "echicken",
+        "url": "https://github.com/echicken/lilygo-t5-clock",
+        "kind": "repository"
+      },
+      "pipelineStage": "FOUND",
+      "tags": [
+        "ESP32",
+        "e-paper",
+        "clock"
+      ]
+    },
+    {
+      "slug": "low-cost-toolchanger",
+      "name": "Low Cost Toolchanger",
+      "category": "Workshop",
+      "summary": "Open automatic toolchanger project aimed at expanding conventional 3D-printer and motion-platform capabilities without buying an integrated commercial system.",
+      "source": {
+        "name": "totaldesaster",
+        "url": "https://github.com/totaldesaster/toolchanger",
+        "kind": "repository"
+      },
+      "pipelineStage": "FOUND",
+      "tags": [
+        "toolchanger",
+        "3D printer",
+        "fabrication",
+        "motion"
+      ]
+    },
+    {
+      "slug": "lowrider-cnc",
+      "name": "LowRider CNC",
+      "category": "Workshop",
+      "summary": "Large-format DIY CNC/router route.",
+      "source": {
+        "name": "V1 Engineering",
+        "url": "https://github.com/V1EngineeringInc/LowRider2",
+        "kind": "repository"
+      },
+      "pipelineStage": "FOUND",
+      "tags": [
+        "CNC",
+        "router",
+        "large format"
+      ]
+    },
+    {
+      "slug": "maslow-cnc",
+      "name": "Maslow CNC",
+      "category": "Furniture & woodworking",
+      "summary": "Wall-oriented large-format CNC ecosystem designed around cutting full-size sheet material, relevant to furniture and architectural builds.",
+      "source": {
+        "name": "Maslow CNC",
+        "url": "https://github.com/MaslowCNC/GroundControl",
+        "kind": "repository"
+      },
+      "pipelineStage": "REVIEWED SOURCE",
+      "tags": [
+        "CNC",
+        "wood",
+        "furniture",
+        "large format"
+      ]
+    },
+    {
+      "slug": "meshtastic",
+      "name": "Meshtastic Devices",
+      "category": "Electronics",
+      "summary": "Large open physical-device ecosystem using ESP32 and LoRa hardware.",
+      "source": {
+        "name": "Meshtastic",
+        "url": "https://github.com/meshtastic",
+        "kind": "repository"
+      },
+      "pipelineStage": "FOUND",
+      "tags": [
+        "ESP32",
+        "LoRa",
+        "communication"
+      ]
+    },
+    {
+      "slug": "morning-thermal-printer",
+      "name": "Morning Thermal Printer",
+      "category": "Home & automation",
+      "summary": "An ESP32 desk printer that turns weather and calendar data into a short physical morning briefing on receipt paper.",
+      "source": {
+        "name": "Schematik",
+        "url": "https://www.schematik.io/blog/morning-thermal-printer-daily-briefing",
+        "kind": "creator"
+      },
+      "pipelineStage": "ASSESSED",
+      "tags": [
+        "Home & automation",
+        "ESP32",
+        "APIs & data",
+        "USEFUL",
+        "DATA",
+        "CUSTOM"
+      ],
+      "assessment": {
+        "verdict": "RECOMMENDED",
+        "reason": "It is a clean example of software and public data becoming a physical ritual object. The hardware is modest, while the useful customisation lives in what the device fetches and prints.",
+        "cost": "Not published",
+        "time": "45 minutes",
+        "difficulty": 2,
+        "aiLeverage": 5,
+        "evidenceStatus": "Strong",
+        "aiCanHelp": [
+          "API integration",
+          "Formatting",
+          "Calendar logic",
+          "Firmware changes",
+          "Debugging"
+        ],
+        "aiCantDo": [
+          "Provide stable separate power for the thermal printer",
+          "Wire the printer and shared ground correctly",
+          "Judge whether the physical print layout is readable and useful",
+          "Turn the breadboard prototype into a tidy appliance"
+        ],
+        "mainCatch": "The thermal printer needs its own stable 5V supply. Powering it from the ESP32 regulator is specifically warned against because the print head current causes brownouts.",
+        "checkedOn": "27 Aug 2026"
+      },
+      "resources": [
+        {
+          "name": "Open-Meteo API documentation",
+          "url": "https://open-meteo.com/en/docs",
+          "type": "docs",
+          "note": "Weather-data source used by the project, including forecast fields and request parameters."
+        },
+        {
+          "name": "Google Calendar API documentation",
+          "url": "https://developers.google.com/calendar/api/guides/overview",
+          "type": "docs",
+          "note": "Optional calendar integration route referenced by the build."
+        }
+      ],
+      "lastChecked": "27 Aug 2026"
+    },
+    {
+      "slug": "mostly-printed-cnc",
+      "name": "Mostly Printed CNC",
+      "category": "Furniture & woodworking",
+      "summary": "DIY CNC route built from printed parts and commodity hardware, useful for showing when building the tool itself makes sense.",
+      "source": {
+        "name": "V1 Engineering",
+        "url": "https://github.com/V1EngineeringInc/MPCNC_Archim1",
+        "kind": "repository"
+      },
+      "pipelineStage": "ASSESSMENT CANDIDATE",
+      "tags": [
+        "CNC",
+        "router",
+        "3D printed",
+        "wood"
+      ]
+    },
+    {
+      "slug": "mpcnc",
+      "name": "Mostly Printed CNC",
+      "category": "Workshop",
+      "summary": "A CNC machine built substantially from printed parts and commodity hardware.",
+      "source": {
+        "name": "V1 Engineering",
+        "url": "https://github.com/V1EngineeringInc/MPCNC_Archim1",
+        "kind": "repository"
+      },
+      "pipelineStage": "FOUND",
+      "tags": [
+        "CNC",
+        "3D printer",
+        "router"
+      ]
+    },
+    {
+      "slug": "mutable-eurorack",
+      "name": "Mutable Instruments Eurorack Hardware",
+      "category": "Music & audio",
+      "summary": "Open hardware and firmware archive for a major family of Eurorack synthesizer modules. Strong source material for electronics, enclosure and music-device builds, with lifecycle status clearly noted.",
+      "source": {
+        "name": "Mutable Instruments",
+        "url": "https://github.com/pichenettes/eurorack",
+        "kind": "repository"
+      },
+      "pipelineStage": "FOUND",
+      "tags": [
+        "synthesizer",
+        "Eurorack",
+        "audio",
+        "PCB"
+      ]
+    },
+    {
+      "slug": "mutantw-v2",
+      "name": "MutantW V2",
+      "category": "Wearables",
+      "summary": "Open wearable/watch hardware candidate for review.",
+      "source": {
+        "name": "MutantW",
+        "url": "https://github.com/MutantW/MutantW_V2",
+        "kind": "repository"
+      },
+      "pipelineStage": "FOUND",
+      "tags": [
+        "ESP32",
+        "watch",
+        "wearable"
+      ]
+    },
+    {
+      "slug": "myclock",
+      "name": "myClock",
+      "category": "Electronics",
+      "summary": "ESP32 display clock project.",
+      "source": {
+        "name": "dragondaud",
+        "url": "https://github.com/dragondaud/myClock",
+        "kind": "repository"
+      },
+      "pipelineStage": "FOUND",
+      "tags": [
+        "ESP32",
+        "clock",
+        "display"
+      ]
+    },
+    {
+      "slug": "oomwoo",
+      "name": "OomWoo",
+      "category": "Robotics",
+      "summary": "Open physical robot project worth source review.",
+      "source": {
+        "name": "MakersPet",
+        "url": "https://github.com/makerspet/oomwoo",
+        "kind": "repository"
+      },
+      "pipelineStage": "FOUND",
+      "tags": [
+        "robot",
+        "open hardware"
+      ]
+    },
+    {
+      "slug": "open-cat",
+      "name": "OpenCat",
+      "category": "Robotics",
+      "summary": "Open-source quadruped robot framework with a significant builder community.",
+      "source": {
+        "name": "Petoi",
+        "url": "https://github.com/PetoiCamp/OpenCat",
+        "kind": "repository"
+      },
+      "pipelineStage": "FOUND",
+      "tags": [
+        "quadruped",
+        "robot",
+        "open source"
+      ]
+    },
+    {
+      "slug": "open-evse",
+      "name": "OpenEVSE",
+      "category": "Home & automation",
+      "summary": "Open electric-vehicle charging hardware ecosystem. Any future assessment needs a strict electrical-safety treatment rather than casual maker framing.",
+      "source": {
+        "name": "OpenEVSE",
+        "url": "https://github.com/OpenEVSE/open_evse",
+        "kind": "repository"
+      },
+      "pipelineStage": "FOUND",
+      "tags": [
+        "EV charging",
+        "open hardware",
+        "power",
+        "home"
+      ]
+    },
+    {
+      "slug": "open-manipulator",
+      "name": "OpenMANIPULATOR-X",
+      "category": "Robotics",
+      "summary": "A current open four-axis robot arm and gripper platform built from DYNAMIXEL servos, modular frames and printable parts, with supported ROS 2, MoveIt 2 and OpenCR routes.",
+      "source": {
+        "name": "ROBOTIS",
+        "url": "https://github.com/ROBOTIS-GIT/open_manipulator",
+        "kind": "repository"
+      },
+      "pipelineStage": "ASSESSED",
+      "tags": [
+        "Robotics",
+        "Basic hand tools",
+        "ROS 2",
+        "DYNAMIXEL Wizard",
+        "Optional 3D printer",
+        "ROBOTICS",
+        "OPEN PLATFORM"
+      ],
+      "assessment": {
+        "verdict": "WORTH CONSIDERING",
+        "reason": "This is less about saving money than owning a supported robot platform that can be physically assembled, modified and then used for serious software experiments. AI can be genuinely useful across ROS 2 setup, MoveIt planning, Python integration, debugging and custom end effectors, while the builder still has to configure and assemble a real multi-joint machine correctly.",
+        "cost": "$1,629.09 arm kit; base plate and control/interface hardware may be additional",
+        "time": "About 3 to 4 hours physical assembly, plus software and DYNAMIXEL setup",
+        "difficulty": 4,
+        "aiLeverage": 4,
+        "evidenceStatus": "Strong",
+        "aiCanHelp": [
+          "ROS 2 and MoveIt setup help",
+          "Package and launch-file troubleshooting",
+          "Kinematics and motion-planning code",
+          "Python and automation integration",
+          "CAD and end-effector modification guidance"
+        ],
+        "aiCantDo": [
+          "Configure each DYNAMIXEL correctly",
+          "Assemble and align the joints",
+          "Route and secure cables",
+          "Mount the arm rigidly",
+          "Set safe starting poses",
+          "Test real motion and payloads carefully"
+        ],
+        "mainCatch": "The current kit is expensive for a hobby arm and it is not complete by headline price alone. A base plate is not included, and ROS operation needs a suitable communication/control route and power supply. Servo IDs, horn alignment, cable routing and joint pose all matter before software can safely take over.",
+        "checkedOn": "29 Aug 2026"
+      },
+      "resources": [
+        {
+          "name": "ROBOTIS OpenMANIPULATOR-X",
+          "url": "https://github.com/ROBOTIS-GIT/open_manipulator",
+          "type": "repo",
+          "note": "Current ROBOTIS ROS 2 source with active Humble, Jazzy and main branches, MoveIt 2 support, bring-up, GUI, teleoperation and description packages."
+        },
+        {
+          "name": "OpenMANIPULATOR-X overview",
+          "url": "https://docs.robotis.com/docs/systems/openmanipulator_x/overview/",
+          "type": "docs",
+          "note": "Current ROBOTIS overview confirming the open hardware/software model, OpenCR route, ROS compatibility and printable/modifiable components."
+        },
+        {
+          "name": "OpenMANIPULATOR-X assembly guide",
+          "url": "https://emanual.robotis.com/docs/en/platform/openmanipulator_x/assembly/",
+          "type": "docs",
+          "note": "Official part list, tools, printable-part route and physical assembly instructions."
+        },
+        {
+          "name": "OpenMANIPULATOR-X ROS 2 quick start",
+          "url": "https://emanual.robotis.com/docs/en/platform/openmanipulator_x/quick_start_guide/",
+          "type": "docs",
+          "note": "Current ROS 2 bring-up route covering U2D2/OpenCR communication, packages and first operation."
+        },
+        {
+          "name": "Current ROBOTIS product listing",
+          "url": "https://www.robotis.us/openmanipulator-x-rm-x52-tnm/",
+          "type": "docs",
+          "note": "Current manufacturer listing for RM-X52-TNM. It was listed at $1,629.09 with a two-to-three-week lead time when checked."
+        },
+        {
+          "name": "Independent university assembly report",
+          "url": "https://ots.th-brandenburg.de/downloads/abschlussarbeiten/2022-02-24%20ba_fabian_claus.pdf",
+          "type": "community",
+          "note": "Independent academic build reports roughly three to four hours for complete assembly and flags servo-ID setup, horn alignment and small manual details that are easy to miss."
+        },
+        {
+          "name": "University first-time DYNAMIXEL setup notes",
+          "url": "https://innovation.iha.unistra.fr/books/robotique-open-source/page/installation-et-demarrage-du-openmanipulator-x-turtlebot-3",
+          "type": "community",
+          "note": "Independent teaching notes reinforce the practical need to configure each XM430 servo ID and baud rate individually before normal arm operation."
+        }
+      ],
+      "lastChecked": "29 Aug 2026"
+    },
+    {
+      "slug": "open-pnp",
+      "name": "OpenPnP",
+      "category": "Workshop",
+      "summary": "Open pick-and-place machine ecosystem for electronics assembly.",
+      "source": {
+        "name": "OpenPnP",
+        "url": "https://github.com/openpnp/openpnp",
+        "kind": "repository"
+      },
+      "pipelineStage": "FOUND",
+      "tags": [
+        "pick and place",
+        "electronics",
+        "machine"
+      ]
+    },
+    {
+      "slug": "open-scan",
+      "name": "OpenScan",
+      "category": "Photography & video",
+      "summary": "Open hardware 3D scanning platform.",
+      "source": {
+        "name": "OpenScan",
+        "url": "https://github.com/OpenScanEu/OpenScan3",
+        "kind": "repository"
+      },
+      "pipelineStage": "FOUND",
+      "tags": [
+        "3D scanning",
+        "photogrammetry",
+        "printed"
+      ]
+    },
+    {
+      "slug": "open-smartwatch",
+      "name": "Open Smartwatch",
+      "category": "Wearables",
+      "summary": "A stronger current ESP32 wearable candidate than the ageing smartwatch currently featured.",
+      "source": {
+        "name": "Open Smartwatch",
+        "url": "https://github.com/Open-Smartwatch/open-smartwatch",
+        "kind": "repository"
+      },
+      "pipelineStage": "ASSESSMENT CANDIDATE",
+      "tags": [
+        "ESP32",
+        "watch",
+        "wearable"
+      ]
+    },
+    {
+      "slug": "open-source-beehives",
+      "name": "Open Source Beehives",
+      "category": "Home & automation",
+      "summary": "Physical hive and sensing ecosystem.",
+      "source": {
+        "name": "Open Source Beehives",
+        "url": "https://github.com/opensourcebeehives",
+        "kind": "repository"
+      },
+      "pipelineStage": "FOUND",
+      "tags": [
+        "sensors",
+        "outdoors",
+        "fabrication"
+      ]
+    },
+    {
+      "slug": "open-source-ecology",
+      "name": "Open Source Ecology Machines",
+      "category": "Workshop",
+      "summary": "Large ecosystem of open physical machine projects.",
+      "source": {
+        "name": "Open Source Ecology",
+        "url": "https://github.com/OpenSourceEcology",
+        "kind": "repository"
+      },
+      "pipelineStage": "FOUND",
+      "tags": [
+        "machines",
+        "fabrication",
+        "agriculture"
+      ]
+    },
+    {
+      "slug": "open-source-incubator",
+      "name": "Open Source Incubator",
+      "category": "Science & measurement",
+      "summary": "Open biology-lab incubator developed as low-cost open science hardware. Useful science-equipment coverage, but CAIBI must keep research and educational use distinct from validated medical equipment.",
+      "source": {
+        "name": "FOSH Following Demand",
+        "url": "https://github.com/FOSH-following-demand/Incubator",
+        "kind": "repository"
+      },
+      "pipelineStage": "REVIEWED SOURCE",
+      "tags": [
+        "incubator",
+        "lab",
+        "temperature",
+        "open hardware"
+      ]
+    },
+    {
+      "slug": "open-source-leg",
+      "name": "Open Source Leg",
+      "category": "Science & measurement",
+      "summary": "Research-grade open robotic leg platform.",
+      "source": {
+        "name": "Neurobionics Lab",
+        "url": "https://github.com/neurobionics/opensourceleg",
+        "kind": "repository"
+      },
+      "pipelineStage": "FOUND",
+      "tags": [
+        "prosthetics",
+        "robotics",
+        "biomechanics"
+      ]
+    },
+    {
+      "slug": "open-source-ventilator-history",
+      "name": "Open Ventilator Hardware Projects",
+      "category": "Science & measurement",
+      "summary": "Historical open-hardware ecosystem from the pandemic period. Included only as a discovery/archive lead; CAIBI must not present unvalidated medical hardware as a build recommendation.",
+      "source": {
+        "name": "Helpful Engineering archive",
+        "url": "https://github.com/HelpfulEngineering",
+        "kind": "repository"
+      },
+      "pipelineStage": "FOUND",
+      "tags": [
+        "open hardware",
+        "medical",
+        "archive",
+        "fabrication"
+      ]
+    },
+    {
+      "slug": "open-syringe-pump",
+      "name": "Open Syringe Pump",
+      "category": "Science & measurement",
+      "summary": "Open laboratory syringe-pump system with current hardware revisions, printable parts and controller options. A useful example of serious scientific equipment becoming buildable.",
+      "source": {
+        "name": "Karpova Lab",
+        "url": "https://github.com/Karpova-Lab/syringe-pump",
+        "kind": "repository"
+      },
+      "pipelineStage": "ASSESSMENT CANDIDATE",
+      "tags": [
+        "lab",
+        "syringe pump",
+        "3D printed",
+        "precision"
+      ]
+    },
+    {
+      "slug": "openastrotracker",
+      "name": "OpenAstroTracker",
+      "category": "Photography & video",
+      "summary": "Large open-source star-tracker ecosystem combining printed mechanics, motors, calibration and photography.",
+      "source": {
+        "name": "OpenAstroTech",
+        "url": "https://github.com/OpenAstroTech/OpenAstroTracker",
+        "kind": "repository"
+      },
+      "pipelineStage": "ASSESSMENT CANDIDATE",
+      "tags": [
+        "astronomy",
+        "camera",
+        "3D printed",
+        "motion"
+      ]
+    },
+    {
+      "slug": "openbike",
+      "name": "OpenBike",
+      "category": "Mobility",
+      "summary": "Open-design bicycle fabrication project.",
+      "source": {
+        "name": "Arquimaña",
+        "url": "https://github.com/Arquimaña/OpenBike",
+        "kind": "repository"
+      },
+      "pipelineStage": "FOUND",
+      "tags": [
+        "bicycle",
+        "CNC",
+        "open design"
+      ]
+    },
+    {
+      "slug": "openbikesensor",
+      "name": "OpenBikeSensor",
+      "category": "Mobility",
+      "summary": "Open bicycle-mounted passing-distance sensor with published electronics, firmware and printable enclosure work.",
+      "source": {
+        "name": "OpenBikeSensor",
+        "url": "https://github.com/openbikesensor/OpenBikeSensor3dPrintableCase",
+        "kind": "repository"
+      },
+      "pipelineStage": "REVIEWED SOURCE",
+      "tags": [
+        "bicycle",
+        "sensor",
+        "3D printed",
+        "measurement"
+      ]
+    },
+    {
+      "slug": "openbot",
+      "name": "OpenBot",
+      "category": "Robotics",
+      "summary": "Open robot platform that uses a smartphone for sensing and higher-level compute while the physical vehicle remains comparatively simple to fabricate.",
+      "source": {
+        "name": "Intelligence and Systems Lab",
+        "url": "https://github.com/isl-org/OpenBot",
+        "kind": "repository"
+      },
+      "pipelineStage": "ASSESSMENT CANDIDATE",
+      "tags": [
+        "robot",
+        "smartphone",
+        "3D printed",
+        "AI"
+      ]
+    },
+    {
+      "slug": "openbuilds-control",
+      "name": "OpenBuilds Machine Ecosystem",
+      "category": "Workshop",
+      "summary": "Control ecosystem connected to a broad range of physical CNC and laser builds.",
+      "source": {
+        "name": "OpenBuilds",
+        "url": "https://github.com/OpenBuilds/OpenBuilds-CONTROL",
+        "kind": "repository"
+      },
+      "pipelineStage": "FOUND",
+      "tags": [
+        "CNC",
+        "laser",
+        "motion"
+      ]
+    },
+    {
+      "slug": "openbuilds-lead-cnc",
+      "name": "OpenBuilds LEAD CNC",
+      "category": "Furniture & woodworking",
+      "summary": "OpenBuilds machine ecosystem includes well-established router builds assembled from modular extrusion and motion components. Current exact LEAD source route needs checking before assessment.",
+      "source": {
+        "name": "OpenBuilds",
+        "url": "https://github.com/OpenBuilds",
+        "kind": "repository"
+      },
+      "pipelineStage": "FOUND",
+      "tags": [
+        "CNC",
+        "router",
+        "aluminium extrusion",
+        "wood"
+      ]
+    },
+    {
+      "slug": "opendesk-leap",
+      "name": "Opendesk Leap",
+      "category": "Furniture & woodworking",
+      "summary": "CNC-cut furniture source that demonstrates the design-file-to-physical-furniture route CAIBI should cover.",
+      "source": {
+        "name": "Opendesk / community source",
+        "url": "https://github.com/harrykeen18/Opendesk-Leap",
+        "kind": "repository"
+      },
+      "pipelineStage": "FOUND",
+      "tags": [
+        "furniture",
+        "CNC",
+        "plywood",
+        "open design"
+      ]
+    },
+    {
+      "slug": "opendrop",
+      "name": "OpenDrop",
+      "category": "Science & measurement",
+      "summary": "Open digital microfluidics platform for manipulating droplets on a physical electrode array, extending CAIBI into serious laboratory hardware.",
+      "source": {
+        "name": "GaudiLabs",
+        "url": "https://github.com/GaudiLabs/OpenDrop",
+        "kind": "repository"
+      },
+      "pipelineStage": "REVIEWED SOURCE",
+      "tags": [
+        "microfluidics",
+        "lab",
+        "open hardware",
+        "PCB"
+      ]
+    },
+    {
+      "slug": "openembroidery",
+      "name": "OpenEmbroidery Machine",
+      "category": "Textiles & craft",
+      "summary": "Project for converting an ordinary sewing machine into a computer-controlled embroidery machine using stepper motion and G-code.",
+      "source": {
+        "name": "F33RNI",
+        "url": "https://github.com/F33RNI/OpenEmbroidery",
+        "kind": "repository"
+      },
+      "pipelineStage": "FOUND",
+      "tags": [
+        "embroidery",
+        "sewing",
+        "Arduino",
+        "motion"
+      ]
+    },
+    {
+      "slug": "openflexure-block-stage",
+      "name": "OpenFlexure Block Stage",
+      "category": "Science & measurement",
+      "summary": "Precision flexure-motion project from the OpenFlexure ecosystem, useful for builders interested in accurate small-scale positioning rather than a complete microscope.",
+      "source": {
+        "name": "OpenFlexure",
+        "url": "https://github.com/OpenFlexure",
+        "kind": "repository"
+      },
+      "pipelineStage": "FOUND",
+      "tags": [
+        "precision motion",
+        "3D printed",
+        "microscopy",
+        "mechanism"
+      ]
+    },
+    {
+      "slug": "openflexure-delta-stage",
+      "name": "OpenFlexure Delta Stage",
+      "category": "Science & measurement",
+      "summary": "Open precision-motion ecosystem related to the microscope platform.",
+      "source": {
+        "name": "OpenFlexure",
+        "url": "https://github.com/OpenFlexure",
+        "kind": "repository"
+      },
+      "pipelineStage": "FOUND",
+      "tags": [
+        "microscopy",
+        "motion",
+        "3D printed"
+      ]
+    },
+    {
+      "slug": "openflexure-microscope",
+      "name": "OpenFlexure Microscope",
+      "category": "Science & measurement",
+      "summary": "A 3D-printable microscope platform with precise flexure-based sample positioning and multiple optical configurations.",
+      "source": {
+        "name": "OpenFlexure",
+        "url": "https://gitlab.com/openflexure/openflexure-microscope/",
+        "kind": "creator"
+      },
+      "pipelineStage": "ASSESSED",
+      "tags": [
+        "Science & measurement",
+        "3D printer",
+        "Optics",
+        "LEARN",
+        "MORE CAPABILITY",
+        "PLATFORM"
+      ],
+      "assessment": {
+        "verdict": "WORTH CONSIDERING",
+        "reason": "It provides a serious open instrument platform rather than a classroom toy, with the option to change mechanics, optics and automation.",
+        "cost": "Configuration-dependent",
+        "time": "Multi-stage",
+        "difficulty": 4,
+        "aiLeverage": 3,
+        "evidenceStatus": "Strong",
+        "aiCanHelp": [
+          "Documentation search",
+          "Configuration help",
+          "Software changes",
+          "Troubleshooting"
+        ],
+        "aiCantDo": [
+          "Print the precision mechanical parts",
+          "Fit and align the optics",
+          "Assemble the flexure stage without introducing mechanical errors",
+          "Focus and calibrate the real microscope",
+          "Verify image quality and positioning repeatability for the intended use"
+        ],
+        "mainCatch": "Optics, calibration and precise assembly matter more than simply getting the printed parts to fit together.",
+        "checkedOn": "17 Aug 2026"
+      },
+      "resources": [
+        {
+          "name": "OpenFlexure build routes",
+          "url": "https://openflexure.org/projects/microscope/build",
+          "type": "docs",
+          "note": "Official build selector for current microscope configurations and releases."
+        },
+        {
+          "name": "OpenFlexure documentation",
+          "url": "https://openflexure.org/projects/microscope/documentation",
+          "type": "docs",
+          "note": "Official documentation hub for mechanics, optics, software and supported configurations."
+        },
+        {
+          "name": "OpenFlexure v7 high-resolution instructions",
+          "url": "https://build.openflexure.org/openflexure-microscope/v7.0.0-beta5/high_res_microscope.html",
+          "type": "docs",
+          "note": "Detailed assembly instructions for the current v7 beta high-resolution route."
+        }
+      ],
+      "lastChecked": "17 Aug 2026"
+    },
+    {
+      "slug": "openhasp",
+      "name": "openHASP Panels",
+      "category": "Home & automation",
+      "summary": "Open ESP32 touchscreen control-panel platform.",
+      "source": {
+        "name": "openHASP",
+        "url": "https://github.com/HASwitchPlate/openHASP",
+        "kind": "repository"
+      },
+      "pipelineStage": "FOUND",
+      "tags": [
+        "ESP32",
+        "touchscreen",
+        "home automation"
+      ]
+    },
+    {
+      "slug": "openhydroponics",
+      "name": "OpenHydroponics",
+      "category": "Garden & growing",
+      "summary": "Open hydroponics project combining physical growing hardware, sensing and control.",
+      "source": {
+        "name": "evandavey",
+        "url": "https://github.com/evandavey/OpenHydroponics",
+        "kind": "repository"
+      },
+      "pipelineStage": "FOUND",
+      "tags": [
+        "hydroponics",
+        "growing",
+        "automation",
+        "sensors"
+      ]
+    },
+    {
+      "slug": "openknit",
+      "name": "OpenKnit",
+      "category": "Textiles & craft",
+      "summary": "Open digital knitting-machine project that turns garment design files into a physical textile workflow. Strong example of AI-assisted making beyond electronics.",
+      "source": {
+        "name": "g3rard / OpenKnit",
+        "url": "https://github.com/g3rard/OpenKnit",
+        "kind": "repository"
+      },
+      "pipelineStage": "ASSESSMENT CANDIDATE",
+      "tags": [
+        "knitting",
+        "textiles",
+        "digital fabrication",
+        "machine"
+      ]
+    },
+    {
+      "slug": "openmower",
+      "name": "OpenMower",
+      "category": "Robotics",
+      "summary": "A conversion that replaces the electronics in compatible robot mowers with GPS-guided, map-aware open hardware and software.",
+      "source": {
+        "name": "Clemens Elflein",
+        "url": "https://github.com/ClemensElflein/OpenMower",
+        "kind": "repository"
+      },
+      "pipelineStage": "ASSESSED",
+      "tags": [
+        "Robotics",
+        "Electronics",
+        "Linux",
+        "Mechanical work",
+        "MORE CAPABILITY",
+        "REUSE",
+        "PLATFORM"
+      ],
+      "assessment": {
+        "verdict": "FOR THE BUILD",
+        "reason": "It can turn a compatible basic mower into a much more capable open platform. The case is strongest if you value control, mapping and modification rather than simply needing the grass cut.",
+        "cost": "~€700 + mower + RTK",
+        "time": "Weekend+",
+        "difficulty": 5,
+        "aiLeverage": 2,
+        "evidenceStatus": "Strong",
+        "aiCanHelp": [
+          "Configuration help",
+          "Code investigation",
+          "Diagnostics"
+        ],
+        "aiCantDo": [
+          "Modify the donor mower safely",
+          "Make the electrical and mechanical connections inside the machine",
+          "Install and prove the positioning hardware in the real garden",
+          "Test emergency behaviour, obstacle handling and unattended operation",
+          "Take responsibility for the safety consequences of a bad installation"
+        ],
+        "mainCatch": "This is a substantial machine conversion involving electronics, Linux, mechanical work and outdoor safety. AI does not remove the consequences of getting those parts wrong.",
+        "checkedOn": "17 Aug 2026"
+      },
+      "resources": [
+        {
+          "name": "open_mower_ros",
+          "url": "https://github.com/ClemensElflein/open_mower_ros",
+          "type": "repo",
+          "note": "ROS navigation, planning and state machine used by the OpenMower ecosystem."
+        },
+        {
+          "name": "OpenMowerOS",
+          "url": "https://github.com/ClemensElflein/OpenMowerOS",
+          "type": "repo",
+          "note": "Operating system image used by the current OpenMower software route."
+        },
+        {
+          "name": "hw-openmower-universal",
+          "url": "https://github.com/xtech/hw-openmower-universal",
+          "type": "repo",
+          "note": "Universal mainboard hardware repository linked by the main OpenMower project."
+        },
+        {
+          "name": "OpenMower build documentation",
+          "url": "https://openmower.de/latest/docs/step-by-step-guide/",
+          "type": "docs",
+          "note": "Current step-by-step route recommended by the project for new builders."
+        }
+      ],
+      "lastChecked": "17 Aug 2026"
+    },
+    {
+      "slug": "openpump",
+      "name": "OpenPump",
+      "category": "Science & measurement",
+      "summary": "Open-source pump-control project relevant to fluid handling and laboratory automation. Requires source review against newer pump platforms before assessment.",
+      "source": {
+        "name": "Gert Nienaber",
+        "url": "https://github.com/gniezen/openpump",
+        "kind": "repository"
+      },
+      "pipelineStage": "FOUND",
+      "tags": [
+        "pump",
+        "lab",
+        "fluidics",
+        "open hardware"
+      ]
+    },
+    {
+      "slug": "openscan-mini",
+      "name": "OpenScan Mini",
+      "category": "Science & measurement",
+      "summary": "A compact open-source photogrammetry scanner that rotates small objects through controlled camera positions to create detailed 3D models.",
+      "source": {
+        "name": "OpenScan",
+        "url": "https://github.com/OpenScan-org/OpenScan-Doc/blob/main/docs/hardware/OpenScanMini.md",
+        "kind": "repository"
+      },
+      "pipelineStage": "ASSESSED",
+      "tags": [
+        "Science & measurement",
+        "3D printer",
+        "Raspberry Pi",
+        "Photography",
+        "USEFUL",
+        "DIGITISE",
+        "PLATFORM"
+      ],
+      "assessment": {
+        "verdict": "RECOMMENDED",
+        "reason": "It turns physical objects into reusable digital geometry with an unusually accessible open hardware route. AI can help with scan preparation, photogrammetry workflow, cleanup and adapting the printable frame.",
+        "cost": "From €232 kit / €386 fuller kit",
+        "time": "Not published",
+        "difficulty": 3,
+        "aiLeverage": 4,
+        "evidenceStatus": "Strong",
+        "aiCanHelp": [
+          "Scan workflow planning",
+          "Image and mesh troubleshooting",
+          "CAD cleanup guidance",
+          "Configuration help"
+        ],
+        "aiCantDo": [
+          "Print parts",
+          "Assemble motors and camera",
+          "Prepare objects",
+          "Capture scans",
+          "Validate dimensions"
+        ],
+        "mainCatch": "Scan quality still depends on lighting, surface preparation, focus, object positioning and photogrammetry processing. The hardware does not make every object easy to scan.",
+        "checkedOn": "29 Aug 2026"
+      },
+      "resources": [
+        {
+          "name": "OpenScan-Design",
+          "url": "https://github.com/OpenScan-org/OpenScan-Design",
+          "type": "repo",
+          "note": "Current design repository containing Mini V1/V2 files, printing guidance, assembly guidance and community modifications."
+        },
+        {
+          "name": "OpenScan-Doc",
+          "url": "https://github.com/OpenScan-org/OpenScan-Doc",
+          "type": "repo",
+          "note": "Current hardware and software documentation for supported OpenScan configurations."
+        },
+        {
+          "name": "OpenScan Mini hardware guide",
+          "url": "https://github.com/OpenScan-org/OpenScan-Doc/blob/main/docs/hardware/OpenScanMini.md",
+          "type": "docs",
+          "note": "Current Mini V1 BOM and hardware guidance, including supported cameras and printed parts."
+        },
+        {
+          "name": "OpenScan Mini product and configuration page",
+          "url": "https://openscan.eu/pages/openscan-mini",
+          "type": "docs",
+          "note": "Current supported kit configurations, scan volume, camera options and processing routes."
+        }
+      ],
+      "lastChecked": "29 Aug 2026"
+    },
+    {
+      "slug": "otto-diy",
+      "name": "Otto DIY",
+      "category": "Robotics",
+      "summary": "Large open robot ecosystem with many printable variants.",
+      "source": {
+        "name": "Otto DIY",
+        "url": "https://github.com/OttoDIY",
+        "kind": "repository"
+      },
+      "pipelineStage": "FOUND",
+      "tags": [
+        "robot",
+        "3D printed",
+        "education"
+      ]
+    },
+    {
+      "slug": "otto-ninja",
+      "name": "Otto Ninja",
+      "category": "Robotics",
+      "summary": "More capable printable Otto-family robot route for builders who want a larger movement and interaction project than the simplest Otto builds.",
+      "source": {
+        "name": "Otto DIY",
+        "url": "https://github.com/OttoDIY/OttoNinja",
+        "kind": "repository"
+      },
+      "pipelineStage": "FOUND",
+      "tags": [
+        "robot",
+        "3D printed",
+        "education",
+        "Arduino"
+      ]
+    },
+    {
+      "slug": "parol6",
+      "name": "PAROL6 Desktop Robot Arm",
+      "category": "Robotics",
+      "summary": "A six-axis open desktop robot arm with printable structure, a published BOM, control electronics, GUI, Python API and ROS2/MoveIt routes.",
+      "source": {
+        "name": "Source Robotics",
+        "url": "https://github.com/Source-Robotics/PAROL6-Desktop-robot-arm",
+        "kind": "repository"
+      },
+      "pipelineStage": "ASSESSED",
+      "tags": [
+        "Robotics",
+        "3D printer",
+        "Electronics",
+        "Mechanical assembly",
+        "Robotics software",
+        "ROBOTICS",
+        "PLATFORM",
+        "LEARN"
+      ],
+      "assessment": {
+        "verdict": "FOR THE BUILD",
+        "reason": "It is a serious robotics platform rather than a novelty arm. The open mechanics, control stack, Python API and ROS2 ecosystem give AI useful software work after the physical machine is correctly assembled.",
+        "cost": "DIY varies; €1,188.81 partial kit / €2,378.81 kit",
+        "time": "Not published",
+        "difficulty": 5,
+        "aiLeverage": 4,
+        "evidenceStatus": "Strong",
+        "aiCanHelp": [
+          "Control-code investigation",
+          "Python integration",
+          "ROS2 and MoveIt help",
+          "Diagnostics and automation logic"
+        ],
+        "aiCantDo": [
+          "Source the BOM",
+          "Print and assemble joints",
+          "Wire power and control hardware",
+          "Calibrate axes",
+          "Test safely"
+        ],
+        "mainCatch": "This is a high-consequence multi-axis machine. The source carries explicit serious-hazard warnings, and calibration, wiring, power, joint assembly and safe testing remain human responsibilities.",
+        "checkedOn": "29 Aug 2026"
+      },
+      "resources": [
+        {
+          "name": "PAROL6 Desktop Robot Arm",
+          "url": "https://github.com/Source-Robotics/PAROL6-Desktop-robot-arm",
+          "type": "repo",
+          "note": "Canonical current source containing the BOM, STL files, build instructions, control-board software and safety material."
+        },
+        {
+          "name": "PAROL6 current BOM",
+          "url": "https://github.com/Source-Robotics/PAROL6-Desktop-robot-arm/blob/main/BOM/BOM.md",
+          "type": "files",
+          "note": "Current self-source parts list. The project asks builders to report stale supplier links rather than assuming every old link remains valid."
+        },
+        {
+          "name": "PAROL6 build instructions",
+          "url": "https://github.com/Source-Robotics/PAROL6-Desktop-robot-arm/tree/main/Building%20instructions",
+          "type": "docs",
+          "note": "Creator assembly documentation for the mechanical robot and its control hardware."
+        },
+        {
+          "name": "Source Robotics PAROL6 purchase routes",
+          "url": "https://source-robotics.com/pages/robots",
+          "type": "docs",
+          "note": "Current finished robot, kit, partial-kit, printed-parts and controller options for comparing DIY with supported purchase routes."
+        }
+      ],
+      "lastChecked": "29 Aug 2026"
+    },
+    {
+      "slug": "parol6-control",
+      "name": "PAROL6 Control Stack",
+      "category": "Robotics",
+      "summary": "Original PAROL6 project source and control material. Keep alongside the maintained Source Robotics route while CAIBI checks which files are current.",
+      "source": {
+        "name": "PAROL6 original project",
+        "url": "https://github.com/PCrnjak/PAROL6-desktop-robot-arm",
+        "kind": "repository"
+      },
+      "pipelineStage": "FOUND",
+      "tags": [
+        "robot arm",
+        "control",
+        "motion",
+        "desktop"
+      ]
+    },
+    {
+      "slug": "plasma-clock",
+      "name": "Plasma Clock",
+      "category": "Electronics",
+      "summary": "Distinctive physical clock build with a stronger visual proposition than a generic dev-board demo.",
+      "source": {
+        "name": "vladkorotnev",
+        "url": "https://github.com/vladkorotnev/plasma-clock",
+        "kind": "repository"
+      },
+      "pipelineStage": "FOUND",
+      "tags": [
+        "clock",
+        "display",
+        "ESP32"
+      ]
+    },
+    {
+      "slug": "plotclock",
+      "name": "Plotclock",
+      "category": "Art & objects",
+      "summary": "Mechanical drawing clock that physically writes and erases the time. An approachable kinetic object with clear opportunities for AI-assisted modifications and enclosure design.",
+      "source": {
+        "name": "Plotclock community",
+        "url": "https://github.com/9a/plotclock",
+        "kind": "repository"
+      },
+      "pipelineStage": "FOUND",
+      "tags": [
+        "drawing",
+        "clock",
+        "servo",
+        "3D printed"
+      ]
+    },
+    {
+      "slug": "polyformer",
+      "name": "Polyformer",
+      "category": "Recycling & materials",
+      "summary": "Open machine that turns discarded PET bottles into 3D-printer filament. A strong circular-making project with CAD, firmware and physical process all in one build.",
+      "source": {
+        "name": "Reiten Cheng / Polyformer",
+        "url": "https://hackaday.io/project/185304-polyformer-ideal-filament-recycler",
+        "kind": "creator"
+      },
+      "pipelineStage": "ASSESSMENT CANDIDATE",
+      "tags": [
+        "recycling",
+        "plastic",
+        "3D printing",
+        "machine"
+      ]
+    },
+    {
+      "slug": "poppy-ergo-jr",
+      "name": "Poppy Ergo Jr",
+      "category": "Robotics",
+      "summary": "Compact open robot arm designed for education and experimentation, with a much more approachable physical scope than a full humanoid.",
+      "source": {
+        "name": "Poppy Project",
+        "url": "https://github.com/poppy-project/poppy-ergo-jr",
+        "kind": "repository"
+      },
+      "pipelineStage": "REVIEWED SOURCE",
+      "tags": [
+        "robot arm",
+        "3D printed",
+        "education",
+        "Python"
+      ]
+    },
+    {
+      "slug": "poppy-humanoid",
+      "name": "Poppy Humanoid",
+      "category": "Robotics",
+      "summary": "Large open 3D-printed humanoid robotics platform. Expensive and mechanically demanding, but useful as the upper end of what an individual or lab can build.",
+      "source": {
+        "name": "Poppy Project",
+        "url": "https://github.com/poppy-project/poppy-humanoid",
+        "kind": "repository"
+      },
+      "pipelineStage": "FOUND",
+      "tags": [
+        "humanoid",
+        "3D printed",
+        "robot",
+        "research"
+      ]
+    },
+    {
+      "slug": "precious-plastic-injection",
+      "name": "Precious Plastic Injection Machine",
+      "category": "Recycling & materials",
+      "summary": "Open small-scale plastic injection-moulding route from the Precious Plastic ecosystem. Relevant to mould design and physical product production beyond additive manufacturing.",
+      "source": {
+        "name": "Precious Plastic / One Army",
+        "url": "https://github.com/ONEARMY/precious-plastic",
+        "kind": "repository"
+      },
+      "pipelineStage": "FOUND",
+      "tags": [
+        "recycling",
+        "injection moulding",
+        "plastic",
+        "machine"
+      ]
+    },
+    {
+      "slug": "precious-plastic-shredder",
+      "name": "Precious Plastic Shredder",
+      "category": "Recycling & materials",
+      "summary": "Major open recycling-machine ecosystem covering shredding and plastic processing. Useful bridge from CAD and fabrication into actual materials reuse.",
+      "source": {
+        "name": "Precious Plastic / One Army",
+        "url": "https://github.com/ONEARMY/precious-plastic",
+        "kind": "repository"
+      },
+      "pipelineStage": "ASSESSMENT CANDIDATE",
+      "tags": [
+        "recycling",
+        "plastic",
+        "shredder",
+        "fabrication"
+      ]
+    },
+    {
+      "slug": "printnc",
+      "name": "PrintNC",
+      "category": "Furniture & woodworking",
+      "summary": "Influential DIY CNC design using steel structure and printed parts. The repository is archived and points builders to newer community documentation, so CAIBI must verify the current route before assessment.",
+      "source": {
+        "name": "PrintNC community",
+        "url": "https://github.com/threedesigns/printNC",
+        "kind": "repository"
+      },
+      "pipelineStage": "FOUND",
+      "tags": [
+        "CNC",
+        "steel",
+        "3D printed",
+        "router"
+      ]
+    },
+    {
+      "slug": "rctimer-camera-gimbal",
+      "name": "Open Brushless Camera Gimbal",
+      "category": "Photography & video",
+      "summary": "Open brushless gimbal controller for camera stabilization. It is an older source, so CAIBI should verify current motors, sensors and mechanical build routes before assessment.",
+      "source": {
+        "name": "BruGi community",
+        "url": "https://github.com/jpmalkiewicz/brushless-gimbal-brugi-code",
+        "kind": "repository"
+      },
+      "pipelineStage": "FOUND",
+      "tags": [
+        "camera",
+        "gimbal",
+        "motion",
+        "brushless"
+      ]
+    },
+    {
+      "slug": "rgb-p4-matrix-clock",
+      "name": "RGB P4 Matrix Clock",
+      "category": "Electronics",
+      "summary": "Large RGB matrix clock using ESP32.",
+      "source": {
+        "name": "Lightwell-bg",
+        "url": "https://github.com/Lightwell-bg/RGB-P4-Led-Matrix-Clock-based-on-ESP32",
+        "kind": "repository"
+      },
+      "pipelineStage": "FOUND",
+      "tags": [
+        "ESP32",
+        "LED matrix",
+        "clock"
+      ]
+    },
+    {
+      "slug": "robot-actuator-esp32-v8",
+      "name": "ESP32 Robot Actuator",
+      "category": "Robotics",
+      "summary": "ESP32 based robot actuator and motion-control project.",
+      "source": {
+        "name": "chilipeppr",
+        "url": "https://github.com/chilipeppr/robot-actuator-esp32-v8",
+        "kind": "repository"
+      },
+      "pipelineStage": "FOUND",
+      "tags": [
+        "ESP32",
+        "actuator",
+        "motion"
+      ]
+    },
+    {
+      "slug": "robotduck-head",
+      "name": "RobotDuck Head",
+      "category": "Robotics",
+      "summary": "ESP32 animatronic robot-head project.",
+      "source": {
+        "name": "AI-FanGe",
+        "url": "https://github.com/AI-FanGe/RobotDuck_Head_Esp32",
+        "kind": "repository"
+      },
+      "pipelineStage": "FOUND",
+      "tags": [
+        "ESP32",
+        "animatronic",
+        "robot"
+      ]
+    },
+    {
+      "slug": "rpsd-skateboard-deck",
+      "name": "Recycled Plastic Skateboard Deck",
+      "category": "Recycling & materials",
+      "summary": "Open process and machinery for turning waste plastic into a physical skateboard deck. Much closer to real materials fabrication than a desktop electronics demo.",
+      "source": {
+        "name": "RPSD / Hackaday.io",
+        "url": "https://hackaday.io/project/185588",
+        "kind": "creator"
+      },
+      "pipelineStage": "FOUND",
+      "tags": [
+        "recycling",
+        "skateboard",
+        "moulding",
+        "plastic"
+      ]
+    },
+    {
+      "slug": "satnogs-ground-station",
+      "name": "SatNOGS Ground Station",
+      "category": "Science & measurement",
+      "summary": "Open satellite ground-station ecosystem combining antennas, rotators, radio hardware and network software. Strong multi-discipline build candidate once the current hardware route is mapped.",
+      "source": {
+        "name": "Libre Space Foundation",
+        "url": "https://gitlab.com/librespacefoundation/satnogs",
+        "kind": "creator"
+      },
+      "pipelineStage": "FOUND",
+      "tags": [
+        "satellite",
+        "antenna",
+        "ground station",
+        "radio"
+      ]
+    },
+    {
+      "slug": "satnogs-rotator",
+      "name": "SatNOGS Antenna Rotator",
+      "category": "Science & measurement",
+      "summary": "Archived but influential open antenna-rotator design for satellite ground stations. Useful historical source, but CAIBI should verify the current successor route before assessment.",
+      "source": {
+        "name": "SatNOGS",
+        "url": "https://github.com/satnogs/satnogs-rotator",
+        "kind": "repository"
+      },
+      "pipelineStage": "FOUND",
+      "tags": [
+        "satellite",
+        "antenna",
+        "rotator",
+        "3D printed"
+      ]
+    },
+    {
+      "slug": "sesame-robot",
+      "name": "Sesame Robot",
+      "category": "Robotics",
+      "summary": "A printable ESP32 quadruped using eight servos, an expressive OLED face and open animation/control software.",
+      "source": {
+        "name": "Dorian Todd",
+        "url": "https://github.com/dorianborian/sesame-robot",
+        "kind": "repository"
+      },
+      "pipelineStage": "ASSESSED",
+      "tags": [
+        "Robotics",
+        "3D printer",
+        "Soldering",
+        "LEARN",
+        "COOL",
+        "PLATFORM"
+      ],
+      "assessment": {
+        "verdict": "WORTH CONSIDERING",
+        "reason": "The result is a useful robotics platform rather than a one-off novelty. Hardware, movement, expressions and software can all be changed after the first build.",
+        "cost": "$50–60",
+        "time": "Weekend+",
+        "difficulty": 4,
+        "aiLeverage": 3,
+        "evidenceStatus": "Strong",
+        "aiCanHelp": [
+          "Firmware changes",
+          "Animation code",
+          "API integrations",
+          "Debugging"
+        ],
+        "aiCantDo": [
+          "Print the mechanical parts",
+          "Wire and fit the eight servos",
+          "Assemble the joints and body with the required clearances",
+          "Calibrate movement on the physical robot",
+          "Verify that it moves reliably without binding, slipping or tipping"
+        ],
+        "mainCatch": "Eight servos, printed mechanics and wiring create plenty of opportunities for small errors to become movement problems.",
+        "checkedOn": "17 Aug 2026"
+      },
+      "resources": [
+        {
+          "name": "Sesame hardware guide",
+          "url": "https://github.com/dorianborian/sesame-robot/blob/main/hardware/README.md",
+          "type": "docs",
+          "note": "Hardware index covering the bill of materials, CAD, PCB and printing resources."
+        },
+        {
+          "name": "Sesame printing guide",
+          "url": "https://github.com/dorianborian/sesame-robot/blob/main/hardware/printing/README.md",
+          "type": "docs",
+          "note": "Creator guidance for material, infill, supports and the current printable enclosure generation."
+        }
+      ],
+      "lastChecked": "17 Aug 2026"
+    },
+    {
+      "slug": "smartknob",
+      "name": "SmartKnob",
+      "category": "Creative tools",
+      "summary": "An open haptic control knob that uses a brushless gimbal motor and magnetic encoder to create software-defined detents, endstops, springs and other tactile behaviours.",
+      "source": {
+        "name": "Scott Bezek",
+        "url": "https://github.com/scottbez1/smartknob",
+        "kind": "repository"
+      },
+      "pipelineStage": "ASSESSED",
+      "tags": [
+        "Creative tools",
+        "PCB fabrication",
+        "SMD soldering",
+        "3D printing",
+        "ESP32",
+        "HAPTICS",
+        "CUSTOM",
+        "LEARN"
+      ],
+      "assessment": {
+        "verdict": "FOR THE BUILD",
+        "reason": "It is an unusually capable physical interface whose feel is defined in software. AI can help understand the control code, create behaviours and debug integrations, but the value only appears after a difficult electronics and mechanical build works reliably.",
+        "cost": "No stable complete build price published",
+        "time": "Time-consuming advanced build",
+        "difficulty": 5,
+        "aiLeverage": 4,
+        "evidenceStatus": "Strong",
+        "aiCanHelp": [
+          "Firmware investigation",
+          "Haptic behaviour changes",
+          "Host integrations",
+          "Debugging support",
+          "CAD and enclosure iteration"
+        ],
+        "aiCantDo": [
+          "Order PCBs and parts",
+          "Reflow or hot-air solder fine-pitch components",
+          "Print precision parts",
+          "Assemble motor and display",
+          "Calibrate and debug hardware"
+        ],
+        "mainCatch": "The creator explicitly says SmartKnob View is not a mature plug-and-play project. It requires very small-pitch surface-mount soldering, delicate assembly and an expectation of hardware and firmware troubleshooting.",
+        "checkedOn": "29 Aug 2026"
+      },
+      "resources": [
+        {
+          "name": "SmartKnob",
+          "url": "https://github.com/scottbez1/smartknob",
+          "type": "repo",
+          "note": "Canonical hardware, firmware, CAD and release source. The creator distinguishes stable releases from untested master artifacts."
+        },
+        {
+          "name": "SmartKnob stable releases",
+          "url": "https://github.com/scottbez1/smartknob/releases",
+          "type": "files",
+          "note": "Use tested release assets for PCB and mechanical fabrication rather than assuming the latest generated master artifacts are build-ready."
+        },
+        {
+          "name": "SmartKnob interactive demo",
+          "url": "https://scottbez1.github.io/smartknob/",
+          "type": "docs",
+          "note": "Creator Web Serial demo for a calibrated SmartKnob, useful for proving the baseline control path before custom integrations."
+        },
+        {
+          "name": "Independent SmartKnob build report",
+          "url": "https://blog.n8thnl.com/articles/smart-knob",
+          "type": "community",
+          "note": "Independent 2024 build account covering sourcing, printed parts, assembly and debugging from the perspective of a builder learning the required electronics skills."
+        },
+        {
+          "name": "NanoFOC DevKit alternative",
+          "url": "https://github.com/katbinaris/nanofoc_devkit",
+          "type": "community",
+          "note": "Open third-party FOC haptics development board recommended by the SmartKnob creator for people who want to experiment without fabricating the full View hardware."
+        }
+      ],
+      "lastChecked": "29 Aug 2026"
+    },
+    {
+      "slug": "split-flap-display",
+      "name": "Split-Flap Display",
+      "category": "Electronics",
+      "summary": "A modular ESP32-based split-flap display designed to scale from a single character to large installations.",
+      "source": {
+        "name": "Scott Bezek",
+        "url": "https://github.com/scottbez1/splitflap",
+        "kind": "repository"
+      },
+      "pipelineStage": "ASSESSED",
+      "tags": [
+        "Electronics",
+        "Laser cutting",
+        "Soldering",
+        "CUSTOM",
+        "COOL",
+        "PLATFORM"
+      ],
+      "assessment": {
+        "verdict": "FOR THE BUILD",
+        "reason": "A physical display with sound, motion and presence that software cannot reproduce. It makes most sense when the mechanism itself is part of the appeal.",
+        "cost": "Scale-dependent",
+        "time": "Multi-day",
+        "difficulty": 4,
+        "aiLeverage": 2,
+        "evidenceStatus": "Strong",
+        "aiCanHelp": [
+          "Firmware help",
+          "Layout calculations",
+          "Debugging"
+        ],
+        "aiCantDo": [
+          "Fabricate the repeated mechanical parts",
+          "Assemble and wire every display module",
+          "Fix mechanical alignment, friction and sensor positioning problems",
+          "Calibrate a large bank of modules so they behave consistently"
+        ],
+        "mainCatch": "Every extra module multiplies fabrication, assembly, calibration and fault-finding work.",
+        "checkedOn": "17 Aug 2026"
+      },
+      "resources": [
+        {
+          "name": "Split-flap documentation index",
+          "url": "https://github.com/scottbez1/splitflap/blob/master/docs/DocumentationIndex.md",
+          "type": "docs",
+          "note": "Project-maintained index for the current build, ordering and assembly documentation."
+        },
+        {
+          "name": "Split-flap electronics guide",
+          "url": "https://github.com/scottbez1/splitflap/blob/master/docs/ElectronicsGuide.md",
+          "type": "docs",
+          "note": "Detailed electronics guidance for drivers, power and module wiring."
+        },
+        {
+          "name": "Split-flap flap fabrication guide",
+          "url": "https://github.com/scottbez1/splitflap/blob/master/docs/Flaps.md",
+          "type": "docs",
+          "note": "Detailed guide for producing the physical character flaps, one of the most labour-sensitive parts of the build."
+        }
+      ],
+      "lastChecked": "17 Aug 2026"
+    },
+    {
+      "slug": "spotmicro",
+      "name": "SpotMicro",
+      "category": "Robotics",
+      "summary": "Printable quadruped robot platform.",
+      "source": {
+        "name": "mike4192",
+        "url": "https://github.com/mike4192/spotMicro",
+        "kind": "repository"
+      },
+      "pipelineStage": "FOUND",
+      "tags": [
+        "quadruped",
+        "3D printed",
+        "robot"
+      ]
+    },
+    {
+      "slug": "tellaprompter",
+      "name": "Tellaprompter",
+      "category": "Electronics",
+      "summary": "A compact ESP32 touchscreen teleprompter with touch speed control, a physical pause button and a printable monitor mount.",
+      "source": {
+        "name": "Schematik",
+        "url": "https://www.schematik.io/projects/build-the-tellaprompter-esp32-touchscreen",
+        "kind": "creator"
+      },
+      "pipelineStage": "ASSESSED",
+      "tags": [
+        "Electronics",
+        "ESP32",
+        "3D printer",
+        "USEFUL",
+        "CUSTOM",
+        "LEARN"
+      ],
+      "assessment": {
+        "verdict": "RECOMMENDED",
+        "reason": "The electronics are simple enough to finish, but the result is still genuinely useful. AI can help change the script handling, controls and enclosure without replacing the physical build.",
+        "cost": "Not published",
+        "time": "1.5 hours",
+        "difficulty": 3,
+        "aiLeverage": 4,
+        "evidenceStatus": "Strong",
+        "aiCanHelp": [
+          "Firmware changes",
+          "Script handling",
+          "Touch calibration help",
+          "Enclosure iteration"
+        ],
+        "aiCantDo": [
+          "Wire the display and touch controller correctly",
+          "Print or fabricate the monitor mount",
+          "Calibrate the real touchscreen",
+          "Position the finished display so you can read it while looking toward the camera"
+        ],
+        "mainCatch": "Touch calibration and the quality of the physical monitor mount matter more than the basic firmware once the first version works.",
+        "checkedOn": "27 Aug 2026"
+      },
+      "resources": [
+        {
+          "name": "Adafruit ILI9341 library",
+          "url": "https://github.com/adafruit/Adafruit_ILI9341",
+          "type": "docs",
+          "note": "Display driver used by the published starter firmware."
+        },
+        {
+          "name": "XPT2046 touchscreen library",
+          "url": "https://github.com/PaulStoffregen/XPT2046_Touchscreen",
+          "type": "docs",
+          "note": "Touch controller library used by the build and useful when diagnosing calibration or orientation issues."
+        }
+      ],
+      "lastChecked": "27 Aug 2026"
+    },
+    {
+      "slug": "thor-robot-arm",
+      "name": "Thor Open Robot Arm",
+      "category": "Robotics",
+      "summary": "Open printable robot-arm platform with a long maker history. Worth comparison against newer PAROL6 and OpenMANIPULATOR routes before assessment.",
+      "source": {
+        "name": "AngelLM",
+        "url": "https://github.com/AngelLM/Thor",
+        "kind": "repository"
+      },
+      "pipelineStage": "FOUND",
+      "tags": [
+        "robot arm",
+        "3D printed",
+        "Arduino",
+        "motion"
+      ]
+    },
+    {
+      "slug": "three-axis-camera-slider",
+      "name": "3-Axis Camera Slider",
+      "category": "Photography & video",
+      "summary": "Open 3D-printed DSLR motion-control slider with pan and tilt, CAD files and control code. A visually strong build with obvious AI-assisted design and tuning opportunities.",
+      "source": {
+        "name": "Isaac Chasteau / Hackaday.io",
+        "url": "https://hackaday.io/project/174685-3-axis-camera-slider",
+        "kind": "creator"
+      },
+      "pipelineStage": "ASSESSMENT CANDIDATE",
+      "tags": [
+        "camera",
+        "slider",
+        "motion control",
+        "3D printed"
+      ]
+    },
+    {
+      "slug": "trash-printer-v3",
+      "name": "The Trash Printer V3",
+      "category": "Recycling & materials",
+      "summary": "Open large-format printer designed to print directly from shredded plastic rather than conventional filament.",
+      "source": {
+        "name": "Sam Smith / Hackaday.io",
+        "url": "https://hackaday.io/project/185691-the-trash-printer-version-3",
+        "kind": "creator"
+      },
+      "pipelineStage": "REVIEWED SOURCE",
+      "tags": [
+        "recycling",
+        "large format",
+        "3D printer",
+        "plastic"
+      ]
+    },
+    {
+      "slug": "verhobot",
+      "name": "VerhoBot",
+      "category": "Home & automation",
+      "summary": "A compact ESP32 curtain robot built to automate an existing curtain rail without ropes or pulleys.",
+      "source": {
+        "name": "migit",
+        "url": "https://github.com/migit/verhoBot",
+        "kind": "repository"
+      },
+      "pipelineStage": "ASSESSED",
+      "tags": [
+        "Home & automation",
+        "3D printer",
+        "ESP32",
+        "USEFUL",
+        "CUSTOM",
+        "PLATFORM"
+      ],
+      "assessment": {
+        "verdict": "WORTH CONSIDERING",
+        "reason": "It retrofits automation to an ordinary curtain rail and keeps the hardware and firmware open to modification.",
+        "cost": "Not published",
+        "time": "Not published",
+        "difficulty": 3,
+        "aiLeverage": 4,
+        "evidenceStatus": "Moderate",
+        "aiCanHelp": [
+          "Firmware changes",
+          "Scheduling logic",
+          "Home automation integration"
+        ],
+        "aiCantDo": [
+          "Check the real curtain load, rail geometry and available clearance",
+          "Assemble the motor, battery and drive hardware",
+          "Mount the mechanism so it grips and travels reliably",
+          "Calibrate open and closed positions on the actual curtain",
+          "Prove battery life and unattended operation over repeated cycles"
+        ],
+        "mainCatch": "Curtain weight, rail geometry, traction and battery life are physical variables. A successful build still depends on the installation.",
+        "checkedOn": "17 Aug 2026"
+      },
+      "resources": [
+        {
+          "name": "VerhoBot CAD files",
+          "url": "https://www.thingiverse.com/thing:7370927",
+          "type": "files",
+          "note": "3D CAD files linked from the project source."
+        }
+      ],
+      "lastChecked": "17 Aug 2026"
+    },
+    {
+      "slug": "vesc-hardware",
+      "name": "VESC Motor Controller",
+      "category": "Mobility",
+      "summary": "Open motor-controller hardware ecosystem used across electric skateboards, bikes, robots and other mobility builds. Relevant as a platform rather than a single finished object.",
+      "source": {
+        "name": "Benjamin Vedder",
+        "url": "https://github.com/vedderb/bldc-hardware",
+        "kind": "repository"
+      },
+      "pipelineStage": "FOUND",
+      "tags": [
+        "motor controller",
+        "EV",
+        "skateboard",
+        "electronics"
+      ]
+    },
+    {
+      "slug": "voice-controlled-robot",
+      "name": "Voice Controlled Robot",
+      "category": "Robotics",
+      "summary": "Voice-controlled physical robot project with ESP32 hardware.",
+      "source": {
+        "name": "atomic14",
+        "url": "https://github.com/atomic14/voice-controlled-robot",
+        "kind": "repository"
+      },
+      "pipelineStage": "FOUND",
+      "tags": [
+        "ESP32",
+        "voice",
+        "robot"
+      ]
+    },
+    {
+      "slug": "voron-2",
+      "name": "Voron 2",
+      "category": "Workshop",
+      "summary": "Highly documented open-source 3D printer build ecosystem.",
+      "source": {
+        "name": "Voron Design",
+        "url": "https://github.com/VoronDesign/Voron-2",
+        "kind": "repository"
+      },
+      "pipelineStage": "FOUND",
+      "tags": [
+        "3D printer",
+        "motion",
+        "fabrication"
+      ]
+    },
+    {
+      "slug": "voron-trident",
+      "name": "Voron Trident",
+      "category": "Workshop",
+      "summary": "Open-source CoreXY printer route with large builder ecosystem.",
+      "source": {
+        "name": "Voron Design",
+        "url": "https://github.com/VoronDesign/Voron-Trident",
+        "kind": "repository"
+      },
+      "pipelineStage": "FOUND",
+      "tags": [
+        "3D printer",
+        "fabrication"
+      ]
+    },
+    {
+      "slug": "watchy",
+      "name": "Watchy",
+      "category": "Wearables",
+      "summary": "A fully open-source ESP32-S3 e-paper watch sold as a small assembly kit and designed to be reprogrammed, modified and recased.",
+      "source": {
+        "name": "SQFMI",
+        "url": "https://github.com/sqfmi/Watchy",
+        "kind": "repository"
+      },
+      "pipelineStage": "ASSESSED",
+      "tags": [
+        "Wearables",
+        "ESP32-S3",
+        "Arduino IDE",
+        "CUSTOM",
+        "LEARN",
+        "PLATFORM"
+      ],
+      "assessment": {
+        "verdict": "FOR THE BUILD",
+        "reason": "The reason to choose Watchy is not to beat a mainstream smartwatch on features. It is to own an unusually open wearable platform whose hardware, firmware, watch faces and enclosure can all be changed.",
+        "cost": "£45.49 UK / $59 US",
+        "time": "~1 hour assembly and setup",
+        "difficulty": 2,
+        "aiLeverage": 4,
+        "evidenceStatus": "Strong",
+        "aiCanHelp": [
+          "Watch-face code",
+          "Firmware changes",
+          "ESP32 troubleshooting",
+          "Power-use optimisation",
+          "Custom feature planning"
+        ],
+        "aiCantDo": [
+          "Connect display and battery",
+          "Assemble case",
+          "Enter bootloader mode",
+          "Flash and verify firmware",
+          "Protect and wear the hardware"
+        ],
+        "mainCatch": "Assembly is simple but the glass e-paper display and tiny ribbon connector need care. The stock experience is also deliberately basic, so much of the value depends on wanting to customise the firmware rather than simply wear a finished smartwatch.",
+        "checkedOn": "29 Aug 2026"
+      },
+      "resources": [
+        {
+          "name": "Watchy",
+          "url": "https://github.com/sqfmi/Watchy",
+          "type": "repo",
+          "note": "Canonical firmware and Arduino library repository for the open-source watch, with current release history and examples."
+        },
+        {
+          "name": "Watchy v3 hardware reference",
+          "url": "https://watchy.sqfmi.com/docs/hardware/",
+          "type": "docs",
+          "note": "Official revision table, v3 ESP32-S3 hardware details, battery specification, dimensions and hardware design-file links."
+        },
+        {
+          "name": "Watchy assembly and firmware setup",
+          "url": "https://watchy.sqfmi.com/docs/getting-started/",
+          "type": "docs",
+          "note": "Current official assembly, bootloader, Arduino and firmware-upload route for v3 hardware."
+        },
+        {
+          "name": "Watchy battery guidance",
+          "url": "https://watchy.sqfmi.com/docs/battery-life/",
+          "type": "docs",
+          "note": "Official runtime expectations and the specific Wi-Fi, Bluetooth, display and deep-sleep behaviours that affect battery life."
+        },
+        {
+          "name": "Independent Watchy build report",
+          "url": "https://claire-blackshaw.com/blog/2024/12/watchy/",
+          "type": "community",
+          "note": "Independent build and firmware experience reporting simple but fiddly assembly and more friction around flashing and the software toolchain."
+        },
+        {
+          "name": "Independent Watchy first impressions",
+          "url": "https://www.revk.uk/2023/05/sqfmi-watchy-first-impressions.html",
+          "type": "community",
+          "note": "Independent ownership report supporting the learning-platform case while flagging exposed-screen and form-factor compromises."
+        }
+      ],
+      "lastChecked": "29 Aug 2026"
+    },
+    {
+      "slug": "wled",
+      "name": "WLED Builds",
+      "category": "Home & automation",
+      "summary": "Massive ESP32 lighting ecosystem with many physical build routes.",
+      "source": {
+        "name": "WLED",
+        "url": "https://github.com/Aircoookie/WLED",
+        "kind": "repository"
+      },
+      "pipelineStage": "FOUND",
+      "tags": [
+        "ESP32",
+        "lighting",
+        "LED"
+      ]
+    },
+    {
+      "slug": "zynthian",
+      "name": "Zynthian V5.1",
+      "category": "Music & audio",
+      "summary": "An open Raspberry Pi 5 music workstation and synthesizer platform available as a documented DIY kit, combining audio I/O, MIDI, touchscreen control, sequencing, sampling, effects and open software.",
+      "source": {
+        "name": "Zynthian",
+        "url": "https://wiki.zynthian.org/index.php/Assembling_Zynthian_Kit_V5.1",
+        "kind": "creator"
+      },
+      "pipelineStage": "ASSESSED",
+      "tags": [
+        "Music & audio",
+        "Raspberry Pi 5",
+        "Audio",
+        "MIDI",
+        "Linux",
+        "MUSIC",
+        "OPEN",
+        "CUSTOM"
+      ],
+      "assessment": {
+        "verdict": "RECOMMENDED",
+        "reason": "Unlike many DIY instruments, the current official route gives you a substantial finished music workstation without requiring PCB fabrication or soldering. AI becomes useful after assembly for configuration, MIDI routing, software investigation, scripting and adapting an unusually open audio platform.",
+        "cost": "€395 kit base, VAT excluded; Pi 5 and PSU options extra; microSD not included",
+        "time": "1 to 3 hours assembly",
+        "difficulty": 2,
+        "aiLeverage": 4,
+        "evidenceStatus": "Strong",
+        "aiCanHelp": [
+          "ZynthianOS troubleshooting",
+          "MIDI and audio routing help",
+          "Configuration planning",
+          "Python and integration work",
+          "Custom workflow investigation"
+        ],
+        "aiCantDo": [
+          "Fit thermal pads",
+          "Mount Raspberry Pi and boards",
+          "Connect delicate ribbon cables",
+          "Prepare microSD",
+          "Connect and verify real audio and MIDI hardware"
+        ],
+        "mainCatch": "The €395 headline is the base kit price before VAT and optional Raspberry Pi 5 or PSU choices, and a microSD card is required separately. The physical build is approachable, but ribbon cables, thermal-pad placement and first-boot software still need careful handling.",
+        "checkedOn": "29 Aug 2026"
+      },
+      "resources": [
+        {
+          "name": "Zynthian UI",
+          "url": "https://github.com/zynthian/zynthian-ui",
+          "type": "repo",
+          "note": "Active core user-interface repository for the open music workstation."
+        },
+        {
+          "name": "Zynthian hardware",
+          "url": "https://github.com/zynthian/zynthian-hw",
+          "type": "repo",
+          "note": "Public hardware-design repository supporting the open-hardware side of the platform."
+        },
+        {
+          "name": "ZynthianOS",
+          "url": "https://github.com/zynthian/ZynthianOS",
+          "type": "repo",
+          "note": "Current operating-system build and distribution source for Zynthian devices."
+        },
+        {
+          "name": "Zynthian V5.1 assembly guide",
+          "url": "https://wiki.zynthian.org/index.php/Assembling_Zynthian_Kit_V5.1",
+          "type": "docs",
+          "note": "Current official BOM, tooling, assembly sequence, first-boot guidance and one-to-three-hour build estimate."
+        },
+        {
+          "name": "Zynthian V5.1 kit",
+          "url": "https://shop.zynthian.org/shop/zynthian-v5-1-kit-383",
+          "type": "docs",
+          "note": "Current official kit configuration and base price, including explicit exclusions and selectable Raspberry Pi / PSU options."
+        },
+        {
+          "name": "V5 builder first impressions",
+          "url": "https://discourse.zynthian.org/t/zynthian-v5-building-and-first-impressions/8516",
+          "type": "community",
+          "note": "First-hand builder report describing a little over three hours of careful assembly and identifying thermal pads and flat-cable connectors as the trickiest steps."
+        },
+        {
+          "name": "V5 one-hour build report",
+          "url": "https://discourse.zynthian.org/t/love-my-new-zynthian/8835",
+          "type": "community",
+          "note": "Independent owner report describing a successful one-hour assembly and straightforward initial bring-up, while noting room for UI refinement."
+        },
+        {
+          "name": "V5.1 current build experience",
+          "url": "https://discourse.zynthian.org/t/great-building-experience/11459",
+          "type": "community",
+          "note": "2025 V5.1 builder report confirming the current guide is workable while flagging a few ribbon-cable and illustration details that can cause uncertainty."
+        }
+      ],
+      "lastChecked": "29 Aug 2026"
+    }
+  ]
+}
