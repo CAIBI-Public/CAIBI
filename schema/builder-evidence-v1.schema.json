@@ -1,0 +1,55 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://caibi.app/schema/builder-evidence-v1.schema.json",
+  "title": "CAIBI Public Builder Evidence Dataset v1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["contractVersion", "generatedAt", "records"],
+  "properties": {
+    "contractVersion": { "const": "1.0" },
+    "generatedAt": { "type": "string", "format": "date-time" },
+    "records": { "type": "array", "items": { "$ref": "#/$defs/report" } }
+  },
+  "$defs": {
+    "link": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["label", "url", "kind"],
+      "properties": {
+        "label": { "type": "string", "minLength": 1 },
+        "url": { "type": "string", "format": "uri", "pattern": "^https?://" },
+        "kind": { "enum": ["github", "makerworld", "printables", "video", "site", "shop", "etsy", "other"] }
+      }
+    },
+    "media": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["url"],
+      "properties": {
+        "url": { "type": "string", "format": "uri" },
+        "alt": { "type": "string" },
+        "sourceUrl": { "type": "string", "format": "uri" },
+        "rightsBasis": { "type": "string" }
+      }
+    },
+    "report": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["id", "projectSlug", "outcome", "publishedAt"],
+      "properties": {
+        "id": { "type": "string", "minLength": 1 },
+        "projectSlug": { "type": "string", "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$" },
+        "displayName": { "type": "string", "minLength": 1 },
+        "region": { "type": "string", "minLength": 1 },
+        "outcome": { "enum": ["Worked first time", "Worked after changes", "Did not finish", "Bought something instead"] },
+        "changes": { "type": "array", "items": { "type": "string", "minLength": 1 } },
+        "cost": { "type": "string" },
+        "time": { "type": "string" },
+        "notes": { "type": "string" },
+        "links": { "type": "array", "items": { "$ref": "#/$defs/link" } },
+        "media": { "type": "array", "items": { "$ref": "#/$defs/media" } },
+        "publishedAt": { "type": "string", "format": "date-time" }
+      }
+    }
+  }
+}
