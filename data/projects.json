@@ -1,6 +1,6 @@
 {
   "contractVersion": "1.0",
-  "generatedAt": "2026-08-31T07:09:50.359Z",
+  "generatedAt": "2026-09-02T14:56:53.127Z",
   "records": [
     {
       "slug": "ai-on-the-edge-device",
@@ -50,6 +50,177 @@
         }
       ],
       "lastChecked": "17 Aug 2026"
+    },
+    {
+      "slug": "albert-apron",
+      "name": "Albert Apron",
+      "category": "Textiles & craft",
+      "summary": "A made-to-measure FreeSewing apron generated from five body measurements, then cut and sewn from ordinary sturdy fabric.",
+      "source": {
+        "name": "FreeSewing",
+        "url": "https://freesewing.eu/docs/designs/albert/",
+        "kind": "documentation"
+      },
+      "pipelineStage": "ASSESSED",
+      "tags": [
+        "Textiles & craft",
+        "Sewing machine",
+        "Fabric scissors or rotary cutter",
+        "Iron",
+        "Measuring tape",
+        "BESPOKE FIT",
+        "BEGINNER",
+        "USEFUL",
+        "LOW COST",
+        "TEXTILES"
+      ],
+      "assessment": {
+        "verdict": "RECOMMENDED",
+        "reason": "Albert is a useful counterexample to the idea that AI-assisted making has to mean electronics. The digital value is in turning measurements and options into a bespoke pattern, explaining unfamiliar sewing steps and helping reason about changes before fabric is cut. The physical quality still comes from accurate measuring, fabric choice, cutting, pressing and stitching.",
+        "cost": "About £13 to £20 of fabric from current UK examples, before delivery and assuming basic sewing supplies are already owned",
+        "time": "Not published by source",
+        "difficulty": 2,
+        "aiLeverage": 3,
+        "evidenceStatus": "Strong",
+        "aiCanHelp": [
+          "Explain measurements and pattern options",
+          "Compare bib, strap and length settings",
+          "Explain sewing terminology and source instructions",
+          "Help plan fabric layout around a known width",
+          "Troubleshoot fit or construction from real builder observations"
+        ],
+        "aiCantDo": [
+          "Measure the wearer",
+          "Choose suitable fabric",
+          "Generate and transfer the pattern",
+          "Cut fabric accurately",
+          "Press hems",
+          "Sew pocket, body and straps",
+          "Try on and verify fit"
+        ],
+        "mainCatch": "The pattern generation is the easy part. A poor measurement, stretchy or unsuitable fabric, inaccurate cutting or inconsistent stitching can still produce a bad apron even when the generated pattern is correct.",
+        "checkedOn": "2 Sep 2026"
+      },
+      "resources": [
+        {
+          "name": "Albert design documentation",
+          "url": "https://freesewing.eu/docs/designs/albert/",
+          "type": "docs",
+          "note": "Primary FreeSewing documentation covering measurements, fabric guidance, cutting requirements and the creator assessment that Albert is suitable for a beginning sewist."
+        },
+        {
+          "name": "Albert design options",
+          "url": "https://freesewing.eu/docs/designs/albert/options/",
+          "type": "docs",
+          "note": "Current parametric controls for back opening, straps, bib dimensions and apron length."
+        },
+        {
+          "name": "Albert sewing instructions",
+          "url": "https://freesewing.eu/docs/designs/albert/instructions/",
+          "type": "docs",
+          "note": "Primary construction route covering the pocket, front hems and straps."
+        },
+        {
+          "name": "FreeSewing Albert showcase",
+          "url": "https://freesewing.eu/showcase/?design=albert",
+          "type": "community",
+          "note": "FreeSewing community showcase route. The archive records repeated Albert builds from 2020 through 2025, including child-size and modified examples."
+        },
+        {
+          "name": "A tiny Albert apron",
+          "url": "https://freesewing.eu/showcase/a-tiny-albert-apron",
+          "type": "community",
+          "note": "Direct community example showing a child-size Albert with strap adjusters added to extend useful fit life."
+        }
+      ],
+      "lastChecked": "2 Sep 2026"
+    },
+    {
+      "slug": "atfab-5-30-minute-chair",
+      "name": "AtFAB 5-30 Minute Chair",
+      "category": "Furniture & woodworking",
+      "summary": "An open-source CNC plywood chair that turns a downloadable cut file, one sheet of material and basic fasteners into full-size furniture.",
+      "source": {
+        "name": "Filson & Rohrbacher / AtFAB",
+        "url": "https://filson-rohrbacher.com/work/atfab",
+        "kind": "creator"
+      },
+      "pipelineStage": "ASSESSED",
+      "tags": [
+        "Furniture & woodworking",
+        "Large-format CNC router",
+        "CAD/CAM software",
+        "Drill and bits",
+        "1/4 inch end mill",
+        "1/8 inch end mill",
+        "Measuring tools",
+        "Sanding and finishing tools",
+        "OPEN FILES",
+        "CNC FURNITURE",
+        "ONE-SHEET BUILD",
+        "CUSTOMISABLE",
+        "REAL MAKER BUILDS"
+      ],
+      "assessment": {
+        "verdict": "WORTH CONSIDERING",
+        "reason": "This is a clean CAIBI example of digital design becoming useful conventional furniture. AI can help interpret the files, explain CNC joinery, calculate material-thickness scaling, plan CAM and explore cosmetic or dimensional changes. The value is in learning digital fabrication and adapting an open design, not in assuming a chair is automatically cheaper because the files are free.",
+        "cost": "No current all-in price is published. The documented chair/test route uses one 1200×2400×19 mm sheet plus about 30 fasteners, with CNC access and finishing costs depending on the workshop.",
+        "time": "The title is not a reliable total build-time estimate. The documented route includes material measurement, a test piece, CAM/toolpaths, CNC cutting, fit adjustment, finishing and assembly.",
+        "difficulty": 3,
+        "aiLeverage": 3,
+        "evidenceStatus": "Strong",
+        "aiCanHelp": [
+          "Explain the supplied 2D/3D files and the source build sequence",
+          "Help calculate scale compensation from measured sheet thickness",
+          "Help map source geometry into a CAM plan and cutting order",
+          "Suggest non-structural customisation and finishing options",
+          "Troubleshoot fit observations after the test piece is cut"
+        ],
+        "aiCantDo": [
+          "Choose suitable sheet material and measure its real thickness",
+          "Prepare and safely operate a large-format CNC router",
+          "Cut and evaluate the source test piece before the chair",
+          "Approve feeds, speeds, workholding and toolpaths",
+          "Machine the full sheet",
+          "Sand, finish and assemble the chair",
+          "Inspect joint fit and the finished chair before loading it"
+        ],
+        "mainCatch": "Plywood thickness and CNC tolerances control whether the joints actually fit. The source deliberately uses a measured test piece before the full cut. A visually plausible AI-generated edit can break joinery, ergonomics or load paths, so structural changes need physical prototyping and judgement.",
+        "checkedOn": "2 Sep 2026"
+      },
+      "resources": [
+        {
+          "name": "AtFAB open-source furniture collection",
+          "url": "https://filson-rohrbacher.com/work/atfab",
+          "type": "docs",
+          "note": "Current Filson & Rohrbacher primary source providing the open-source file package for the 5-30 Minute Chair and the wider AtFAB collection."
+        },
+        {
+          "name": "Design for CNC: 5-30 Minute Chair",
+          "url": "https://www.oreilly.com/library/view/design-for-cnc/9781457187414/ch10.html",
+          "type": "docs",
+          "note": "Author-led fabrication chapter covering the design files, sheet requirement, test piece, scaling, CAM/toolpaths, cutting, fit evaluation and assembly."
+        },
+        {
+          "name": "V1 Engineering maker build",
+          "url": "https://forum.v1e.com/t/atfab-co-chair/11825",
+          "type": "community",
+          "note": "Independent first-hand LowRider CNC build using inexpensive plywood; the maker reports the chair was easy to make, comfortable and sturdy."
+        },
+        {
+          "name": "100kGarages AtFAB builds",
+          "url": "https://www.100kgarages.com/blog/2014/05/100kgaragers-featured-in-the-atfab-open-source-living-room/",
+          "type": "community",
+          "note": "Independent record of multiple physical 5-30 Minute Chair builds and modifications by students and fabrication shops."
+        },
+        {
+          "name": "Maslow CNC AtFAB file discussion",
+          "url": "https://forums.maslowcnc.com/t/trouble-with-atfab-files/3822",
+          "type": "community",
+          "note": "Independent user report showing that editing/manipulating the AtFAB vector files can be awkward in some modern CAD workflows, a useful counterweight to the simple download-and-cut success cases."
+        }
+      ],
+      "lastChecked": "2 Sep 2026"
     },
     {
       "slug": "bcn3d-moveo",
@@ -453,32 +624,14 @@
       ]
     },
     {
-      "slug": "farmbot-express",
-      "name": "FarmBot Express",
-      "category": "Garden & growing",
-      "summary": "Simplified FarmBot route that may offer a more approachable comparison with Genesis. Needs exact current hardware and documentation review before promotion.",
-      "source": {
-        "name": "FarmBot",
-        "url": "https://github.com/FarmBot",
-        "kind": "repository"
-      },
-      "pipelineStage": "FOUND",
-      "tags": [
-        "garden",
-        "robot",
-        "automation",
-        "growing"
-      ]
-    },
-    {
       "slug": "farmbot-genesis",
       "name": "FarmBot Genesis",
       "category": "Garden & growing",
-      "summary": "Full physical garden robot ecosystem with mechanics, electronics, software and fabrication. A strong large-build candidate rather than a generic smart-garden project.",
+      "summary": "Current open-source garden robot with exact Genesis documentation, mechanics, electronics, software and fabrication. A strong large-build candidate rather than a generic smart-garden project.",
       "source": {
         "name": "FarmBot",
-        "url": "https://github.com/FarmBot",
-        "kind": "repository"
+        "url": "https://farm.bot/pages/genesis",
+        "kind": "creator"
       },
       "pipelineStage": "ASSESSMENT CANDIDATE",
       "tags": [
@@ -801,23 +954,6 @@
       ]
     },
     {
-      "slug": "lemontron",
-      "name": "Lemontron",
-      "category": "Workshop",
-      "summary": "Open fabrication project for source review.",
-      "source": {
-        "name": "mattwach",
-        "url": "https://github.com/mattwach/lemontron",
-        "kind": "repository"
-      },
-      "pipelineStage": "FOUND",
-      "tags": [
-        "CNC",
-        "robot",
-        "fabrication"
-      ]
-    },
-    {
       "slug": "lilygo-t-watch",
       "name": "LilyGo T-Watch Projects",
       "category": "Wearables",
@@ -873,11 +1009,11 @@
       "slug": "lowrider-cnc",
       "name": "LowRider CNC",
       "category": "Workshop",
-      "summary": "Large-format DIY CNC/router route.",
+      "summary": "Current LowRider CNC V4 documentation for a large-format DIY CNC/router route.",
       "source": {
         "name": "V1 Engineering",
-        "url": "https://github.com/V1EngineeringInc/LowRider2",
-        "kind": "repository"
+        "url": "https://docs.v1e.com/lowrider/",
+        "kind": "documentation"
       },
       "pipelineStage": "FOUND",
       "tags": [
@@ -981,32 +1117,14 @@
       "lastChecked": "27 Aug 2026"
     },
     {
-      "slug": "mostly-printed-cnc",
-      "name": "Mostly Printed CNC",
-      "category": "Furniture & woodworking",
-      "summary": "DIY CNC route built from printed parts and commodity hardware, useful for showing when building the tool itself makes sense.",
-      "source": {
-        "name": "V1 Engineering",
-        "url": "https://github.com/V1EngineeringInc/MPCNC_Archim1",
-        "kind": "repository"
-      },
-      "pipelineStage": "ASSESSMENT CANDIDATE",
-      "tags": [
-        "CNC",
-        "router",
-        "3D printed",
-        "wood"
-      ]
-    },
-    {
       "slug": "mpcnc",
       "name": "Mostly Printed CNC",
       "category": "Workshop",
-      "summary": "A CNC machine built substantially from printed parts and commodity hardware.",
+      "summary": "Current V1 Engineering documentation for the MPCNC Primo, a CNC machine built substantially from printed parts and commodity hardware.",
       "source": {
         "name": "V1 Engineering",
-        "url": "https://github.com/V1EngineeringInc/MPCNC_Archim1",
-        "kind": "repository"
+        "url": "https://docs.v1e.com/mpcnc/intro/",
+        "kind": "documentation"
       },
       "pipelineStage": "FOUND",
       "tags": [
@@ -1031,23 +1149,6 @@
         "Eurorack",
         "audio",
         "PCB"
-      ]
-    },
-    {
-      "slug": "mutantw-v2",
-      "name": "MutantW V2",
-      "category": "Wearables",
-      "summary": "Open wearable/watch hardware candidate for review.",
-      "source": {
-        "name": "MutantW",
-        "url": "https://github.com/MutantW/MutantW_V2",
-        "kind": "repository"
-      },
-      "pipelineStage": "FOUND",
-      "tags": [
-        "ESP32",
-        "watch",
-        "wearable"
       ]
     },
     {
@@ -1248,10 +1349,10 @@
       "slug": "open-smartwatch",
       "name": "Open Smartwatch",
       "category": "Wearables",
-      "summary": "A stronger current ESP32 wearable candidate than the ageing smartwatch currently featured.",
+      "summary": "Current hardware-design repository for the Open Smartwatch Light, paired with the actively maintained Open Smartwatch OS ecosystem.",
       "source": {
         "name": "Open Smartwatch",
-        "url": "https://github.com/Open-Smartwatch/open-smartwatch",
+        "url": "https://github.com/Open-Smartwatch/open-smartwatch-light",
         "kind": "repository"
       },
       "pipelineStage": "ASSESSMENT CANDIDATE",
@@ -1385,21 +1486,90 @@
       ]
     },
     {
-      "slug": "openbike",
-      "name": "OpenBike",
+      "slug": "openbike-rev4",
+      "name": "OpenBike Rev4",
       "category": "Mobility",
-      "summary": "Open-design bicycle fabrication project.",
+      "summary": "An open wooden bicycle whose frame parts are CNC-cut locally, with additional printed parts and conventional bicycle components assembled into a usable physical vehicle.",
       "source": {
-        "name": "Arquimaña",
-        "url": "https://github.com/Arquimaña/OpenBike",
-        "kind": "repository"
+        "name": "Arquimaña / OpenBike",
+        "url": "https://openbike.cc/download/",
+        "kind": "creator"
       },
-      "pipelineStage": "FOUND",
+      "pipelineStage": "ASSESSED",
       "tags": [
-        "bicycle",
-        "CNC",
-        "open design"
-      ]
+        "Mobility",
+        "CNC router",
+        "3D printer",
+        "Mallet",
+        "Allen keys",
+        "Bicycle assembly tools",
+        "Measuring and inspection tools",
+        "OPEN DESIGN",
+        "CNC FABRICATION",
+        "MOBILITY",
+        "REUSE",
+        "LOCAL MAKING"
+      ],
+      "assessment": {
+        "verdict": "WORTH CONSIDERING",
+        "reason": "OpenBike is a strong example of data becoming a large, useful physical object without a conventional factory supply chain. AI can help inspect fabrication files, explain assembly, adapt non-safety-critical geometry and reason through sourcing. The main reason to build is local fabrication, learning, repairability and design control, not a guaranteed saving over buying a bicycle.",
+        "cost": "Not currently published by the source. Real cost depends heavily on local CNC access, plywood/aluminium pricing and whether wheels, drivetrain and steering parts are reused or bought.",
+        "time": "Not currently published by the source",
+        "difficulty": 4,
+        "aiLeverage": 3,
+        "evidenceStatus": "Moderate",
+        "aiCanHelp": [
+          "Explain the source BOM and fabrication sequence",
+          "Help map source dimensions into CNC/CAM preparation",
+          "Compare reusable bicycle components with source requirements",
+          "Help reason through non-safety-critical customisation before cutting",
+          "Troubleshoot assembly observations against the documented geometry"
+        ],
+        "aiCantDo": [
+          "Source structurally suitable plywood, aluminium and bicycle components",
+          "Prepare and supervise CNC machining",
+          "3D print the required parts",
+          "Inspect every machined and printed component",
+          "Assemble and align the frame, fork, steering and drivetrain",
+          "Set up and verify brakes and wheels",
+          "Make the final safety and road-use decision"
+        ],
+        "mainCatch": "A downloadable bicycle design is not proof of a safe finished bicycle. Steering fit, frame joints, material quality, wheel alignment, braking and every load-bearing interface must be verified on the real build. CAIBI has not road-tested Rev4 and does not infer roadworthiness from the files.",
+        "checkedOn": "2 Sep 2026"
+      },
+      "resources": [
+        {
+          "name": "OpenBike manufacturing files and build route",
+          "url": "https://openbike.cc/download/",
+          "type": "docs",
+          "note": "Primary Arquimaña source for the Rev4 materials, CNC and 3D-print fabrication route, reused bicycle components, downloadable files and assembly-manual access."
+        },
+        {
+          "name": "OpenBike project background",
+          "url": "https://openbike.cc/about/",
+          "type": "docs",
+          "note": "Primary project context from Arquimaña covering distributed local manufacturing, maker culture and the project history."
+        },
+        {
+          "name": "Konkarlab Woody Bike build log",
+          "url": "https://www.konkarlab.bzh/atelier-woody-bike/",
+          "type": "community",
+          "note": "Independent fablab build log documenting real steering-axis fit work, temporary 3D-printed adaptation and repeated CNC machining while resolving the physical assembly."
+        },
+        {
+          "name": "Google Arts & Culture OpenBike exhibit",
+          "url": "https://artsandculture.google.com/asset/openbike-arquima%C3%B1a/jAF4Kik6NlJR0A?hl=en",
+          "type": "community",
+          "note": "Independent institutional description of the OpenBike as a hand-assembled wooden bicycle fabricated locally from shared CNC and 3D-print data."
+        },
+        {
+          "name": "3Dnatives OpenBike overview",
+          "url": "https://www.3dnatives.com/es/openbike-bicicleta-codigo-abierto-arquimana-031120212/",
+          "type": "community",
+          "note": "Independent additive-manufacturing coverage confirming the mixed CNC/3D-print route and the progression through multiple OpenBike revisions."
+        }
+      ],
+      "lastChecked": "2 Sep 2026"
     },
     {
       "slug": "openbikesensor",
@@ -1456,13 +1626,13 @@
     },
     {
       "slug": "openbuilds-lead-cnc",
-      "name": "OpenBuilds LEAD CNC",
+      "name": "OpenBuilds LEAD CNC 1515",
       "category": "Furniture & woodworking",
-      "summary": "OpenBuilds machine ecosystem includes well-established router builds assembled from modular extrusion and motion components. Current exact LEAD source route needs checking before assessment.",
+      "summary": "Legacy LEAD 1515 assembly/build reference with exact parts and files. The model is no longer sold, so retain it for historical/used-build context rather than promoting it as a current assessment candidate.",
       "source": {
         "name": "OpenBuilds",
-        "url": "https://github.com/OpenBuilds",
-        "kind": "repository"
+        "url": "https://builds.openbuilds.com/builds/openbuilds-lead-cnc-machine-1515-60-x-60.9552/",
+        "kind": "creator"
       },
       "pipelineStage": "FOUND",
       "tags": [
@@ -1530,13 +1700,13 @@
       "slug": "openflexure-block-stage",
       "name": "OpenFlexure Block Stage",
       "category": "Science & measurement",
-      "summary": "Precision flexure-motion project from the OpenFlexure ecosystem, useful for builders interested in accurate small-scale positioning rather than a complete microscope.",
+      "summary": "Current OpenFlexure Block Stage route for sub-micron 3-axis positioning, with project-specific documentation rather than a generic organisation link.",
       "source": {
         "name": "OpenFlexure",
-        "url": "https://github.com/OpenFlexure",
-        "kind": "repository"
+        "url": "https://openflexure.org/projects/blockstage/",
+        "kind": "creator"
       },
-      "pipelineStage": "FOUND",
+      "pipelineStage": "REVIEWED SOURCE",
       "tags": [
         "precision motion",
         "3D printed",
@@ -2059,11 +2229,11 @@
       "slug": "precious-plastic-injection",
       "name": "Precious Plastic Injection Machine",
       "category": "Recycling & materials",
-      "summary": "Open small-scale plastic injection-moulding route from the Precious Plastic ecosystem. Relevant to mould design and physical product production beyond additive manufacturing.",
+      "summary": "Specific small-scale plastic injection-moulding route from the Precious Plastic academy. Relevant to mould design and physical product production beyond additive manufacturing.",
       "source": {
         "name": "Precious Plastic / One Army",
-        "url": "https://github.com/ONEARMY/precious-plastic",
-        "kind": "repository"
+        "url": "https://community.preciousplastic.com/academy/build/injection",
+        "kind": "creator"
       },
       "pipelineStage": "FOUND",
       "tags": [
@@ -2075,21 +2245,87 @@
     },
     {
       "slug": "precious-plastic-shredder",
-      "name": "Precious Plastic Shredder",
+      "name": "Precious Plastic Shredder 3.3",
       "category": "Recycling & materials",
-      "summary": "Major open recycling-machine ecosystem covering shredding and plastic processing. Useful bridge from CAD and fabrication into actual materials reuse.",
+      "summary": "An open-source workshop machine that reduces sorted plastic waste into flakes for later recycling processes, with downloadable fabrication files and a documented safety-focused 3.3 revision.",
       "source": {
         "name": "Precious Plastic / One Army",
-        "url": "https://github.com/ONEARMY/precious-plastic",
-        "kind": "repository"
+        "url": "https://community.preciousplastic.com/library/shr---33-",
+        "kind": "creator"
       },
-      "pipelineStage": "ASSESSMENT CANDIDATE",
+      "pipelineStage": "ASSESSED",
       "tags": [
-        "recycling",
-        "plastic",
-        "shredder",
-        "fabrication"
-      ]
+        "Recycling & materials",
+        "Grinder",
+        "Chop saw",
+        "MIG/MAG or TIG welder",
+        "Drill press",
+        "Lathe",
+        "Laser-cutting service or suitable metal-cutting equipment",
+        "Torque wrench",
+        "Bearing mounting tools",
+        "Electrical test equipment",
+        "MATERIALS REUSE",
+        "OPEN MACHINE",
+        "WORKSHOP INFRASTRUCTURE",
+        "REAL BUILDS",
+        "SAFETY-CRITICAL"
+      ],
+      "assessment": {
+        "verdict": "FOR THE BUILD",
+        "reason": "This is workshop infrastructure rather than a casual maker project. It makes sense for a person or group that actually intends to process a recurring stream of suitable plastic and values an open, repairable machine. AI can help interpret drawings, organise the BOM, explain assembly order and reason about documented tolerances, but it does not make the fabrication or operation safe.",
+        "cost": "No reliable current all-in self-build price is published on the primary 3.3 build page. Cost depends heavily on local laser cutting/machining, steel, motor/control hardware and whether specialist fabrication is subcontracted.",
+        "time": "1-2 weeks is the current source estimate for the Shredder small 3.3 build. That assumes access to, or subcontracting of, the required metalworking, machining and electrical work.",
+        "difficulty": 5,
+        "aiLeverage": 2,
+        "evidenceStatus": "Strong",
+        "aiCanHelp": [
+          "Explain the supplied CAD, drawings, BOM and assembly sequence",
+          "Help organise fabrication packages for outsourced laser cutting or machining",
+          "Cross-check dimensions and documented tolerances against the source files",
+          "Help create inspection and commissioning checklists from the official manual",
+          "Troubleshoot non-safety-critical assembly observations against the documentation"
+        ],
+        "aiCantDo": [
+          "Decide whether you have the fabrication and electrical competence to build this machine at all",
+          "Source or subcontract the metal cutting, turning and welding",
+          "Select and install the correct motor, contactor, overload protection and controls",
+          "Fabricate and assemble the frame, shredder box, bearings, shaft and drive",
+          "Install and verify guards, safety switching and emergency-stop provisions",
+          "Inspect alignment, fasteners, electrical protection and rotation before commissioning",
+          "Read and follow the current operating manual and local machinery/electrical requirements",
+          "Operate only with suitable sorted plastics and keep hands/tools away from the cutting chamber"
+        ],
+        "mainCatch": "The shredder combines fabricated steel parts, bearings, a high-torque drive, exposed-workshop fabrication processes and motor/control electrics. The current 3.3 revision was specifically changed around safety, but following an open design does not itself certify a home-built machine. Guarding, interlocks, electrical protection, emergency stopping, alignment and safe operating procedures require competent human judgement and local compliance checks.",
+        "checkedOn": "2 Sep 2026"
+      },
+      "resources": [
+        {
+          "name": "Precious Plastic Shredder small 3.3",
+          "url": "https://community.preciousplastic.com/library/shr---33-",
+          "type": "docs",
+          "note": "Current primary build page for Shredder small 3.3, including downloadable CAD, DXF, blueprints, schematics, BOM, stated 1-2 week build duration, required fabrication skills and the operating-manual route."
+        },
+        {
+          "name": "Precious Plastic Shredder workspace guide",
+          "url": "https://community.preciousplastic.com/library/set-up-a-shredder-workspace",
+          "type": "docs",
+          "note": "Primary operating/workspace guidance covering space, machine acquisition, setup and explicit shredder safety guidance."
+        },
+        {
+          "name": "Bike-powered PP 3.3 build and test",
+          "url": "https://community.preciousplastic.com/library/bike-powered-plastic-shredder-built-and-tested",
+          "type": "community",
+          "note": "Independent first-hand 2026 build based on the standard PP 3.3 shredder box, documenting physical assembly, iteration and a safer/stabler modified frame."
+        },
+        {
+          "name": "Trash Printer builder history",
+          "url": "https://hackaday.io/project/185691-the-trash-printer-version-3",
+          "type": "community",
+          "note": "Independent builder record stating that a Precious Plastic open-source shredder was physically built and used to process plastic waste before later recycling-machine development."
+        }
+      ],
+      "lastChecked": "2 Sep 2026"
     },
     {
       "slug": "printnc",
@@ -2450,6 +2686,91 @@
         "3D printed",
         "robot"
       ]
+    },
+    {
+      "slug": "teagan-tshirt",
+      "name": "Teagan T-shirt",
+      "category": "Textiles & craft",
+      "summary": "A made-to-measure FreeSewing T-shirt generated from body measurements, then cut and sewn from stretch jersey on an ordinary sewing machine or overlocker.",
+      "source": {
+        "name": "FreeSewing",
+        "url": "https://freesewing.eu/docs/designs/teagan/",
+        "kind": "documentation"
+      },
+      "pipelineStage": "ASSESSED",
+      "tags": [
+        "Textiles & craft",
+        "Sewing machine or overlocker",
+        "Fabric scissors or rotary cutter",
+        "Iron",
+        "Measuring tape",
+        "Pins or clips",
+        "BESPOKE FIT",
+        "LOW COST",
+        "BEGINNER ROUTE",
+        "TEXTILES",
+        "PRACTICAL"
+      ],
+      "assessment": {
+        "verdict": "WORTH CONSIDERING",
+        "reason": "Teagan is a useful low-cost example of digital assistance leading to a genuinely personal physical result. The pattern generator turns measurements and design choices into a custom garment pattern, while AI can explain stretch, neckline options, sewing terminology and troubleshooting. Buying a basic T-shirt is usually cheaper than valuing your time, so the reason to build is fit, fabric choice, learning and control rather than simple cash saving.",
+        "cost": "About £9 to £14 for one metre of current UK cotton-elastane jersey examples, before delivery and assuming thread/basic sewing supplies are already owned",
+        "time": "Not published by source",
+        "difficulty": 2,
+        "aiLeverage": 3,
+        "evidenceStatus": "Strong",
+        "aiCanHelp": [
+          "Explain measurements and pattern options",
+          "Help choose between knit band and binding finishes",
+          "Explain stretch percentage and suitable stitch settings",
+          "Troubleshoot puckering, wavy seams and neckband fit from observed symptoms",
+          "Help plan alterations before recutting fabric"
+        ],
+        "aiCantDo": [
+          "Measure the wearer",
+          "Choose suitable jersey",
+          "Generate and transfer the pattern",
+          "Cut stretch fabric accurately",
+          "Control fabric feed at the machine",
+          "Sew neckline, sleeves, side seams and hems",
+          "Try on and verify fit"
+        ],
+        "mainCatch": "Stretch fabric is less forgiving than the small number of pattern pieces suggests. Neckband tension, fabric feed, stitch choice and pressing can visibly change the result, and AI cannot feel whether the knit is being stretched or fed evenly at the machine.",
+        "checkedOn": "2 Sep 2026"
+      },
+      "resources": [
+        {
+          "name": "Teagan design documentation",
+          "url": "https://freesewing.eu/docs/designs/teagan/",
+          "type": "docs",
+          "note": "Primary FreeSewing documentation covering measurements, approximately one metre of suitable fabric, knit-fabric guidance, cutting and machine requirements."
+        },
+        {
+          "name": "Teagan sewing instructions",
+          "url": "https://freesewing.eu/docs/designs/teagan/instructions/",
+          "type": "docs",
+          "note": "Primary construction sequence covering shoulders, sleeves, neck finish, side seams and hems, including a standard-machine zig-zag route."
+        },
+        {
+          "name": "2026 Teagan beginner class report",
+          "url": "https://forum.freesewing.eu/t/t-shirt-course-a-great-success-using-teagan-pattern/1049",
+          "type": "community",
+          "note": "Course teacher reports using Teagan with first-time sewers in March 2026, including a student completing a professional-looking shirt on his first sewing project."
+        },
+        {
+          "name": "Independent first-garment Teagan reference",
+          "url": "https://www.reddit.com/r/sewing/comments/162cjsn/",
+          "type": "community",
+          "note": "Independent sewing-community post from a first garment build using Teagan as a fit and pattern-shape reference, with candid discussion of knit-fabric handling difficulty."
+        },
+        {
+          "name": "Current UK cotton jersey example",
+          "url": "https://www.dalstonmillfabrics.co.uk/premium-cotton-jersey-dark-indigo.html",
+          "type": "docs",
+          "note": "Current UK price evidence for 200 gsm 95% cotton / 5% elastane jersey at £8.50 per metre when checked on 2 Sep 2026."
+        }
+      ],
+      "lastChecked": "2 Sep 2026"
     },
     {
       "slug": "tellaprompter",
