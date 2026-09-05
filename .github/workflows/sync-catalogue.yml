@@ -2,6 +2,7 @@ name: Sync CAIBI catalogue
 
 # Production caibi.app exports are the source for public snapshots; validation must pass before commit.
 # A push to this workflow is the intentional manual-sync fallback when workflow_dispatch is unavailable to the operator.
+# Manual sync fallback trigger: private release PR #31.
 
 on:
   workflow_dispatch:
