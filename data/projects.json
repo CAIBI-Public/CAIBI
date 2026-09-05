@@ -1,6 +1,6 @@
 {
   "contractVersion": "2.0",
-  "generatedAt": "2026-09-05T18:11:04.104Z",
+  "generatedAt": "2026-09-05T18:29:40.383Z",
   "records": [
     {
       "slug": "ai-on-the-edge-device",
@@ -1875,16 +1875,149 @@
       ]
     },
     {
+      "slug": "openastroexplorer",
+      "name": "OpenAstroExplorer v1.0",
+      "category": "Photography & video",
+      "summary": "A compact open-source equatorial mount for light-to-midrange astrophotography, combining printed mechanics, belt and worm drives, stepper control and built-in automatic polar-alignment hardware.",
+      "source": {
+        "name": "OpenAstroTech",
+        "url": "https://github.com/OpenAstroTech/OpenAstroExplorer",
+        "kind": "repository"
+      },
+      "pipelineStage": "ASSESSED",
+      "tags": [
+        "Photography & video",
+        "3D printer or printed-parts route",
+        "Hex keys",
+        "Drill and tap for raw-extrusion route",
+        "Soldering/crimping for full self-source route",
+        "OPEN HARDWARE",
+        "ASTROPHOTOGRAPHY",
+        "PRECISION MOTION",
+        "TRAVEL MOUNT",
+        "CUSTOMISABLE"
+      ],
+      "assessment": {
+        "verdict": "FOR THE BUILD",
+        "reason": "OpenAstroExplorer is a serious open mount rather than a novelty star tracker. The current v1.0 source publishes CAD, printable parts, BOM and assembly guidance, while the seller offers both a complete DIY kit and component routes. It makes sense when learning, modification and ownership of the motion platform matter. If the goal is simply a supported mount that works with minimum setup, a mainstream commercial equatorial mount remains the lower-risk route.",
+        "cost": "The current complete DIY kit is €399. The source separately estimates $200-350 for a self-sourced build, before several required support items.",
+        "costGuidance": {
+          "label": "Source cost",
+          "gbp": "~£343 DIY kit",
+          "usd": "~$463 DIY kit",
+          "basis": "source-partial",
+          "confidence": "high",
+          "checkedOn": "5 Sep 2026",
+          "explanation": "The current complete OAE DIY kit is €399. The GBP and USD displays use CAIBI’s dated 4 Sep 2026 FX research snapshot for planning. The source repository separately publishes a $200-350 self-source estimate; CAIBI keeps that as a different route rather than blending it with the prepared seller kit.",
+          "includes": [
+            "Current €399 complete DIY kit",
+            "65 seller-prepared printed parts with heat-set inserts",
+            "About 300 hardware parts and screws"
+          ],
+          "excludes": [
+            "Tripod and counterweights",
+            "12 V power supply rated at least 2 A",
+            "Camera, lens or telescope",
+            "Optional guider and imaging accessories",
+            "Shipping, VAT/import effects where applicable",
+            "Self-sourcing tools and labour"
+          ]
+        },
+        "buildVsBuy": {
+          "status": "not-like-for-like",
+          "outcome": "not-applicable",
+          "headline": "No honest bought-mount saving is published.",
+          "note": "The seller’s €499 pre-built OAE listing is out of stock and the seller is unsure whether it will be offered. Mainstream equatorial mounts and star trackers also vary materially in payload, guiding, tripod/power inclusion, support and openness. CAIBI therefore records the OAE build route without manufacturing a commercial saving.",
+          "checkedOn": "5 Sep 2026",
+          "sources": [
+            {
+              "region": "GLOBAL",
+              "url": "https://shop.openastrotech.com/collections/openastroexplorer"
+            },
+            {
+              "region": "GLOBAL",
+              "url": "https://github.com/OpenAstroTech/OpenAstroExplorer"
+            }
+          ]
+        },
+        "time": "Multi-stage build, alignment and commissioning rather than a single assembly session.",
+        "difficulty": 5,
+        "aiLeverage": 3,
+        "evidenceStatus": "Strong",
+        "aiCanHelp": [
+          "Navigate the BOM, CAD, printed-parts list and assembly documentation",
+          "Separate the complete-kit, hardware-kit and fully self-sourced routes",
+          "Help check part specifications before ordering or printing",
+          "Explain firmware configuration and mount-control concepts",
+          "Help investigate ASCOM, INDI, PHD2 and guiding logs",
+          "Calculate planning values for balance, gearing and imaging scale",
+          "Help document modifications after the baseline mount works"
+        ],
+        "aiCantDo": [
+          "Choose a latitude, tripod and payload route that suits the actual observing setup",
+          "Print or buy the mechanical parts and inspect critical fits",
+          "Drill and tap raw extrusions where the selected sourcing route requires it",
+          "Install bearings, belts, pulleys, worm drive, linear rail and fasteners without introducing binding or play",
+          "Wire the controller, drivers and motors correctly with power disconnected",
+          "Provide a stable 12 V supply and safe outdoor power arrangement",
+          "Mount and balance the camera or telescope with suitable counterweights",
+          "Physically align, polar-align, calibrate and guide the real mount",
+          "Verify tracking, cable clearance and stability before leaving a session unattended"
+        ],
+        "mainCatch": "The €399 kit is not a complete astrophotography setup. You still need a rigid tripod, roughly matched counterweights, a suitable 12 V supply and the imaging equipment itself. Tracking quality depends on mechanical fit, balance, polar alignment, firmware configuration and real guiding performance. The published 0.6-0.9 arcsecond RMS figure is a source specification, not an independent CAIBI measurement.",
+        "checkedOn": "5 Sep 2026"
+      },
+      "resources": [
+        {
+          "name": "OpenAstroExplorer hardware source",
+          "url": "https://github.com/OpenAstroTech/OpenAstroExplorer",
+          "type": "repo",
+          "note": "Current v1.0 mechanical source, CAD, printed parts and published source specifications for the OpenAstroExplorer mount."
+        },
+        {
+          "name": "OpenAstroExplorer bill of materials",
+          "url": "https://docs.google.com/spreadsheets/d/1VRqLXc0toShZgP3rCiKZRFy2YImOhnwUEP0JS75wGOw/edit?usp=sharing",
+          "type": "docs",
+          "note": "Current BOM for the exact OAE route, including motion, bearings, electronics, required tripod, counterweights, 12 V power and self-build tooling."
+        },
+        {
+          "name": "OpenAstroExplorer assembly guide",
+          "url": "https://wiki.openastrotech.com/en/OpenAstroExplorer",
+          "type": "docs",
+          "note": "Official assembly and setup documentation for the current OpenAstroExplorer generation."
+        },
+        {
+          "name": "OpenAstroTech electronics guidance",
+          "url": "https://wiki.openastrotech.com/en/Knowledge/Electronics",
+          "type": "docs",
+          "note": "Current mount electronics guidance, including explicit stepper wiring and powered-connection safety warnings."
+        },
+        {
+          "name": "OpenAstroExplorer DIY kit",
+          "url": "https://shop.openastrotech.com/products/openastroexplorer",
+          "type": "docs",
+          "note": "Current seller route for the €399 DIY kit, which includes 65 printed parts and about 300 hardware parts and screws but still requires a tripod, counterweights and power supply."
+        },
+        {
+          "name": "OpenAstroExplorer product collection",
+          "url": "https://shop.openastrotech.com/collections/openastroexplorer",
+          "type": "docs",
+          "note": "Current availability across OAE kits and sub-kits. Also records the €499 pre-built listing as out of stock with the seller explicitly unsure whether it will be offered."
+        }
+      ],
+      "lastChecked": "5 Sep 2026"
+    },
+    {
       "slug": "openastrotracker",
       "name": "OpenAstroTracker",
       "category": "Photography & video",
-      "summary": "Large open-source star-tracker ecosystem combining printed mechanics, motors, calibration and photography.",
+      "summary": "Important earlier OpenAstroTech camera-mount ecosystem with current firmware/community value, but the full €259 DIY kit and €185 hardware-only route are currently sold out. The newer OpenAstroExplorer v1.0 is the stronger present hardware assessment target.",
       "source": {
         "name": "OpenAstroTech",
         "url": "https://github.com/OpenAstroTech/OpenAstroTracker",
         "kind": "repository"
       },
-      "pipelineStage": "ASSESSMENT CANDIDATE",
+      "pipelineStage": "REVIEWED SOURCE",
       "tags": [
         "astronomy",
         "camera",
