@@ -1,6 +1,6 @@
 {
   "contractVersion": "2.0",
-  "generatedAt": "2026-09-05T10:41:04.712Z",
+  "generatedAt": "2026-09-05T18:11:04.104Z",
   "records": [
     {
       "slug": "ai-on-the-edge-device",
@@ -772,21 +772,137 @@
     },
     {
       "slug": "farmbot-genesis",
-      "name": "FarmBot Genesis",
+      "name": "FarmBot Genesis v1.8",
       "category": "Garden & growing",
-      "summary": "Current open-source garden robot with exact Genesis documentation, mechanics, electronics, software and fabrication. A strong large-build candidate rather than a generic smart-garden project.",
+      "summary": "A current open-source CNC-style garden robot that moves over a raised bed to seed, water, sense soil, photograph plants and use interchangeable tools.",
       "source": {
         "name": "FarmBot",
-        "url": "https://farm.bot/pages/genesis",
+        "url": "https://farm.bot/products/farmbot-genesis-v1-8",
         "kind": "creator"
       },
-      "pipelineStage": "ASSESSMENT CANDIDATE",
+      "pipelineStage": "ASSESSED",
       "tags": [
-        "garden",
-        "CNC",
-        "robot",
-        "automation"
-      ]
+        "Garden & growing",
+        "Mechanical assembly",
+        "Raised-bed construction",
+        "Electrical setup",
+        "Water connection",
+        "3D printing or machining for a scratch build",
+        "OPEN HARDWARE",
+        "AUTOMATION",
+        "GARDEN ROBOT",
+        "CUSTOMISABLE",
+        "LARGE BUILD"
+      ],
+      "assessment": {
+        "verdict": "FOR THE BUILD",
+        "reason": "FarmBot is unusually open for a finished garden robot: the CAD, electronics, software and documentation are published, and the machine is designed to be changed. The complete kit is the rational route if the goal is to use a supported FarmBot. Building from the open files makes more sense when fabrication, modification and learning are part of the goal rather than when the only objective is cheaper automated watering.",
+        "cost": "The current v1.8 BOM lists $2,889.39 of item prices. FarmBot says self-sourcers may need about 20% more before several additional costs; the complete v1.8 kit is $5,995.",
+        "costGuidance": {
+          "label": "Source cost",
+          "gbp": "~£2,565 self-sourcing baseline",
+          "usd": "~$3,467 self-sourcing baseline",
+          "basis": "source-partial",
+          "confidence": "high",
+          "checkedOn": "5 Sep 2026",
+          "explanation": "The exact v1.8 BOM totals $2,889.39 of item prices and FarmBot says self-sourcers might expect to pay about 20% more for components than the table indicates. CAIBI applies that source-stated allowance and uses the dated FX snapshot for the approximate GBP display. This is still not an all-in build total.",
+          "includes": [
+            "Current v1.8 BOM item-price route",
+            "Source-stated roughly 20% self-sourcing allowance"
+          ],
+          "excludes": [
+            "Raised bed and soil",
+            "Shipping, taxes, duties and import fees",
+            "Minimum-order waste beyond the rough source allowance",
+            "Fabrication tools or subcontracting",
+            "Research and build labour",
+            "DIY technical support"
+          ]
+        },
+        "buildVsBuy": {
+          "status": "incomplete",
+          "outcome": "unclear",
+          "headline": "The source math favours self-sourcing on parts, but this is not a clean saving claim.",
+          "note": "The exact v1.8 BOM totals $2,889.39 of item prices and FarmBot says self-sourcers might expect about 20% more, producing a source-guided baseline of about $3,467 / £2,565 before several exclusions. The complete v1.8 kit is $5,995 / about £4,435 before UK import taxes and duties, but it also includes factory pre-assembly, a matched parts set and support. Raised-bed infrastructure, DIY fabrication, labour, import costs and support differences remain decision-critical, so CAIBI does not publish the nominal gap as a saving.",
+          "boughtAlternative": "FarmBot Genesis v1.8 complete kit",
+          "boughtGbp": "~£4,435 before UK import taxes/duties",
+          "boughtUsd": "$5,995",
+          "checkedOn": "5 Sep 2026",
+          "sources": [
+            {
+              "region": "GLOBAL",
+              "url": "https://farm.bot/products/farmbot-genesis-v1-8"
+            },
+            {
+              "region": "GLOBAL",
+              "url": "https://genesis.farm.bot/v1.8/bom.html"
+            }
+          ]
+        },
+        "time": "About 2.5 hours for current v1.8 kit assembly after the supporting infrastructure is ready. From-scratch manufacture and sourcing is a separate, much larger job.",
+        "difficulty": 5,
+        "aiLeverage": 3,
+        "evidenceStatus": "Strong",
+        "aiCanHelp": [
+          "Navigate the large BOM, CAD and documentation set",
+          "Compare the complete-kit and self-sourced routes without hiding exclusions",
+          "Explain assembly steps, wiring and configuration from the current documentation",
+          "Help write or review FarmBot sequences, API integrations and software changes",
+          "Interpret logs and configuration symptoms during troubleshooting",
+          "Help plan experiments and changes after the baseline machine is proven"
+        ],
+        "aiCantDo": [
+          "Choose whether to buy the supported kit or manufacture and source the machine yourself",
+          "Build or prepare a straight, rigid and level raised bed or equivalent support",
+          "Provide safe mains power, the correct plug or adapter, water and reliable internet",
+          "Fabricate and inspect parts if following the from-scratch route",
+          "Assemble and physically align the tracks, gantry, Z-axis, cables, tubing and tools",
+          "Commission motors, sensors, water delivery, tool changing and emergency stopping on the real machine",
+          "Keep people clear of pinch, entanglement and rotary-tool hazards",
+          "Verify that unattended watering and movement are safe for the actual garden"
+        ],
+        "mainCatch": "The robot is only one part of the installation. It needs a straight and level raised bed or equivalent structure, mains power, water and reliable internet, then physical calibration and ongoing garden judgement. A from-scratch build adds a large sourcing and fabrication burden, while custom sequences or integrations can also create real movement and flooding risks.",
+        "checkedOn": "5 Sep 2026"
+      },
+      "resources": [
+        {
+          "name": "FarmBot Genesis v1.8 product page",
+          "url": "https://farm.bot/products/farmbot-genesis-v1-8",
+          "type": "docs",
+          "note": "Current manufacturer route for the complete Genesis v1.8 kit, current $5,995 price, included hardware, installation requirements, support position and international import caveats."
+        },
+        {
+          "name": "Genesis v1.8 documentation",
+          "url": "https://genesis.farm.bot/v1.8/",
+          "type": "docs",
+          "note": "Current open-source hardware, assembly, manufacturing and operating documentation for the exact v1.8 generation."
+        },
+        {
+          "name": "Genesis v1.8 bill of materials",
+          "url": "https://genesis.farm.bot/v1.8/bom.html",
+          "type": "docs",
+          "note": "Exact v1.8 BOM with a $2,889.39 Genesis item-price subtotal and FarmBot guidance that DIY self-sourcing may cost about 20% more before shipping, tax, import duties, minimum quantities, waste and research time."
+        },
+        {
+          "name": "Genesis product safety",
+          "url": "https://genesis.farm.bot/v1.8/assembly/intro/product-safety.html",
+          "type": "docs",
+          "note": "Primary safety guidance covering electrical, movement, pinch and entanglement, rotary-tool, flooding and emergency-stop risks."
+        },
+        {
+          "name": "Long-term FarmBot owner discussion",
+          "url": "https://forum.farmbot.org/t/reviews-of-farmbot/8171",
+          "type": "community",
+          "note": "Independent long-term Genesis owners describe repeated-season use, the need for tinkering and the importance of a level, parallel supporting bed. This predates v1.8 and is used as builder context, not as a claim about the current kit revision."
+        },
+        {
+          "name": "DIY or kit builder discussion",
+          "url": "https://forum.farmbot.org/t/costs-diy-or-purchase-a-kit/8845",
+          "type": "community",
+          "note": "Independent 2023 builder discussion records substantial self-build time, fabrication-tool dependence and UK import-cost concerns. It predates v1.8, so CAIBI uses it only to evidence the real DIY-versus-kit trade-off, not as current pricing."
+        }
+      ],
+      "lastChecked": "5 Sep 2026"
     },
     {
       "slug": "firepick-delta",
