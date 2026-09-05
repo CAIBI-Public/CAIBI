@@ -12,15 +12,18 @@ This repository is for intentionally public catalogue and community material. It
 
 ## Current state
 
-The v1 public data contract is now defined. Machine-readable schemas are published under `schema/`.
+The public **project** dataset uses contract **v2.0**, adding reviewed cost guidance and build-vs-buy classification for assessed projects. Discovery-stage records do not receive assessment or money fields before assessment.
 
-The first generated catalogue dataset will be published only from the validated allowlisted export. Builder evidence will remain empty until its moderation, rights and media-safety publication gates are connected.
+The separate **builder-evidence** dataset remains on contract **v1.0** and remains empty until its moderation, rights and media-safety publication gates are satisfied.
+
+Machine-readable schemas are published under `schema/`. The previous project v1 schema remains available for consumers that need the historical contract definition.
 
 ## Structure
 
 ```text
 schema/
   project-v1.schema.json
+  project-v2.schema.json
   builder-evidence-v1.schema.json
 
 data/
