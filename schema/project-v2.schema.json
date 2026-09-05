@@ -96,7 +96,7 @@
       "additionalProperties": false,
       "required": ["verdict", "reason", "costGuidance", "buildVsBuy", "evidenceStatus", "aiCanHelp", "aiCantDo"],
       "properties": {
-        "verdict": { "enum": ["RECOMMENDED", "WORTH_CONSIDERING", "FOR_THE_BUILD", "BUY_INSTEAD", "NOT_READY"] },
+        "verdict": { "enum": ["RECOMMENDED", "WORTH CONSIDERING", "FOR THE BUILD", "BUY INSTEAD", "NOT READY"] },
         "reason": { "type": "string", "minLength": 1 },
         "cost": { "type": "string" },
         "costGuidance": { "$ref": "#/$defs/costGuidance" },
