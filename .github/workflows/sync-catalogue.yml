@@ -1,5 +1,7 @@
 name: Sync CAIBI catalogue
 
+# Production caibi.app exports are the source for public snapshots; validation must pass before commit.
+
 on:
   workflow_dispatch:
   schedule:
