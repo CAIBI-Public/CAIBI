@@ -1,6 +1,6 @@
 {
   "contractVersion": "2.0",
-  "generatedAt": "2026-09-05T18:29:40.383Z",
+  "generatedAt": "2026-09-05T19:30:23.307Z",
   "records": [
     {
       "slug": "ai-on-the-edge-device",
@@ -1276,21 +1276,145 @@
     },
     {
       "slug": "jubilee",
-      "name": "Jubilee Motion Platform",
+      "name": "Jubilee V2.2.2",
       "category": "Workshop",
-      "summary": "Open extensible machine platform built around automatic toolchanging. Can be configured for printing, plotting and other digital-fabrication processes rather than one fixed machine.",
+      "summary": "An open CoreXY multi-tool motion platform designed to swap tools automatically for 3D printing, plotting and low-force custom automation, with a substantial science-automation ecosystem.",
       "source": {
-        "name": "Machine Agency",
+        "name": "Machine Agency / Jubilee",
         "url": "https://github.com/machineagency/jubilee",
         "kind": "repository"
       },
-      "pipelineStage": "ASSESSMENT CANDIDATE",
+      "pipelineStage": "ASSESSED",
       "tags": [
-        "toolchanger",
-        "motion platform",
-        "3D printer",
-        "automation"
-      ]
+        "Workshop",
+        "Metric hand tools",
+        "Electrical assembly tools",
+        "Computer and network setup",
+        "3D printer for many custom tools unless parts are outsourced",
+        "OPEN HARDWARE",
+        "TOOLCHANGING",
+        "AUTOMATION",
+        "EXTENSIBLE",
+        "RESEARCH PLATFORM"
+      ],
+      "assessment": {
+        "verdict": "WORTH CONSIDERING",
+        "reason": "Jubilee makes sense when the motion platform is a foundation for several custom processes rather than a single finished machine. The current source remains a stable V2.2.2 hardware route, Filastruder sells a complete base kit, and Science Jubilee demonstrates that the platform can be extended into real research automation. It is a poor choice for someone who only wants a conventional 3D printer or a turnkey laboratory robot with minimal integration work.",
+        "cost": "The current Filastruder motion-platform kit is $1,799.99 and excludes tools. The core source repository separately estimates about $1,350 for a self-sourced single unit before tools.",
+        "costGuidance": {
+          "label": "Source cost",
+          "gbp": "~£1,332 motion-platform kit",
+          "usd": "$1,799.99 motion-platform kit",
+          "basis": "source-partial",
+          "confidence": "high",
+          "checkedOn": "5 Sep 2026",
+          "explanation": "The current Filastruder Jubilee Motion Platform Kit is $1,799.99. CAIBI uses the dated 4 Sep 2026 FX research snapshot for the approximate GBP display. The core repository separately estimates about $1,350 for a self-sourced unit before tools, so these are different procurement routes rather than one blended build price.",
+          "includes": [
+            "Current Filastruder base frame and motion-platform hardware",
+            "Controller, motors and electronics",
+            "Base printed parts and labelled platform wiring harnesses"
+          ],
+          "excludes": [
+            "All working toolheads such as extruders, syringes, plotters or other process tools",
+            "Tool harnesses where not selected separately",
+            "Shipping outside the continental US, import taxes and VAT",
+            "Application-specific deck, labware and fixtures",
+            "Computer, Raspberry Pi or other application-control hardware",
+            "Assembly, calibration and process-validation time"
+          ]
+        },
+        "buildVsBuy": {
+          "status": "not-like-for-like",
+          "outcome": "not-applicable",
+          "headline": "The current kit is a build route, not a turnkey comparator.",
+          "note": "The $1,799.99 Filastruder product supplies the Jubilee base motion platform but explicitly includes no working tools. Conventional 3D printers and laboratory robots solve narrower jobs with different tooling, software, support and validation. CAIBI therefore does not manufacture a build-versus-buy saving from an unmatched product class.",
+          "checkedOn": "5 Sep 2026",
+          "sources": [
+            {
+              "region": "US",
+              "url": "https://www.filastruder.com/products/jubilee-motion-platform-kit"
+            },
+            {
+              "region": "GLOBAL",
+              "url": "https://github.com/machineagency/jubilee"
+            },
+            {
+              "region": "GLOBAL",
+              "url": "https://science-jubilee.readthedocs.io/en/latest/getting_started/new_user_guide.html"
+            }
+          ]
+        },
+        "time": "Current Science Jubilee onboarding estimates 8 hours to 5 working days for base motion-platform assembly and configuration, before application-specific tools and experiments.",
+        "difficulty": 5,
+        "aiLeverage": 4,
+        "evidenceStatus": "Strong",
+        "aiCanHelp": [
+          "Navigate the V2.2.2 BOM, CAD, fabrication exports, assembly and configuration material",
+          "Help choose between self-sourcing and the current Filastruder base-kit route",
+          "Explain Duet configuration, G-code and Science Jubilee software concepts",
+          "Help draft and review application-specific tool or deck designs",
+          "Generate checklists for wiring, commissioning, tool offsets and experiment setup",
+          "Help write Python control workflows and analyse logs or repeatability data",
+          "Trace current Science Jubilee examples for pipettes, syringes, cameras and labware"
+        ],
+        "aiCantDo": [
+          "Choose the exact base-platform sourcing route and application before buying parts",
+          "Assemble and square the frame, rails, CoreXY motion and kinematic bed system",
+          "Wire the controller, motors, heaters and power system with mains isolated",
+          "Install guards over exposed mains terminals and keep hands clear of belts and moving parts",
+          "Configure and commission motion before attaching expensive or hazardous application tools",
+          "Build or buy every application-specific toolhead and required harness that the base kit does not include",
+          "Calibrate tool pickup, offsets, bed or deck coordinates and the real process",
+          "Validate experiment, material or lab-safety requirements that sit outside the open motion-platform design"
+        ],
+        "mainCatch": "The base platform is only the beginning. The current $1,799.99 kit includes the motion platform, controller, motors and electronics but no working tools, and Science Jubilee describes a steep learning curve. Application-specific toolheads, harnesses, decks, software configuration, calibration and process validation remain additional. The power system also involves 120/240 V mains connections, so this is not casual plug-and-play electrical work.",
+        "checkedOn": "5 Sep 2026"
+      },
+      "resources": [
+        {
+          "name": "Jubilee V2.2.2 hardware source",
+          "url": "https://github.com/machineagency/jubilee",
+          "type": "repo",
+          "note": "Stable Jubilee V2.2.2 source for the frame, tools, software configuration, CAD and fabrication exports."
+        },
+        {
+          "name": "Science Jubilee current research software",
+          "url": "https://github.com/Jubilee-CSL/science_jubilee",
+          "type": "repo",
+          "note": "Current 2026 Science Jubilee fork and research-control ecosystem for lab automation, tools, decks and labware."
+        },
+        {
+          "name": "Jubilee official wiki",
+          "url": "https://jubilee3d.com/index.php?title=Main_Page",
+          "type": "docs",
+          "note": "Official navigation for the motion-platform BOM, assembly instructions, configuration and machine specifications."
+        },
+        {
+          "name": "Jubilee Motion Platform Kit",
+          "url": "https://www.filastruder.com/products/jubilee-motion-platform-kit",
+          "type": "docs",
+          "note": "Current $1,799.99 Filastruder kit route for the frame, controller, motors and electronics. No Jubilee tools are included."
+        },
+        {
+          "name": "Science Jubilee new-user guide",
+          "url": "https://science-jubilee.readthedocs.io/en/latest/getting_started/new_user_guide.html",
+          "type": "docs",
+          "note": "Current start-to-finish research onboarding, including the 8-hour to 5-working-day base assembly estimate, steep learning-curve warning and explicit mains/motion safety guidance."
+        },
+        {
+          "name": "Science Jubilee documentation",
+          "url": "https://science-jubilee.readthedocs.io/en/latest/",
+          "type": "docs",
+          "note": "Current Python control, deck, labware and tool documentation for scientific Jubilee applications."
+        },
+        {
+          "name": "2025 Science Jubilee materials study",
+          "url": "https://pubs.rsc.org/en-us/content/articlelanding/2025/dd/d5dd00274e",
+          "type": "docs",
+          "note": "Peer-reviewed 2025 research using a Science Jubilee automation platform for automated sol-gel synthesis and integrated characterization. This supports real research deployment, not a generic consumer comparison."
+        }
+      ],
+      "lastChecked": "5 Sep 2026"
     },
     {
       "slug": "led-sequin-wearable",
@@ -1858,21 +1982,122 @@
     },
     {
       "slug": "open-syringe-pump",
-      "name": "Open Syringe Pump",
+      "name": "Open Syringe Pump v4",
       "category": "Science & measurement",
-      "summary": "Open laboratory syringe-pump system with current hardware revisions, printable parts and controller options. A useful example of serious scientific equipment becoming buildable.",
+      "summary": "A modular open laboratory syringe-pump platform with a compact mechanical pump, a separate controller and serial control for repeatable research fluid handling.",
       "source": {
         "name": "Karpova Lab",
         "url": "https://github.com/Karpova-Lab/syringe-pump",
         "kind": "repository"
       },
-      "pipelineStage": "ASSESSMENT CANDIDATE",
+      "pipelineStage": "ASSESSED",
       "tags": [
-        "lab",
-        "syringe pump",
-        "3D printed",
-        "precision"
-      ]
+        "Science & measurement",
+        "FDM printer or print service",
+        "Metal fabrication access for the bent aluminium frame",
+        "Electronics assembly tools",
+        "Hex and hand tools",
+        "OPEN HARDWARE",
+        "LAB AUTOMATION",
+        "MODULAR",
+        "REPAIRABLE",
+        "SERIAL CONTROL"
+      ],
+      "assessment": {
+        "verdict": "WORTH CONSIDERING",
+        "reason": "This is a credible open instrument rather than a classroom mock-up. The current v4 route publishes the hardware, software and build documentation, and its controller can run up to four pumps. It is most compelling for research teams that value repairability, custom control and integration with their own experiments. A commercial pump is still the lower-risk choice when procurement support, validated performance or regulated use matters more than openness.",
+        "cost": "The source estimates about $175 per pump plus $100 per controller. One controller can operate up to four pumps.",
+        "costGuidance": {
+          "label": "Source cost",
+          "gbp": "~£203 one pump + controller",
+          "usd": "$275 one pump + controller",
+          "basis": "source-partial",
+          "confidence": "high",
+          "checkedOn": "5 Sep 2026",
+          "explanation": "The current v4 documentation estimates about $175 per pump plus $100 per controller. CAIBI combines those source figures for a one-pump first setup and uses the dated 4 Sep 2026 FX research snapshot for the approximate GBP display. One controller can serve up to four pumps, so multi-pump economics differ.",
+          "includes": [
+            "Source-estimated one v4 pump hardware route",
+            "Source-estimated one controller hardware route"
+          ],
+          "excludes": [
+            "Shipping and taxes",
+            "Bent aluminium and FDM fabrication service or owned fabrication equipment",
+            "Electronics assembly labour or outsourced controller assembly",
+            "12 V power supply if not already owned",
+            "Syringe, tubing and experiment-specific fluid-path consumables",
+            "Calibration equipment and operator time"
+          ]
+        },
+        "buildVsBuy": {
+          "status": "not-like-for-like",
+          "outcome": "not-applicable",
+          "headline": "A generic commercial syringe-pump price would create a false saving.",
+          "note": "Commercial laboratory pumps vary materially in channel count, calibration, accuracy claims, fluid-path compatibility, support and validation. The open v4 source also shares one controller across up to four pumps. CAIBI therefore records the source build economics without converting an unlike commercial pump price into a savings claim.",
+          "checkedOn": "5 Sep 2026",
+          "sources": [
+            {
+              "region": "GLOBAL",
+              "url": "https://karpova-lab.github.io/syringe-pump/latest/"
+            },
+            {
+              "region": "GLOBAL",
+              "url": "https://github.com/Karpova-Lab/syringe-pump"
+            }
+          ]
+        },
+        "time": "The source states less than 10 minutes for pump assembly once the fabricated and sourced parts are ready; procurement, fabrication, electronics, setup and calibration are additional.",
+        "difficulty": 4,
+        "aiLeverage": 4,
+        "evidenceStatus": "Strong",
+        "aiCanHelp": [
+          "Navigate the v4 BOM, mechanical source, controller files and documentation",
+          "Help distinguish current v4 parts from older v2 and v3 hardware",
+          "Explain controller configuration and serial commands",
+          "Calculate source-defined flow relationships from syringe diameter and plunger speed",
+          "Help build calibration plans and data-logging scripts for the actual fluid path",
+          "Review firmware or host-side integration changes before physical testing",
+          "Help troubleshoot repeatability using measured results rather than theoretical microstep claims"
+        ],
+        "aiCantDo": [
+          "Source or fabricate the exact v4 bent aluminium and printed mechanical parts",
+          "Assemble the rods, bearings, leadscrew, carriage, clamps, stepper and limit switches",
+          "Build or source the controller electronics and inspect every connection before power is applied",
+          "Use the source-safe 12 V route unless the experiment genuinely requires and validates a different supported setup",
+          "Fit the real syringe and fluid path and check clearances, loading and limit-switch operation",
+          "Calibrate delivered volume and flow with the actual syringe, tubing and fluid",
+          "Manage experiment-specific physical, fluid and contamination risks",
+          "Validate suitability for the intended research process rather than assuming an open design is a certified instrument"
+        ],
+        "mainCatch": "The source cost and 10-minute assembly statement do not describe an all-in first build. The frame and printed parts must already exist, the controller still has to be built or sourced, and real dispensing accuracy depends on the syringe, tubing, needle or outlet, fluid properties, plunger friction and calibration. CAIBI does not treat the theoretical step size as guaranteed delivered-volume accuracy and does not present this as clinical dosing equipment.",
+        "checkedOn": "5 Sep 2026"
+      },
+      "resources": [
+        {
+          "name": "Open Syringe Pump v4 source",
+          "url": "https://github.com/Karpova-Lab/syringe-pump",
+          "type": "repo",
+          "note": "Current v4 hardware, firmware, mechanical source and version history from the Karpova Lab project."
+        },
+        {
+          "name": "Open Syringe Pump v4 documentation",
+          "url": "https://karpova-lab.github.io/syringe-pump/latest/",
+          "type": "docs",
+          "note": "Current build and operating documentation covering the pump, controller, flow calculations, calibration context and source-published cost estimates."
+        },
+        {
+          "name": "Open Syringe Pump v4 branch",
+          "url": "https://github.com/Karpova-Lab/syringe-pump/tree/v4",
+          "type": "docs",
+          "note": "Exact current v4 source branch. The v4 release dates from August 2025 and reduces the design to 49 parts with a bent aluminium frame and FDM printed parts."
+        },
+        {
+          "name": "2026 research-use context",
+          "url": "https://www.biorxiv.org/content/10.64898/2026.04.23.720375v1.full",
+          "type": "docs",
+          "note": "A 2026 Karpova-led research preprint cites the project documentation for a custom syringe pump used to deliver rewards. This is current use context, not independent builder validation."
+        }
+      ],
+      "lastChecked": "5 Sep 2026"
     },
     {
       "slug": "openastroexplorer",
@@ -2867,13 +3092,13 @@
       "slug": "polyformer",
       "name": "Polyformer",
       "category": "Recycling & materials",
-      "summary": "Open machine that turns discarded PET bottles into 3D-printer filament. A strong circular-making project with CAD, firmware and physical process all in one build.",
+      "summary": "Important open PET-bottle-to-filament project, but the maintainer says it is no longer supported since late 2025. The current EBB42 V1.2.1 kit-board compatibility also needs firmware work or an older board, so CAIBI retains the source without promoting a stale current-build recommendation.",
       "source": {
         "name": "Reiten Cheng / Polyformer",
-        "url": "https://hackaday.io/project/185304-polyformer-ideal-filament-recycler",
-        "kind": "creator"
+        "url": "https://github.com/Reiten966/Polyformer",
+        "kind": "repository"
       },
-      "pipelineStage": "ASSESSMENT CANDIDATE",
+      "pipelineStage": "REVIEWED SOURCE",
       "tags": [
         "recycling",
         "plastic",
