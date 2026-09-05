@@ -1,6 +1,7 @@
-# CAIBI Public Data Contract v1
+# CAIBI Public Data Contract
 
-Status: **stable for first public export**.
+Project dataset: **v2.0**  
+Builder-evidence dataset: **v1.0**
 
 This repository contains intentionally public catalogue and community material. The contract is deliberately narrower than the application model. A field existing elsewhere does not make it public here.
 
@@ -22,26 +23,51 @@ Approved reports from people who attempted or completed the build.
 
 A public record should make the voice of a statement explicit rather than requiring readers to infer it.
 
-## Public project data
+## Public project data v2
 
-The v1 project dataset may contain:
+The project dataset may contain:
 
 - stable project slug and name;
 - category, summary and public tags;
 - original public source reference;
 - pipeline stage;
 - concise CAIBI assessment fields for assessed projects;
+- reviewed project cost guidance;
+- reviewed build-vs-buy classification and comparison sources where a comparison is defensible;
 - evidence status and last-checked information;
 - reviewed public supporting resources;
 - approved public media references where publication rights are established.
 
-Discovery records may be published before full assessment, but they must not expose a CAIBI assessment block until they are actually assessed.
+Discovery records may be published before full assessment, but they must not expose a CAIBI assessment, cost guidance or build-vs-buy block until they are actually assessed.
 
-See `../schema/project-v1.schema.json` for the machine-readable definition.
+See `../schema/project-v2.schema.json` for the current machine-readable definition. `project-v1.schema.json` remains published as the historical v1 contract.
+
+## Cost guidance
+
+Every assessed project in v2 carries a `costGuidance` block. CAIBI distinguishes:
+
+- **Source cost**: a creator/source total or a source-backed partial total;
+- **CAIBI estimate**: an estimate assembled by CAIBI from current representative parts or services;
+- **Planning cost**: a broader range where configuration, scale or local fabrication materially changes the result.
+
+The block also carries confidence, checked date, explanation, inclusions and exclusions. A CAIBI estimate must not be presented as a creator-published fact.
+
+## Build versus buy
+
+Every assessed project in v2 carries a `buildVsBuy` classification. The status is one of:
+
+- `priced`;
+- `incomplete`;
+- `no-close-equivalent`;
+- `not-like-for-like`.
+
+A cash difference is published only when CAIBI has a defensible bought reference and priced comparison. Where the comparison is incomplete or misleading, the public record says so instead of inventing a saving.
+
+Cash differences are not expected-cost claims. Time, owned tools, shipping, failure risk and builder-specific changes remain separate unless genuine evidence supports them.
 
 ## Public builder evidence
 
-Builder evidence is a separate dataset. It is never copied directly from raw submissions.
+Builder evidence remains a separate v1 dataset. It is never copied directly from raw submissions.
 
 Before a builder report may be public:
 
@@ -52,7 +78,7 @@ Before a builder report may be public:
 5. media safety scanning must pass;
 6. no moderation, fingerprint, queue or risk metadata may be exported.
 
-Until those publication gates are connected, the public builder-evidence dataset remains empty.
+Until those publication gates are satisfied for genuine submissions, the public builder-evidence dataset remains empty.
 
 See `../schema/builder-evidence-v1.schema.json` for the machine-readable definition.
 
@@ -69,19 +95,29 @@ This repository must not contain:
 - raw uploaded media before rights and safety checks;
 - private backend identifiers where a public stable identifier is sufficient.
 
-## Export envelope
+## Export envelopes
 
-Generated datasets use this envelope:
+Current project dataset:
 
 ```json
 {
-  "contractVersion": "1.0",
-  "generatedAt": "2026-08-29T00:00:00.000Z",
+  "contractVersion": "2.0",
+  "generatedAt": "2026-09-05T00:00:00.000Z",
   "records": []
 }
 ```
 
-`generatedAt` records when the public artefact was generated. It is separate from source freshness or assessment `checkedOn` dates.
+Builder evidence remains:
+
+```json
+{
+  "contractVersion": "1.0",
+  "generatedAt": "2026-09-05T00:00:00.000Z",
+  "records": []
+}
+```
+
+`generatedAt` records when the public artefact was generated. It is separate from source freshness, cost `checkedOn` dates and comparison `checkedOn` dates.
 
 Unknown values remain unknown. They are not filled merely to make records look complete.
 
@@ -91,7 +127,10 @@ An assessed public project may expose:
 
 - verdict;
 - concise reason;
-- cost and time where known;
+- legacy source cost text;
+- structured cost guidance with provenance label and assumptions;
+- build-vs-buy classification and, where defensible, bought reference and cash difference;
+- time;
 - difficulty and AI leverage on the public CAIBI scales;
 - evidence status;
 - AI CAN HELP;
@@ -116,6 +155,6 @@ See `CONTRIBUTING.md` for the contribution route.
 
 ## Versioning
 
-A v1-compatible change may add optional fields, add records or correct values without changing the meaning of existing fields.
+Project v2 is a deliberate major-version change because it adds a new reviewed public class of assessment data: structured cost basis and build-vs-buy comparison.
 
-A new major contract version is required to remove or rename existing fields, change their meaning or type, merge the three evidence voices, or expose a previously private class of data.
+Within v2, compatible changes may add optional fields, add records or correct values without changing the meaning of existing fields. A new major project-contract version is required to remove or rename existing fields, change their meaning or type, merge the three evidence voices, or expose another previously private class of data.

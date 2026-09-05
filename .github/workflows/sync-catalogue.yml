@@ -44,9 +44,12 @@ jobs:
       - name: Validate public envelope
         if: steps.fetch.outcome == 'success'
         run: |
-          jq -e '.contractVersion == "1.0" and (.generatedAt | type == "string") and (.records | type == "array") and (.records | length > 0)' /tmp/caibi-sync/projects.json >/dev/null
+          jq -e '(.contractVersion == "1.0" or .contractVersion == "2.0") and (.generatedAt | type == "string") and (.records | type == "array") and (.records | length > 0)' /tmp/caibi-sync/projects.json >/dev/null
           jq -e '.contractVersion == "1.0" and (.generatedAt | type == "string") and (.records | type == "array")' /tmp/caibi-sync/builder-evidence.json >/dev/null
           jq -e 'all(.records[]; (.slug | type == "string") and (.source.url | startswith("http")))' /tmp/caibi-sync/projects.json >/dev/null
+          if jq -e '.contractVersion == "2.0"' /tmp/caibi-sync/projects.json >/dev/null; then
+            jq -e 'all(.records[]; if .pipelineStage == "ASSESSED" then (.assessment.costGuidance | type == "object") and (.assessment.buildVsBuy | type == "object") else (.assessment? == null) end)' /tmp/caibi-sync/projects.json >/dev/null
+          fi
 
       - name: Install validated datasets
         if: steps.fetch.outcome == 'success'
