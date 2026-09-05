@@ -1,6 +1,6 @@
 {
-  "contractVersion": "1.0",
-  "generatedAt": "2026-09-05T06:32:18.643Z",
+  "contractVersion": "2.0",
+  "generatedAt": "2026-09-05T10:41:04.712Z",
   "records": [
     {
       "slug": "ai-on-the-edge-device",
@@ -23,6 +23,31 @@
         "verdict": "RECOMMENDED",
         "reason": "It adds digital reporting to a meter that already works. The value is in avoiding replacement hardware and extracting more use from the equipment you already have.",
         "cost": "Varies",
+        "costGuidance": {
+          "label": "CAIBI estimate",
+          "gbp": "£25–£60",
+          "usd": "$34–$81",
+          "basis": "caibi-estimate",
+          "confidence": "low",
+          "checkedOn": "4 Sep 2026",
+          "explanation": "A practical allowance for ESP32-CAM hardware, lighting/mounting and small installation materials. The project reuses an existing meter, so installation choices dominate the total.",
+          "includes": [
+            "ESP32-CAM route",
+            "Basic illumination/mounting",
+            "Small power and fixing items"
+          ],
+          "excludes": [
+            "Existing utility meter",
+            "Custom enclosure/service work",
+            "Home automation server"
+          ]
+        },
+        "buildVsBuy": {
+          "status": "no-close-equivalent",
+          "outcome": "not-applicable",
+          "headline": "The value is in reusing the meter you already have.",
+          "note": "A replacement smart meter or separate energy monitor changes the measurement route rather than doing the same retrofit job, so CAIBI does not claim a like-for-like saving."
+        },
         "time": "Varies",
         "difficulty": 3,
         "aiLeverage": 4,
@@ -78,6 +103,29 @@
         "verdict": "RECOMMENDED",
         "reason": "Albert is a useful counterexample to the idea that AI-assisted making has to mean electronics. The digital value is in turning measurements and options into a bespoke pattern, explaining unfamiliar sewing steps and helping reason about changes before fabric is cut. The physical quality still comes from accurate measuring, fabric choice, cutting, pressing and stitching.",
         "cost": "About £13 to £20 of fabric from current UK examples, before delivery and assuming basic sewing supplies are already owned",
+        "costGuidance": {
+          "label": "Source cost",
+          "gbp": "£13–£20 fabric",
+          "usd": "~$18–$27 fabric",
+          "basis": "source-total",
+          "confidence": "high",
+          "checkedOn": "4 Sep 2026",
+          "explanation": "Current UK fabric examples recorded by CAIBI for the source-recommended material quantity.",
+          "includes": [
+            "About 1.25 m of suitable sturdy fabric"
+          ],
+          "excludes": [
+            "Sewing machine",
+            "Thread/basic supplies if not owned",
+            "Delivery"
+          ]
+        },
+        "buildVsBuy": {
+          "status": "not-like-for-like",
+          "outcome": "not-applicable",
+          "headline": "Making an apron is not primarily a cash-saving comparison.",
+          "note": "The fabric cost is visible, but labour, machine ownership, fit and fabric choice dominate the decision. A generic finished apron is not the same specification."
+        },
         "time": "Not published by source",
         "difficulty": 2,
         "aiLeverage": 3,
@@ -165,6 +213,32 @@
         "verdict": "WORTH CONSIDERING",
         "reason": "This is a clean CAIBI example of digital design becoming useful conventional furniture. AI can help interpret the files, explain CNC joinery, calculate material-thickness scaling, plan CAM and explore cosmetic or dimensional changes. The value is in learning digital fabrication and adapting an open design, not in assuming a chair is automatically cheaper because the files are free.",
         "cost": "No current all-in price is published. The documented chair/test route uses one 1200×2400×19 mm sheet plus about 30 fasteners, with CNC access and finishing costs depending on the workshop.",
+        "costGuidance": {
+          "label": "Planning cost",
+          "gbp": "£70–£180",
+          "usd": "$95–$243",
+          "basis": "caibi-estimate",
+          "confidence": "low",
+          "checkedOn": "4 Sep 2026",
+          "explanation": "Allowance for one full plywood sheet, fasteners, finishing and modest CNC access. A commercial CNC service can cost more than the material itself.",
+          "includes": [
+            "1200×2400×19 mm sheet",
+            "About 30 fasteners",
+            "Basic finish",
+            "Low/modest CNC access allowance"
+          ],
+          "excludes": [
+            "CNC machine ownership",
+            "High commercial cutting fees",
+            "Delivery of full-size sheet"
+          ]
+        },
+        "buildVsBuy": {
+          "status": "not-like-for-like",
+          "outcome": "not-applicable",
+          "headline": "The commercial comparison depends on the chair you would otherwise buy.",
+          "note": "Material and CNC access are the meaningful costs here. A generic retail chair is not a matched alternative to an open CNC furniture design, so CAIBI does not claim a saving."
+        },
         "time": "The title is not a reliable total build-time estimate. The documented route includes material measurement, a test piece, CAM/toolpaths, CNC cutting, fit adjustment, finishing and assembly.",
         "difficulty": 3,
         "aiLeverage": 3,
@@ -283,6 +357,30 @@
         "verdict": "FOR THE BUILD",
         "reason": "This is exactly the kind of project that broadens AI-assisted making beyond electronics. The machine itself is physical textile fabrication, while AI can help adapt patterns, parametric parts, control logic and obsolete sourcing.",
         "cost": "Not currently published",
+        "costGuidance": {
+          "label": "Source cost",
+          "gbp": "~£287 materials / ~£568 incl. source manufacturing",
+          "usd": "~$389 materials / ~$768 incl. source manufacturing",
+          "basis": "source-total",
+          "confidence": "medium",
+          "checkedOn": "4 Sep 2026",
+          "explanation": "The source BOM totals €334 of materials and separately lists €327 of manufacturing assumptions. Those historical source figures are converted here for planning, not presented as fresh retailer quotes.",
+          "includes": [
+            "Published materials BOM",
+            "Source manufacturing allowance where shown"
+          ],
+          "excludes": [
+            "Price inflation since the source BOM",
+            "Shipping",
+            "Workshop tools and labour"
+          ]
+        },
+        "buildVsBuy": {
+          "status": "not-like-for-like",
+          "outcome": "not-applicable",
+          "headline": "No honest like-for-like bought comparison.",
+          "note": "Circular Knitic is an open fabrication machine whose source cost includes historical manufacturing assumptions. Consumer circular knitters and industrial machines sit in different capability classes."
+        },
         "time": "One-day workshop route published",
         "difficulty": 4,
         "aiLeverage": 3,
@@ -348,6 +446,29 @@
         "verdict": "RECOMMENDED",
         "reason": "Cheap, compact and easy to modify. It is a good example of AI-assisted embedded work becoming approachable without turning into a large electronics project.",
         "cost": "$7–8",
+        "costGuidance": {
+          "label": "Source cost",
+          "gbp": "~£5–£6",
+          "usd": "$7–$8",
+          "basis": "source-total",
+          "confidence": "high",
+          "checkedOn": "4 Sep 2026",
+          "explanation": "Creator-published parts cost, with GBP shown as an approximate conversion.",
+          "includes": [
+            "Published electronics and basic printed enclosure materials"
+          ],
+          "excludes": [
+            "3D printer ownership",
+            "Shipping",
+            "Optional modifications"
+          ]
+        },
+        "buildVsBuy": {
+          "status": "no-close-equivalent",
+          "outcome": "not-applicable",
+          "headline": "No clean bought equivalent.",
+          "note": "Commercial desk companions exist, but they do not reproduce this small open ESP32 platform closely enough for a savings claim."
+        },
         "time": "~1 hour",
         "difficulty": 2,
         "aiLeverage": 4,
@@ -451,6 +572,32 @@
         "verdict": "RECOMMENDED",
         "reason": "It is a low-risk first sensor build with a useful result and obvious expansion routes into logging, Wi-Fi, automation and more visible indicators.",
         "cost": "Not published",
+        "costGuidance": {
+          "label": "CAIBI estimate",
+          "gbp": "£30–£45",
+          "usd": "$41–$61",
+          "basis": "caibi-estimate",
+          "confidence": "medium",
+          "checkedOn": "4 Sep 2026",
+          "explanation": "Allowance for the source-specified ESP32, BME280 and SSD1306 OLED plus breadboard/jumper hardware.",
+          "includes": [
+            "ESP32 board",
+            "BME280 sensor",
+            "SSD1306 OLED",
+            "Basic wiring/breadboard"
+          ],
+          "excludes": [
+            "Enclosure",
+            "Shipping",
+            "Cloud logging additions"
+          ]
+        },
+        "buildVsBuy": {
+          "status": "not-like-for-like",
+          "outcome": "not-applicable",
+          "headline": "Do not compare this with a full commercial air-quality monitor.",
+          "note": "The published build uses a BME280 and OLED, so its sensing scope is narrower than products that measure PM2.5, CO2 or VOCs. A headline saving would overstate what the build replaces."
+        },
         "time": "25 minutes",
         "difficulty": 2,
         "aiLeverage": 3,
@@ -715,6 +862,29 @@
         "verdict": "RECOMMENDED",
         "reason": "It converts a useful storage standard into something configurable. AI can help generate or modify parameter sets without turning every custom bin into a CAD exercise.",
         "cost": "Filament",
+        "costGuidance": {
+          "label": "Planning cost",
+          "gbp": "~£0.50–£3 per typical bin",
+          "usd": "~$0.70–$4 per typical bin",
+          "basis": "variable",
+          "confidence": "medium",
+          "checkedOn": "4 Sep 2026",
+          "explanation": "Material planning allowance for ordinary FDM bins. Actual cost scales with bin volume, filament price, magnets/fasteners and the number of baseplates.",
+          "includes": [
+            "Typical FDM filament for one ordinary bin"
+          ],
+          "excludes": [
+            "Printer ownership/electricity",
+            "Magnets, screws and labels",
+            "Large baseplate systems"
+          ]
+        },
+        "buildVsBuy": {
+          "status": "not-like-for-like",
+          "outcome": "not-applicable",
+          "headline": "Cost depends on the storage system you design.",
+          "note": "A per-bin filament allowance cannot be fairly compared with a finished organiser until the number and size of bins, baseplates and purchased hardware are known."
+        },
         "time": "Print-dependent",
         "difficulty": 2,
         "aiLeverage": 4,
@@ -779,6 +949,49 @@
         "verdict": "RECOMMENDED",
         "reason": "Hadley is a strong example of AI helping with a physical build without being the point of the project. The source is mature, widely replicated and deliberately designed around simple hardware, while AI can help interpret the manual, adapt metric parts, troubleshoot prints and explain collimation. The actual telescope still succeeds or fails on printed tolerances, mirror handling, alignment and the quality of the mount.",
         "cost": "Typically about $100 to $150 depending on optics, eyepieces and mount",
+        "costGuidance": {
+          "label": "Source cost",
+          "gbp": "~£74–£111",
+          "usd": "$100–$150",
+          "basis": "source-total",
+          "confidence": "high",
+          "checkedOn": "4 Sep 2026",
+          "explanation": "Current source and builder evidence consistently place the usual build around $100 to $150 depending on optics, eyepieces and mount.",
+          "includes": [
+            "Optics",
+            "Printed structure",
+            "Common hardware",
+            "Basic mount route"
+          ],
+          "excludes": [
+            "Premium eyepieces",
+            "Upgraded focuser/finder",
+            "3D printer ownership"
+          ]
+        },
+        "buildVsBuy": {
+          "status": "priced",
+          "outcome": "build-costs-less",
+          "headline": "The current build range is below a comparable beginner reflector.",
+          "note": "Sky-Watcher Heritage 130P is a useful bought reference for a capable compact beginner reflector, but it is not optically or mechanically identical to Hadley.",
+          "boughtAlternative": "Sky-Watcher Heritage 130P",
+          "boughtGbp": "£194",
+          "boughtUsd": "$305",
+          "differenceGbp": "~£83–£120",
+          "differenceUsd": "~$155–$205",
+          "differenceLabel": "Potential cash saving",
+          "checkedOn": "5 Sep 2026",
+          "sources": [
+            {
+              "region": "UK",
+              "url": "https://www.which.co.uk/reviews/telescopes/article/how-to-buy-the-best-telescope-atl543X1xOeJ"
+            },
+            {
+              "region": "US",
+              "url": "https://www.skywatcherusa.com/collections/dobtastic-discounts-sale-2026"
+            }
+          ]
+        },
         "time": "Multi-day including printing; physical assembly is comparatively simple",
         "difficulty": 3,
         "aiLeverage": 3,
@@ -882,6 +1095,34 @@
         "verdict": "RECOMMENDED",
         "reason": "There is no obvious finished-product equivalent. The point is the combination of custom hardware, image generation and a build process that deliberately gives an AI coding agent meaningful work.",
         "cost": "Not published",
+        "costGuidance": {
+          "label": "CAIBI estimate",
+          "gbp": "£85–£105",
+          "usd": "$115–$142",
+          "basis": "caibi-estimate",
+          "confidence": "medium",
+          "checkedOn": "4 Sep 2026",
+          "explanation": "Current representative prices for the published Raspberry Pi, display, camera, battery and storage parts. The source publishes the parts list but not a complete total.",
+          "includes": [
+            "Raspberry Pi Zero 2 W with header",
+            "Display HAT Mini",
+            "Pi Zero camera",
+            "PiSugar 3 battery",
+            "16GB microSD and reader",
+            "Small amount of enclosure filament"
+          ],
+          "excludes": [
+            "3D printer ownership or print service",
+            "Shipping from multiple suppliers",
+            "Computer and OpenAI account"
+          ]
+        },
+        "buildVsBuy": {
+          "status": "no-close-equivalent",
+          "outcome": "not-applicable",
+          "headline": "No clean bought equivalent.",
+          "note": "The combination of a programmable Raspberry Pi camera, local controls and an AI-assisted build workflow is the point of the project. A camera price alone would not be a meaningful comparison."
+        },
         "time": "Not published",
         "difficulty": 3,
         "aiLeverage": 5,
@@ -1080,6 +1321,33 @@
         "verdict": "RECOMMENDED",
         "reason": "It is a clean example of software and public data becoming a physical ritual object. The hardware is modest, while the useful customisation lives in what the device fetches and prints.",
         "cost": "Not published",
+        "costGuidance": {
+          "label": "CAIBI estimate",
+          "gbp": "£60–£75",
+          "usd": "$81–$101",
+          "basis": "caibi-estimate",
+          "confidence": "high",
+          "checkedOn": "4 Sep 2026",
+          "explanation": "Current UK thermal-printer pricing plus an ESP32, dedicated 5V supply, breadboard/wiring and starter paper.",
+          "includes": [
+            "CSN-A2 or compatible printer",
+            "ESP32 dev board",
+            "Dedicated 5V supply",
+            "Breadboard/jumpers",
+            "Starter thermal paper"
+          ],
+          "excludes": [
+            "Enclosure",
+            "Shipping",
+            "Optional Google services"
+          ]
+        },
+        "buildVsBuy": {
+          "status": "no-close-equivalent",
+          "outcome": "not-applicable",
+          "headline": "No clean bought equivalent.",
+          "note": "The value is the custom daily physical briefing and its data integrations. Ordinary receipt printers are components rather than substitutes for the finished behaviour."
+        },
         "time": "45 minutes",
         "difficulty": 2,
         "aiLeverage": 5,
@@ -1243,6 +1511,29 @@
         "verdict": "WORTH CONSIDERING",
         "reason": "This is less about saving money than owning a supported robot platform that can be physically assembled, modified and then used for serious software experiments. AI can be genuinely useful across ROS 2 setup, MoveIt planning, Python integration, debugging and custom end effectors, while the builder still has to configure and assemble a real multi-joint machine correctly.",
         "cost": "$1,629.09 arm kit; base plate and control/interface hardware may be additional",
+        "costGuidance": {
+          "label": "Source cost",
+          "gbp": "~£1,205 arm kit",
+          "usd": "$1,629.09 arm kit",
+          "basis": "source-partial",
+          "confidence": "high",
+          "checkedOn": "4 Sep 2026",
+          "explanation": "Current ROBOTIS arm-kit list price. The base plate and communication/control hardware can be additional.",
+          "includes": [
+            "RM-X52-TNM arm kit"
+          ],
+          "excludes": [
+            "Base plate",
+            "U2D2/OpenCR route where not owned",
+            "Computer and optional end effectors"
+          ]
+        },
+        "buildVsBuy": {
+          "status": "not-like-for-like",
+          "outcome": "not-applicable",
+          "headline": "The official arm kit is already the main bought route.",
+          "note": "CAIBI records the current ROBOTIS kit price as the project cost basis. Treating the same ecosystem as a separate commercial alternative would double-count the comparison."
+        },
         "time": "About 3 to 4 hours physical assembly, plus software and DYNAMIXEL setup",
         "difficulty": 4,
         "aiLeverage": 4,
@@ -1514,6 +1805,32 @@
         "verdict": "WORTH CONSIDERING",
         "reason": "OpenBike is a strong example of data becoming a large, useful physical object without a conventional factory supply chain. AI can help inspect fabrication files, explain assembly, adapt non-safety-critical geometry and reason through sourcing. The main reason to build is local fabrication, learning, repairability and design control, not a guaranteed saving over buying a bicycle.",
         "cost": "Not currently published by the source. Real cost depends heavily on local CNC access, plywood/aluminium pricing and whether wheels, drivetrain and steering parts are reused or bought.",
+        "costGuidance": {
+          "label": "Planning cost",
+          "gbp": "£350–£800",
+          "usd": "$473–$1,081",
+          "basis": "caibi-estimate",
+          "confidence": "low",
+          "checkedOn": "4 Sep 2026",
+          "explanation": "Broad planning allowance for plywood/CNC fabrication, printed parts and conventional bicycle components. Local CNC access and reused cycle parts can move the result far outside this range.",
+          "includes": [
+            "Frame sheet material",
+            "CNC fabrication allowance",
+            "Printed parts",
+            "Typical bicycle component allowance"
+          ],
+          "excludes": [
+            "Owned workshop machinery",
+            "Premium drivetrain/wheels",
+            "Finishing labour and shipping"
+          ]
+        },
+        "buildVsBuy": {
+          "status": "not-like-for-like",
+          "outcome": "not-applicable",
+          "headline": "No honest bicycle saving can be claimed from the current estimate.",
+          "note": "The build cost changes dramatically with local CNC access, reused cycle components and specification. Comparing it with a mass-produced bicycle would mostly measure production scale rather than the project."
+        },
         "time": "Not currently published by the source",
         "difficulty": 4,
         "aiLeverage": 3,
@@ -1754,6 +2071,32 @@
         "verdict": "WORTH CONSIDERING",
         "reason": "It provides a serious open instrument platform rather than a classroom toy, with the option to change mechanics, optics and automation.",
         "cost": "Configuration-dependent",
+        "costGuidance": {
+          "label": "Planning cost",
+          "gbp": "£40–£140",
+          "usd": "$54–$189",
+          "basis": "variable",
+          "confidence": "medium",
+          "checkedOn": "4 Sep 2026",
+          "explanation": "The current project has multiple official configurations. A manual/webcam route is much cheaper than a Raspberry Pi camera and motorised Sangaboard route.",
+          "includes": [
+            "Printed material",
+            "Optics",
+            "Fasteners",
+            "Camera/electronics appropriate to selected official route"
+          ],
+          "excludes": [
+            "3D printer ownership",
+            "Specialist high-resolution optics beyond the selected route",
+            "Labour"
+          ]
+        },
+        "buildVsBuy": {
+          "status": "not-like-for-like",
+          "outcome": "not-applicable",
+          "headline": "No single commercial microscope is a fair price comparison.",
+          "note": "OpenFlexure spans manual, camera and motorised configurations. Comparing the cheapest route with a laboratory microscope, or the most capable route with a classroom microscope, would create a false saving."
+        },
         "time": "Multi-stage",
         "difficulty": 4,
         "aiLeverage": 3,
@@ -1873,6 +2216,43 @@
         "verdict": "FOR THE BUILD",
         "reason": "It can turn a compatible basic mower into a much more capable open platform. The case is strongest if you value control, mapping and modification rather than simply needing the grass cut.",
         "cost": "~€700 + mower + RTK",
+        "costGuidance": {
+          "label": "Source cost",
+          "gbp": "~£602 + mower + RTK",
+          "usd": "~$813 + mower + RTK",
+          "basis": "source-partial",
+          "confidence": "medium",
+          "checkedOn": "4 Sep 2026",
+          "explanation": "The published core-hardware figure is not an all-in build total. A compatible donor mower and RTK route are additional major costs.",
+          "includes": [
+            "Published OpenMower core hardware allowance"
+          ],
+          "excludes": [
+            "Donor robotic mower",
+            "RTK base/receiver where not included",
+            "Shipping and replacement mechanical parts"
+          ]
+        },
+        "buildVsBuy": {
+          "status": "incomplete",
+          "outcome": "unclear",
+          "headline": "A saving cannot be claimed until the donor mower and RTK route are priced.",
+          "note": "The published OpenMower core hardware allowance is already about £602 / $813 before the donor mower and RTK hardware. A current wire-free Mammotion YUKA mini is £849 in the UK and has a $1,099 regular US price, so the missing build items are decision-critical.",
+          "boughtAlternative": "Mammotion YUKA mini",
+          "boughtGbp": "£849",
+          "boughtUsd": "$1,099",
+          "checkedOn": "5 Sep 2026",
+          "sources": [
+            {
+              "region": "UK",
+              "url": "https://uk.mammotion.com/products/yuka-mini-robot-lawn-mower"
+            },
+            {
+              "region": "US",
+              "url": "https://us.mammotion.com/products/yuka-mini-robot-lawn-mower"
+            }
+          ]
+        },
         "time": "Weekend+",
         "difficulty": 5,
         "aiLeverage": 2,
@@ -1962,6 +2342,46 @@
         "verdict": "RECOMMENDED",
         "reason": "It turns physical objects into reusable digital geometry with an unusually accessible open hardware route. AI can help with scan preparation, photogrammetry workflow, cleanup and adapting the printable frame.",
         "cost": "From €232 kit / €386 fuller kit",
+        "costGuidance": {
+          "label": "Source cost",
+          "gbp": "~£199 kit / ~£331 fuller kit",
+          "usd": "~$269 kit / ~$447 fuller kit",
+          "basis": "source-total",
+          "confidence": "high",
+          "checkedOn": "4 Sep 2026",
+          "explanation": "Current OpenScan kit pricing already recorded in the assessment.",
+          "includes": [
+            "Selected OpenScan kit route"
+          ],
+          "excludes": [
+            "Camera/computer items not included in selected kit",
+            "Shipping",
+            "Photogrammetry workstation"
+          ]
+        },
+        "buildVsBuy": {
+          "status": "priced",
+          "outcome": "build-costs-less",
+          "headline": "The kit route is substantially below a current small-object commercial scanner.",
+          "note": "Revopoint MINI 2 is a useful small-object scanner comparison, but it offers different optics, software and metrology claims. The difference is therefore a cash reference, not an equivalence claim.",
+          "boughtAlternative": "Revopoint MINI 2",
+          "boughtGbp": "£799",
+          "boughtUsd": "$829",
+          "differenceGbp": "~£468–£600",
+          "differenceUsd": "~$382–$560",
+          "differenceLabel": "Potential cash saving",
+          "checkedOn": "5 Sep 2026",
+          "sources": [
+            {
+              "region": "UK",
+              "url": "https://global.revopoint3d.com/en-uk/collections/3d-scanners"
+            },
+            {
+              "region": "US",
+              "url": "https://global.revopoint3d.com/collections/3d-scanners"
+            }
+          ]
+        },
         "time": "Not published",
         "difficulty": 3,
         "aiLeverage": 4,
@@ -2070,6 +2490,29 @@
         "verdict": "FOR THE BUILD",
         "reason": "It is a serious robotics platform rather than a novelty arm. The open mechanics, control stack, Python API and ROS2 ecosystem give AI useful software work after the physical machine is correctly assembled.",
         "cost": "DIY varies; €1,188.81 partial kit / €2,378.81 kit",
+        "costGuidance": {
+          "label": "Source cost",
+          "gbp": "~£1,022 partial kit / ~£2,044 kit",
+          "usd": "~$1,381 / ~$2,762",
+          "basis": "source-total",
+          "confidence": "high",
+          "checkedOn": "4 Sep 2026",
+          "explanation": "Current Source Robotics kit figures already recorded by CAIBI, converted from EUR for planning.",
+          "includes": [
+            "Selected Source Robotics kit route"
+          ],
+          "excludes": [
+            "3D printer where required",
+            "PC/ROS workstation",
+            "Optional tooling and shipping"
+          ]
+        },
+        "buildVsBuy": {
+          "status": "not-like-for-like",
+          "outcome": "not-applicable",
+          "headline": "The current project cost is a kit route, not a clean DIY-versus-product comparison.",
+          "note": "Industrial and educational six-axis arms vary widely in payload, reach, safety systems and software. CAIBI will not turn that spread into a headline saving without a matched alternative."
+        },
         "time": "Not published",
         "difficulty": 5,
         "aiLeverage": 4,
@@ -2275,6 +2718,34 @@
         "verdict": "FOR THE BUILD",
         "reason": "This is workshop infrastructure rather than a casual maker project. It makes sense for a person or group that actually intends to process a recurring stream of suitable plastic and values an open, repairable machine. AI can help interpret drawings, organise the BOM, explain assembly order and reason about documented tolerances, but it does not make the fabrication or operation safe.",
         "cost": "No reliable current all-in self-build price is published on the primary 3.3 build page. Cost depends heavily on local laser cutting/machining, steel, motor/control hardware and whether specialist fabrication is subcontracted.",
+        "costGuidance": {
+          "label": "Planning cost",
+          "gbp": "£650–£1,370 parts",
+          "usd": "$880–$1,850 parts",
+          "basis": "caibi-estimate",
+          "confidence": "medium",
+          "checkedOn": "4 Sep 2026",
+          "explanation": "Planning range for laser-cut steel, geared motor/drive, shaft/bearings, guarding and electrical hardware. Precious Plastic publishes the full BOM but not a stable global all-in 3.3 price; current comparable build estimates vary substantially by local fabrication.",
+          "includes": [
+            "Steel knife/frame fabrication",
+            "Geared motor/drive",
+            "Shaft/bearings/hardware",
+            "Hopper/stand/guarding",
+            "Electrical controls"
+          ],
+          "excludes": [
+            "40–100+ hours fabrication/debugging",
+            "Workshop machinery",
+            "Compliance/inspection costs",
+            "Shipping"
+          ]
+        },
+        "buildVsBuy": {
+          "status": "not-like-for-like",
+          "outcome": "not-applicable",
+          "headline": "Commercial shredder prices are not comparable without throughput and safety specification.",
+          "note": "Small granulators and workshop shredders differ materially in motor power, guarding, duty cycle and output size. The current parts estimate is useful, but a single bought price would be misleading."
+        },
         "time": "1-2 weeks is the current source estimate for the Shredder small 3.3 build. That assumes access to, or subcontracting of, the required metalworking, machining and electrical work.",
         "difficulty": 5,
         "aiLeverage": 2,
@@ -2491,6 +2962,42 @@
         "verdict": "WORTH CONSIDERING",
         "reason": "The result is a useful robotics platform rather than a one-off novelty. Hardware, movement, expressions and software can all be changed after the first build.",
         "cost": "$50–60",
+        "costGuidance": {
+          "label": "Source cost",
+          "gbp": "~£37–£44",
+          "usd": "$50–$60",
+          "basis": "source-total",
+          "confidence": "high",
+          "checkedOn": "4 Sep 2026",
+          "explanation": "Creator-published total parts range, with GBP shown as an approximate conversion.",
+          "includes": [
+            "Published robot hardware and printed-part material"
+          ],
+          "excludes": [
+            "3D printer ownership",
+            "Shipping",
+            "Optional batteries or upgrades"
+          ]
+        },
+        "buildVsBuy": {
+          "status": "priced",
+          "outcome": "build-costs-less",
+          "headline": "The parts cost is materially below a bought programmable quadruped.",
+          "note": "Petoi Bittle is the nearest straightforward bought comparison, not an identical robot. The difference shown is parts cash only and does not price printing time, assembly or calibration.",
+          "boughtAlternative": "Petoi Bittle programmable robot dog",
+          "boughtGbp": "~£214",
+          "boughtUsd": "$289",
+          "differenceGbp": "~£170–£177",
+          "differenceUsd": "~$229–$239",
+          "differenceLabel": "Potential cash saving",
+          "checkedOn": "5 Sep 2026",
+          "sources": [
+            {
+              "region": "GLOBAL",
+              "url": "https://www.petoi.com/collections/diy-quadruped"
+            }
+          ]
+        },
         "time": "Weekend+",
         "difficulty": 4,
         "aiLeverage": 3,
@@ -2552,6 +3059,31 @@
         "verdict": "FOR THE BUILD",
         "reason": "It is an unusually capable physical interface whose feel is defined in software. AI can help understand the control code, create behaviours and debug integrations, but the value only appears after a difficult electronics and mechanical build works reliably.",
         "cost": "No stable complete build price published",
+        "costGuidance": {
+          "label": "Planning cost",
+          "gbp": "~£74–£148",
+          "usd": "~$100–$200",
+          "basis": "source-partial",
+          "confidence": "medium",
+          "checkedOn": "4 Sep 2026",
+          "explanation": "The creator explicitly says the total is not yet fully tallied, but estimates a single build is probably under $200 and likely around $100 to $150 depending on fabrication and minimum-order quantities.",
+          "includes": [
+            "PCB/electronics",
+            "Motor/display",
+            "Printed mechanical parts"
+          ],
+          "excludes": [
+            "Advanced soldering/rework tools",
+            "Minimum-order waste",
+            "Shipping from multiple suppliers"
+          ]
+        },
+        "buildVsBuy": {
+          "status": "no-close-equivalent",
+          "outcome": "not-applicable",
+          "headline": "No close finished product is recorded.",
+          "note": "SmartKnob is primarily an open haptic input platform. Consumer knobs and dials do not provide a sufficiently similar mechanical, haptic and development surface for a savings claim."
+        },
         "time": "Time-consuming advanced build",
         "difficulty": 5,
         "aiLeverage": 4,
@@ -2630,6 +3162,49 @@
         "verdict": "FOR THE BUILD",
         "reason": "A physical display with sound, motion and presence that software cannot reproduce. It makes most sense when the mechanism itself is part of the appeal.",
         "cost": "Scale-dependent",
+        "costGuidance": {
+          "label": "Planning cost",
+          "gbp": "£35–£75 per character",
+          "usd": "$47–$101 per character",
+          "basis": "variable",
+          "confidence": "low",
+          "checkedOn": "4 Sep 2026",
+          "explanation": "Planning allowance based on the current v2 architecture and comparable module BOMs. The official source publishes a detailed ordering route but no stable all-in per-character price.",
+          "includes": [
+            "Motor/sensor/driver share",
+            "Flap set",
+            "Mechanical panels and fasteners",
+            "Proportional controller/power hardware"
+          ],
+          "excludes": [
+            "Large display frame",
+            "Labour",
+            "Premium pre-printed flaps and international shipping"
+          ]
+        },
+        "buildVsBuy": {
+          "status": "priced",
+          "outcome": "buy-costs-less",
+          "headline": "At Vestaboard scale, buying is cheaper on the current planning numbers.",
+          "note": "Vestaboard uses 132 characters. Applying CAIBI’s current £35–£75 / $47–$101 per-character planning range to the same count gives about £4,620–£9,900 / $6,204–$13,332 before a large frame or labour.",
+          "boughtAlternative": "Vestaboard, 132 characters",
+          "boughtGbp": "£3,199",
+          "boughtUsd": "$3,499",
+          "differenceGbp": "~£1,421–£6,701",
+          "differenceUsd": "~$2,705–$9,833",
+          "differenceLabel": "Buying is cheaper by",
+          "checkedOn": "5 Sep 2026",
+          "sources": [
+            {
+              "region": "UK",
+              "url": "https://uk.vestaboard.com/products/vestaboard"
+            },
+            {
+              "region": "US",
+              "url": "https://shop.vestaboard.com/collections/both-products"
+            }
+          ]
+        },
         "time": "Multi-day",
         "difficulty": 4,
         "aiLeverage": 2,
@@ -2715,6 +3290,29 @@
         "verdict": "WORTH CONSIDERING",
         "reason": "Teagan is a useful low-cost example of digital assistance leading to a genuinely personal physical result. The pattern generator turns measurements and design choices into a custom garment pattern, while AI can explain stretch, neckline options, sewing terminology and troubleshooting. Buying a basic T-shirt is usually cheaper than valuing your time, so the reason to build is fit, fabric choice, learning and control rather than simple cash saving.",
         "cost": "About £9 to £14 for one metre of current UK cotton-elastane jersey examples, before delivery and assuming thread/basic sewing supplies are already owned",
+        "costGuidance": {
+          "label": "Source cost",
+          "gbp": "£9–£14 fabric",
+          "usd": "~$12–$19 fabric",
+          "basis": "source-total",
+          "confidence": "high",
+          "checkedOn": "4 Sep 2026",
+          "explanation": "Current UK jersey examples recorded by CAIBI for the source-recommended material quantity.",
+          "includes": [
+            "About 1 m of suitable cotton/elastane jersey"
+          ],
+          "excludes": [
+            "Sewing machine/overlocker",
+            "Thread/basic supplies if not owned",
+            "Delivery"
+          ]
+        },
+        "buildVsBuy": {
+          "status": "not-like-for-like",
+          "outcome": "not-applicable",
+          "headline": "Making a T-shirt is not primarily a cash-saving comparison.",
+          "note": "The fabric cost is visible, but labour, sewing equipment, fit and fabric choice dominate the decision. A basic retail T-shirt would create a false like-for-like saving figure."
+        },
         "time": "Not published by source",
         "difficulty": 2,
         "aiLeverage": 3,
@@ -2795,6 +3393,32 @@
         "verdict": "RECOMMENDED",
         "reason": "The electronics are simple enough to finish, but the result is still genuinely useful. AI can help change the script handling, controls and enclosure without replacing the physical build.",
         "cost": "Not published",
+        "costGuidance": {
+          "label": "CAIBI estimate",
+          "gbp": "£25–£35",
+          "usd": "$34–$47",
+          "basis": "caibi-estimate",
+          "confidence": "medium",
+          "checkedOn": "4 Sep 2026",
+          "explanation": "Allowance for an ESP32 DevKit, ILI9341/XPT2046 touchscreen, push button, wiring and a simple printed monitor holder.",
+          "includes": [
+            "ESP32 DevKit",
+            "2.8 inch touch display",
+            "Button/wiring",
+            "Small printed mount"
+          ],
+          "excludes": [
+            "3D printer ownership",
+            "USB power source",
+            "Shipping"
+          ]
+        },
+        "buildVsBuy": {
+          "status": "no-close-equivalent",
+          "outcome": "not-applicable",
+          "headline": "No clean bought equivalent is recorded yet.",
+          "note": "The project combines a small custom display and controller route. A generic teleprompter or monitor does not reproduce the same object closely enough for a savings claim."
+        },
         "time": "1.5 hours",
         "difficulty": 3,
         "aiLeverage": 4,
@@ -2907,6 +3531,50 @@
         "verdict": "WORTH CONSIDERING",
         "reason": "It retrofits automation to an ordinary curtain rail and keeps the hardware and firmware open to modification.",
         "cost": "Not published",
+        "costGuidance": {
+          "label": "CAIBI estimate",
+          "gbp": "£30–£45",
+          "usd": "$41–$61",
+          "basis": "caibi-estimate",
+          "confidence": "medium",
+          "checkedOn": "4 Sep 2026",
+          "explanation": "Allowance for the published ESP32-C3, geared motor, motor driver, battery/charging hardware, printed parts and small fixings.",
+          "includes": [
+            "ESP32-C3",
+            "N20 geared motor",
+            "TB6612FNG driver",
+            "Small Li-ion battery/charging route",
+            "Printed chassis and fixings"
+          ],
+          "excludes": [
+            "3D printer ownership",
+            "Curtain/rail changes",
+            "Shipping"
+          ]
+        },
+        "buildVsBuy": {
+          "status": "priced",
+          "outcome": "build-costs-less",
+          "headline": "The current parts allowance is below a single bought curtain robot.",
+          "note": "SwitchBot Curtain 3 is a close functional comparison for automating an existing curtain. The saving is cash only and does not include printing, assembly or the risk that a particular rail needs iteration.",
+          "boughtAlternative": "SwitchBot Curtain 3, 1-pack",
+          "boughtGbp": "£99.99",
+          "boughtUsd": "$99.99",
+          "differenceGbp": "~£55–£70",
+          "differenceUsd": "~$39–$59",
+          "differenceLabel": "Potential cash saving",
+          "checkedOn": "5 Sep 2026",
+          "sources": [
+            {
+              "region": "UK",
+              "url": "https://uk.switch-bot.com/products/switchbot-curtain-3-rod-type-1"
+            },
+            {
+              "region": "US",
+              "url": "https://us.switch-bot.com/products/switchbot-curtain-3-rod-type-1"
+            }
+          ]
+        },
         "time": "Not published",
         "difficulty": 3,
         "aiLeverage": 4,
@@ -3027,6 +3695,29 @@
         "verdict": "FOR THE BUILD",
         "reason": "The reason to choose Watchy is not to beat a mainstream smartwatch on features. It is to own an unusually open wearable platform whose hardware, firmware, watch faces and enclosure can all be changed.",
         "cost": "£45.49 UK / $59 US",
+        "costGuidance": {
+          "label": "Source cost",
+          "gbp": "£45.49 UK",
+          "usd": "$59 US",
+          "basis": "source-total",
+          "confidence": "high",
+          "checkedOn": "4 Sep 2026",
+          "explanation": "Checked regional kit prices already recorded in the assessment.",
+          "includes": [
+            "Watchy kit"
+          ],
+          "excludes": [
+            "Shipping",
+            "Alternative straps/cases",
+            "Development computer"
+          ]
+        },
+        "buildVsBuy": {
+          "status": "not-like-for-like",
+          "outcome": "not-applicable",
+          "headline": "The Watchy kit is the product and the build route.",
+          "note": "The current regional kit prices are useful build costs, but comparing them with an ordinary smartwatch would ignore the open hardware and programmable purpose of the project."
+        },
         "time": "~1 hour assembly and setup",
         "difficulty": 2,
         "aiLeverage": 4,
@@ -3130,6 +3821,30 @@
         "verdict": "RECOMMENDED",
         "reason": "Unlike many DIY instruments, the current official route gives you a substantial finished music workstation without requiring PCB fabrication or soldering. AI becomes useful after assembly for configuration, MIDI routing, software investigation, scripting and adapting an unusually open audio platform.",
         "cost": "€395 kit base, VAT excluded; Pi 5 and PSU options extra; microSD not included",
+        "costGuidance": {
+          "label": "Source cost",
+          "gbp": "~£339 base kit",
+          "usd": "~$459 base kit",
+          "basis": "source-partial",
+          "confidence": "high",
+          "checkedOn": "4 Sep 2026",
+          "explanation": "Official €395 base-kit price converted for planning. VAT, Raspberry Pi 5/PSU choices and microSD can add materially.",
+          "includes": [
+            "Official base kit"
+          ],
+          "excludes": [
+            "VAT where applicable",
+            "Raspberry Pi 5 option",
+            "PSU option",
+            "microSD and shipping"
+          ]
+        },
+        "buildVsBuy": {
+          "status": "not-like-for-like",
+          "outcome": "not-applicable",
+          "headline": "A conventional synthesizer is not a fair substitute.",
+          "note": "Zynthian is an open multi-engine instrument and software platform. Commercial keyboards and modules vary too much in engines, controls and openness for a single price difference to be honest."
+        },
         "time": "1 to 3 hours assembly",
         "difficulty": 2,
         "aiLeverage": 4,
