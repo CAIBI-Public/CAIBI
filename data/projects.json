@@ -1,6 +1,6 @@
 {
   "contractVersion": "2.0",
-  "generatedAt": "2026-09-05T19:30:23.307Z",
+  "generatedAt": "2026-09-05T21:37:54.680Z",
   "records": [
     {
       "slug": "ai-on-the-edge-device",
@@ -300,13 +300,13 @@
       "slug": "bcn3d-moveo",
       "name": "BCN3D Moveo Robot Arm",
       "category": "Robotics",
-      "summary": "Open five-axis robot arm built around printed parts and commodity motion hardware, with enough mechanical depth to make AI-assisted assembly and troubleshooting genuinely useful.",
+      "summary": "Influential open five-axis educational arm, but the repository has not been pushed since 2022. Retain it as a reviewed source while newer maintained robot-arm routes carry current assessment priority.",
       "source": {
         "name": "BCN3D",
         "url": "https://github.com/BCN3D/BCN3D-Moveo",
         "kind": "repository"
       },
-      "pipelineStage": "ASSESSMENT CANDIDATE",
+      "pipelineStage": "REVIEWED SOURCE",
       "tags": [
         "robot arm",
         "3D printed",
@@ -942,13 +942,13 @@
       "slug": "freetouchdeck",
       "name": "FreeTouchDeck",
       "category": "Creative tools",
-      "summary": "Open touchscreen macro deck that can become a custom physical control surface rather than another generic display demo.",
+      "summary": "Useful open touchscreen macro-deck source, but stable 0.9.17 was released in April 2022, master was last pushed in May 2024, and the README still documents ESP32-core compatibility work plus an unfinished 2.0 plan. Retain it as a reviewed source rather than a current assessment candidate.",
       "source": {
         "name": "Dustin Watts",
         "url": "https://github.com/DustinWatts/FreeTouchDeck",
         "kind": "repository"
       },
-      "pipelineStage": "ASSESSMENT CANDIDATE",
+      "pipelineStage": "REVIEWED SOURCE",
       "tags": [
         "ESP32",
         "touchscreen",
@@ -1880,13 +1880,13 @@
       "slug": "open-smartwatch",
       "name": "Open Smartwatch",
       "category": "Wearables",
-      "summary": "Current hardware-design repository for the Open Smartwatch Light, paired with the actively maintained Open Smartwatch OS ecosystem.",
+      "summary": "The selected Light hardware repository has not been pushed since 2021 and its own README says the hardware is still in development and not ready for release. The Open Smartwatch OS repository remains active in 2026, but active software alone does not establish a current supported hardware build route.",
       "source": {
         "name": "Open Smartwatch",
         "url": "https://github.com/Open-Smartwatch/open-smartwatch-light",
         "kind": "repository"
       },
-      "pipelineStage": "ASSESSMENT CANDIDATE",
+      "pipelineStage": "REVIEWED SOURCE",
       "tags": [
         "ESP32",
         "watch",
@@ -2382,21 +2382,135 @@
     },
     {
       "slug": "openbot",
-      "name": "OpenBot",
+      "name": "OpenBot DIY",
       "category": "Robotics",
-      "summary": "Open robot platform that uses a smartphone for sensing and higher-level compute while the physical vehicle remains comparatively simple to fabricate.",
+      "summary": "An open wheeled robot that reuses a smartphone for camera, compute and higher-level robotics while an Arduino Nano or ESP32 handles the motors and low-level sensors.",
       "source": {
-        "name": "Intelligence and Systems Lab",
-        "url": "https://github.com/isl-org/OpenBot",
+        "name": "OpenBot Foundation",
+        "url": "https://github.com/ob-f/OpenBot",
         "kind": "repository"
       },
-      "pipelineStage": "ASSESSMENT CANDIDATE",
+      "pipelineStage": "ASSESSED",
       "tags": [
-        "robot",
-        "smartphone",
-        "3D printed",
-        "AI"
-      ]
+        "Robotics",
+        "3D printer or print service",
+        "Soldering and electronics tools",
+        "Android smartphone",
+        "Computer for firmware and app setup",
+        "REUSE",
+        "ROBOTICS",
+        "COMPUTER VISION",
+        "CUSTOM",
+        "LEARN"
+      ],
+      "assessment": {
+        "verdict": "RECOMMENDED",
+        "reason": "OpenBot makes unusually good use of hardware many people already own. The phone supplies a camera, IMU, compute, display and network connection, while the robot body stays comparatively cheap and understandable. The source is still active in 2026, supports several body variants and exposes the full stack from motor firmware through higher-level autonomy. It is strongest as an education, experimentation and custom-robot platform rather than as a polished domestic appliance.",
+        "cost": "The current project still describes the DIY robot body as about $50. A third-party BOM with links checked in August 2026 estimates roughly $50 to $80 before the phone and fabrication access.",
+        "costGuidance": {
+          "label": "Source cost",
+          "gbp": "~£37 robot body",
+          "usd": "~$50 robot body",
+          "basis": "source-partial",
+          "confidence": "medium",
+          "checkedOn": "5 Sep 2026",
+          "explanation": "The current OpenBot repository and project site still describe the DIY robot body as about $50. A third-party BOM with component links checked on 31 Aug 2026 estimates roughly $50 to $80. CAIBI uses the source headline as a baseline and not as a guaranteed all-in first-build total.",
+          "includes": [
+            "Core low-cost wheeled robot-body hardware represented by the source headline",
+            "Arduino Nano or supported microcontroller bridge, motors and simple drive electronics in the selected DIY route"
+          ],
+          "excludes": [
+            "Android smartphone",
+            "3D printer or print service and filament",
+            "Battery charging equipment and shipping",
+            "Optional sensors, custom PCB route and upgrades",
+            "Controller hardware where separately required",
+            "Assembly, software setup and policy-training time"
+          ]
+        },
+        "buildVsBuy": {
+          "status": "not-like-for-like",
+          "outcome": "not-applicable",
+          "headline": "A ready-to-run OpenBot route exists, but there is not yet a verified like-for-like priced comparison.",
+          "note": "The current OpenBot body documentation links ready-to-run RTR-TT and RTR-520 products on Amazon. The DIY route still carries an about $50 robot-body headline and a current third-party BOM estimate of $50 to $80, but it also assumes a suitable smartphone and fabrication access. Without a verified current regional RTR price and matched inclusions, CAIBI treats the routes as not like-for-like and does not publish a saving.",
+          "boughtAlternative": "OpenBot RTR-TT / RTR-520",
+          "checkedOn": "5 Sep 2026",
+          "sources": [
+            {
+              "region": "GLOBAL",
+              "url": "https://github.com/ob-f/OpenBot/blob/master/body/README.md"
+            },
+            {
+              "region": "GLOBAL",
+              "url": "https://orobot.io/o/program/BROKER-2/openbot"
+            }
+          ]
+        },
+        "time": "Not published. Treat printing, electronics assembly, firmware/app setup and physical testing as separate stages rather than a single quick build.",
+        "difficulty": 3,
+        "aiLeverage": 5,
+        "evidenceStatus": "Strong",
+        "aiCanHelp": [
+          "Navigate the current DIY, Lite, RC-truck, multi-terrain and ready-to-run source routes",
+          "Map the BOM to the selected body and DIY or custom-PCB electronics route",
+          "Explain Arduino Nano and ESP32 firmware configuration without mixing hardware profiles",
+          "Help diagnose USB OTG, serial, motor-direction, sensor and GPIO problems from observed behaviour",
+          "Adapt firmware, controller or app code for custom controls and sensors",
+          "Help plan Playground behaviours, data collection and policy-training experiments",
+          "Review logs and test results while keeping physical safety checks with the builder"
+        ],
+        "aiCantDo": [
+          "Choose a body variant that fits the available printer, phone and intended terrain",
+          "Print or fabricate the chassis and phone mount, or use a compatible alternative robot-car chassis",
+          "Source quality 18650 cells and use an appropriate charging and handling route",
+          "Solder and wire the motors, motor driver or PCB, microcontroller, battery and selected sensors",
+          "Secure the phone so it cannot leave the mount during acceleration, impacts or turns",
+          "Flash the exact hardware profile and prove steering, stopping and sensor directions at low consequence",
+          "Test remote and autonomous behaviour in a clear controlled area before increasing speed or complexity",
+          "Treat learned or vision-based behaviour as fallible and remain responsible for people, pets, property and the robot around it"
+        ],
+        "mainCatch": "The headline $50 is a robot-body figure, not a guaranteed first-build total. You still need a suitable smartphone, printed or alternative chassis, three 18650 cells, safe charging, electronics assembly and time to configure the firmware and app. Autonomous person following and navigation are software capabilities, not a safety system. The source itself limits the hardware to educational and experimental use and puts responsibility for safe construction and operation on the builder.",
+        "checkedOn": "5 Sep 2026"
+      },
+      "resources": [
+        {
+          "name": "OpenBot canonical source",
+          "url": "https://github.com/ob-f/OpenBot",
+          "type": "repo",
+          "note": "Current canonical OpenBot repository for robot bodies, firmware, Android/iOS software, controllers, training and the Playground. The repository was pushed in August 2026."
+        },
+        {
+          "name": "OpenBot DIY body guide",
+          "url": "https://github.com/ob-f/OpenBot/tree/master/body/diy",
+          "type": "docs",
+          "note": "Official body variants, required and optional components, DIY versus custom-PCB routes, wiring and physical assembly instructions."
+        },
+        {
+          "name": "OpenBot firmware guide",
+          "url": "https://github.com/ob-f/OpenBot/tree/master/firmware",
+          "type": "docs",
+          "note": "Official Arduino Nano and ESP32 firmware routes with hardware-configuration selection and low-level motor/sensor behaviour."
+        },
+        {
+          "name": "OpenBot research paper",
+          "url": "https://arxiv.org/abs/2008.10631",
+          "type": "docs",
+          "note": "Peer-reviewed ICRA 2021 project paper documenting the smartphone-as-robot-brain architecture, roughly $50 robot body and controlled person-following/autonomous-navigation experiments."
+        },
+        {
+          "name": "Current third-party BOM check",
+          "url": "https://orobot.io/o/program/BROKER-2/openbot",
+          "type": "docs",
+          "note": "Third-party OpenBot BOM with component links verified in August 2026 and a $50 to $80 materials estimate. Useful as current price context, not an official OpenBot quote."
+        },
+        {
+          "name": "Independent OpenBot build series",
+          "url": "https://custom-build-robots.com/raspberry-pi-robot-cars/openbot-your-smartphone-controls-a-robot-car-android-app-and-first-test-run/13872?lang=en",
+          "type": "docs",
+          "note": "Independent physical build and test series reporting successful app setup and autonomous operation while surfacing practical phone-camera positioning and build considerations."
+        }
+      ],
+      "lastChecked": "5 Sep 2026"
     },
     {
       "slug": "openbuilds-control",
@@ -2652,13 +2766,13 @@
       "slug": "openknit",
       "name": "OpenKnit",
       "category": "Textiles & craft",
-      "summary": "Open digital knitting-machine project that turns garment design files into a physical textile workflow. Strong example of AI-assisted making beyond electronics.",
+      "summary": "Important open digital-knitting source, but the repository has not been pushed since 2018. Retain it for lineage and design research rather than presenting it as a current assessment candidate without a maintained successor route.",
       "source": {
         "name": "g3rard / OpenKnit",
         "url": "https://github.com/g3rard/OpenKnit",
         "kind": "repository"
       },
-      "pipelineStage": "ASSESSMENT CANDIDATE",
+      "pipelineStage": "REVIEWED SOURCE",
       "tags": [
         "knitting",
         "textiles",
@@ -3948,21 +4062,141 @@
     },
     {
       "slug": "three-axis-camera-slider",
-      "name": "3-Axis Camera Slider",
+      "name": "ESP32 3-Axis Camera Slider",
       "category": "Photography & video",
-      "summary": "Open 3D-printed DSLR motion-control slider with pan and tilt, CAD files and control code. A visually strong build with obvious AI-assisted design and tuning opportunities.",
+      "summary": "A current open pan, tilt and slide camera rig using an ESP32 web interface, stepper motors and a fabrication-heavy mix of printed and machined parts.",
       "source": {
-        "name": "Isaac Chasteau / Hackaday.io",
-        "url": "https://hackaday.io/project/174685-3-axis-camera-slider",
-        "kind": "creator"
+        "name": "Daniel McKenzie / CNCDan",
+        "url": "https://github.com/dmcke5/ESP32_3Axis_CameraSlider",
+        "kind": "repository"
       },
-      "pipelineStage": "ASSESSMENT CANDIDATE",
+      "pipelineStage": "ASSESSED",
       "tags": [
-        "camera",
-        "slider",
-        "motion control",
-        "3D printed"
-      ]
+        "Photography & video",
+        "3D printer or print service",
+        "Laser cutting",
+        "Metal folding and welding",
+        "CNC machining and tapping",
+        "Soldering and electronics tools",
+        "CUSTOM",
+        "PHOTOGRAPHY",
+        "MOTION",
+        "LEARN"
+      ],
+      "assessment": {
+        "verdict": "WORTH CONSIDERING",
+        "reason": "This is a serious custom motion project rather than an electronics demo. It can produce programmable slide, pan and tilt moves with up to five keyframes and a browser-based controller, while keeping the mechanics, gearing and code open to modification. The case is strongest if you already have fabrication access, spare motion hardware or a reason to tailor the rig around a specific camera workflow.",
+        "cost": "No source total. CAIBI estimates roughly £110–£190 / $150–$260 for the commodity core hardware before custom metal fabrication, printing and some driver-specific power parts.",
+        "costGuidance": {
+          "label": "CAIBI estimate",
+          "gbp": "£110–£190 core hardware + custom fabrication",
+          "usd": "$150–$260 core hardware + custom fabrication",
+          "basis": "caibi-estimate",
+          "confidence": "low",
+          "checkedOn": "5 Sep 2026",
+          "explanation": "Low-confidence planning allowance for the source-listed commodity mechanics and electronics plus three ordinary step and direction drivers. The creator publishes no all-in total and used spare 3D-printer parts. Custom laser cutting, folded and welded sheet, machined aluminium, pulley machining, printing, driver-specific power and shipping can dominate the actual first build.",
+          "includes": [
+            "Three NEMA 17 motors",
+            "V-slot extrusion, V wheels, bearings, belts and standard pulleys",
+            "ESP32 development board and 5 V regulator",
+            "Planning allowance for three ordinary step and direction drivers",
+            "Source-listed fasteners, T-nuts and small commodity hardware"
+          ],
+          "excludes": [
+            "Laser-cut tripod plates",
+            "Folded and welded tilt bracket",
+            "Machined aluminium slider plate and pulley machining",
+            "3D printing, filament or print service",
+            "Driver-specific power supply, connectors and cabling",
+            "Camera, tripods and quick-release hardware not already owned",
+            "Shipping, taxes, fabrication labour and assembly time"
+          ]
+        },
+        "buildVsBuy": {
+          "status": "not-like-for-like",
+          "outcome": "not-applicable",
+          "headline": "A current three-axis commercial reference exists, but the systems are not equivalent.",
+          "note": "The exact Zeapon AXIS 100 Pro SS-E2P is £1,269 including VAT in the UK and $1,179 in the US. It is a turnkey carbon-fibre system with materially higher rated payload, integrated control and warranty. The DIY slider is a fabrication-heavy open rig with a creator-tested 1.4 kg payload and no complete all-in build cost. CAIBI records the commercial reference for context and does not publish a saving from the numerical gap.",
+          "boughtAlternative": "Zeapon AXIS 100 Pro SS-E2P",
+          "boughtGbp": "£1,269 inc VAT",
+          "boughtUsd": "$1,179",
+          "checkedOn": "5 Sep 2026",
+          "sources": [
+            {
+              "region": "UK",
+              "url": "https://www.productiongear.co.uk/zeapon-axis-100-pro-multi-axis-motorized-slider-3-axis-version.html"
+            },
+            {
+              "region": "US",
+              "url": "https://www.bhphotovideo.com/c/product/1861217-REG/zeapon_ss_e2p_axis_100_pro_multi_axis.html/overview"
+            }
+          ]
+        },
+        "time": "Multi-stage. The source does not publish a total build time.",
+        "difficulty": 5,
+        "aiLeverage": 3,
+        "evidenceStatus": "Moderate",
+        "aiCanHelp": [
+          "Turn the source BOM and CAD set into a staged sourcing and fabrication checklist",
+          "Help compare fabrication routes when you provide real machine, material or supplier constraints",
+          "Review ESP32 configuration for travel, microsteps, gearing, GPIO and WiFi without inventing missing hardware limits",
+          "Help adapt the web interface, keyframe logic and motion code for a documented camera workflow",
+          "Diagnose motion, direction, acceleration and repeatability problems from measured behaviour and configuration",
+          "Review the selected stepper-driver datasheet and wiring plan while leaving current, voltage and physical inspection to the builder",
+          "Help create a low-consequence commissioning plan before a valuable camera is fitted"
+        ],
+        "aiCantDo": [
+          "Choose whether the required printing, laser cutting, folding, welding and machining will be done in-house or outsourced",
+          "Fabricate and inspect the printed and metal parts, including tapped holes and modified pulley features where the source requires them",
+          "Choose three compatible step and direction drivers plus a suitable power route, then verify current, voltage, grounding and wiring against the actual hardware",
+          "Assemble and align the linear, pan and tilt mechanics so belts, bearings and wheels move freely without excessive play",
+          "Support the rail and camera securely with suitable tripods, mounting plates and a reliable quick-release arrangement",
+          "Set real travel limits and motor configuration from physical measurements rather than copying defaults",
+          "Commission the rig unloaded and at low speed, then use a low-consequence test mass before fitting valuable camera equipment",
+          "Keep WiFi credentials private, replace weak defaults where practical and avoid exposing the controller to an untrusted network"
+        ],
+        "mainCatch": "The fabrication chain is the project. The source relies on many printed parts plus laser-cut sheet, a folded and welded tilt bracket, machined aluminium, modified pulleys and three builder-selected stepper drivers. The creator does not publish an all-in cost and reports problems with the driver choice used on the original build. Outsourcing every custom part can change the economics completely. A moving camera also creates pinch, collision, tipping and equipment-drop risks that software cannot remove.",
+        "checkedOn": "5 Sep 2026"
+      },
+      "resources": [
+        {
+          "name": "ESP32 3-Axis Camera Slider source",
+          "url": "https://github.com/dmcke5/ESP32_3Axis_CameraSlider",
+          "type": "repo",
+          "note": "Current 2026 CERN-OHL-S-2.0 hardware and software source with BOM, CAD, printable parts, fabrication drawings and ESP32 control code."
+        },
+        {
+          "name": "Source build and BOM guide",
+          "url": "https://github.com/dmcke5/ESP32_3Axis_CameraSlider/blob/main/README.md",
+          "type": "docs",
+          "note": "Creator BOM, fabrication notes, mechanical assembly, wiring, WiFi setup and motion configuration. The creator reports testing with a 1.4 kg camera load."
+        },
+        {
+          "name": "Hackaday project coverage",
+          "url": "https://hackaday.com/2026/05/03/three-axis-camera-slider-from-3d-printer-parts/",
+          "type": "docs",
+          "note": "Independent May 2026 editorial coverage of the physical build, gear-ratio iteration, custom carrier work, ESP32 interface and the creator’s successful finished rig."
+        },
+        {
+          "name": "Adafruit project coverage",
+          "url": "https://blog.adafruit.com/2026/05/05/an-esp32-based-3-axis-camera-slider/",
+          "type": "docs",
+          "note": "Independent May 2026 editorial coverage confirming the project and its multi-axis ESP32 control route."
+        },
+        {
+          "name": "Zeapon AXIS 100 Pro UK reference",
+          "url": "https://www.productiongear.co.uk/zeapon-axis-100-pro-multi-axis-motorized-slider-3-axis-version.html",
+          "type": "docs",
+          "note": "Current exact-model UK commercial reference for the three-axis Zeapon AXIS 100 Pro SS-E2P. It is a materially different turnkey product, not a like-for-like savings comparator."
+        },
+        {
+          "name": "Zeapon AXIS 100 Pro US reference",
+          "url": "https://www.bhphotovideo.com/c/product/1861217-REG/zeapon_ss_e2p_axis_100_pro_multi_axis.html/overview",
+          "type": "docs",
+          "note": "Current exact-model US commercial reference for the three-axis Zeapon AXIS 100 Pro SS-E2P. It provides useful market context without making the DIY rig equivalent."
+        }
+      ],
+      "lastChecked": "5 Sep 2026"
     },
     {
       "slug": "trash-printer-v3",
