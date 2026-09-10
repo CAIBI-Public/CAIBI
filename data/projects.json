@@ -1,6 +1,6 @@
 {
   "contractVersion": "2.0",
-  "generatedAt": "2026-09-09T08:20:06.342Z",
+  "generatedAt": "2026-09-10T07:20:51.362Z",
   "records": [
     {
       "slug": "ai-on-the-edge-device",
@@ -2825,7 +2825,7 @@
           "status": "incomplete",
           "outcome": "unclear",
           "headline": "A saving cannot be claimed until the donor mower and RTK route are priced.",
-          "note": "The published OpenMower core hardware allowance is already about £602 / $813 before the donor mower and RTK hardware. A current wire-free Mammotion YUKA mini is £849 in the UK and has a $1,099 regular US price, so the missing build items are decision-critical.",
+          "note": "The published OpenMower core hardware allowance is already about £602 / $813 before the donor mower and RTK hardware. A current wire-free Mammotion YUKA mini is £849 in the UK and has a $1,099 regular US price, so the missing build items are decision-critical. US availability rechecked 9 Sep 2026: the linked YUKA mini H page marks its models and bundles sold out. Its $749 sale display is not an available purchase quote; the $1,099 figure above is the dated regular-price reference. Check stock or another suitable model before deciding.",
           "boughtAlternative": "Mammotion YUKA mini",
           "boughtGbp": "£849",
           "boughtUsd": "$1,099",
