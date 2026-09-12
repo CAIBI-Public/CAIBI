@@ -1,6 +1,6 @@
 {
   "contractVersion": "2.0",
-  "generatedAt": "2026-09-10T12:46:43.105Z",
+  "generatedAt": "2026-09-11T18:54:51.411Z",
   "records": [
     {
       "slug": "ai-on-the-edge-device",
@@ -315,6 +315,24 @@
       ]
     },
     {
+      "slug": "bela-pepper",
+      "name": "Bela Pepper",
+      "category": "Music & audio",
+      "summary": "A programmable DIY Eurorack route with design files and examples, based on the previous-generation Bela platform. Confirm the compatible platform, kit contents and power requirements before ordering. Current stock and complete build cost have not been verified.",
+      "source": {
+        "name": "Bela",
+        "url": "https://github.com/BelaPlatform/bela-pepper",
+        "kind": "repository"
+      },
+      "pipelineStage": "REVIEWED SOURCE",
+      "tags": [
+        "Bela",
+        "Eurorack",
+        "DIY kit",
+        "synthesizer"
+      ]
+    },
+    {
       "slug": "cinepi-v2",
       "name": "CinePI V2",
       "category": "Photography & video",
@@ -498,6 +516,24 @@
       "lastChecked": "17 Aug 2026"
     },
     {
+      "slug": "control-surface-midi",
+      "name": "Control Surface MIDI Controller Library",
+      "category": "Music & audio",
+      "summary": "A software foundation and examples for physical MIDI controls using buttons, potentiometers and encoders. Choose a compatible board, controls, enclosure and host mapping; USB and Bluetooth MIDI support varies by board. This is not a complete hardware kit.",
+      "source": {
+        "name": "Pieter P / tttapa",
+        "url": "https://github.com/tttapa/Control-Surface",
+        "kind": "repository"
+      },
+      "pipelineStage": "REVIEWED SOURCE",
+      "tags": [
+        "MIDI",
+        "Arduino",
+        "controller",
+        "library"
+      ]
+    },
+    {
       "slug": "cyd-weather-clock",
       "name": "CYD Weather Clock",
       "category": "Electronics",
@@ -512,6 +548,25 @@
         "ESP32",
         "weather",
         "touchscreen"
+      ]
+    },
+    {
+      "slug": "daisy-audio-examples",
+      "name": "Daisy Audio Hardware Examples",
+      "category": "Music & audio",
+      "summary": "Hardware-specific audio examples for Daisy boards, supporting experiments with synthesizers and effects. A development resource rather than one complete build; select the exact board and example, then establish any additional controls, enclosure, power and parts needed.",
+      "source": {
+        "name": "Electro-Smith",
+        "url": "https://github.com/electro-smith/DaisyExamples",
+        "kind": "repository"
+      },
+      "pipelineStage": "REVIEWED SOURCE",
+      "tags": [
+        "Daisy",
+        "DSP",
+        "synthesizer",
+        "effects",
+        "hardware"
       ]
     },
     {
@@ -1657,6 +1712,24 @@
         "Eurorack",
         "audio",
         "PCB"
+      ]
+    },
+    {
+      "slug": "mx-midi-guitar",
+      "name": "MX MIDI Guitar",
+      "category": "Music & audio",
+      "summary": "A documented USB MIDI guitar controller with printable parts, wiring and CircuitPython code. Source reviewed; current parts substitutions, firmware compatibility and total build cost still need checking. No CAIBI hardware test or full assessment yet.",
+      "source": {
+        "name": "Adafruit / Ruiz Brothers and Liz Clark",
+        "url": "https://learn.adafruit.com/mx-midi-guitar",
+        "kind": "creator"
+      },
+      "pipelineStage": "REVIEWED SOURCE",
+      "tags": [
+        "MIDI",
+        "controller",
+        "CircuitPython",
+        "3D printing"
       ]
     },
     {
@@ -3848,6 +3921,24 @@
         "quadruped",
         "3D printed",
         "robot"
+      ]
+    },
+    {
+      "slug": "synthux-simple-touch",
+      "name": "Synthux Simple Touch Instruments",
+      "category": "Music & audio",
+      "summary": "Touch-controlled instrument examples for the Simple Touch board and kit. Select the exact instrument and hardware, then check assembly instructions and firmware compatibility. Current kit availability and complete cost remain unverified; no CAIBI hardware test is claimed.",
+      "source": {
+        "name": "Synthux Academy",
+        "url": "https://github.com/Synthux-Academy/simple-touch-instruments",
+        "kind": "repository"
+      },
+      "pipelineStage": "REVIEWED SOURCE",
+      "tags": [
+        "touch",
+        "synthesizer",
+        "Daisy",
+        "instrument"
       ]
     },
     {
