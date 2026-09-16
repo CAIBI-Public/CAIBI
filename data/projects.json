@@ -1,6 +1,6 @@
 {
   "contractVersion": "2.0",
-  "generatedAt": "2026-09-15T10:05:25.125Z",
+  "generatedAt": "2026-09-16T08:11:34.050Z",
   "records": [
     {
       "slug": "ai-on-the-edge-device",
@@ -75,6 +75,22 @@
         }
       ],
       "lastChecked": "17 Aug 2026"
+    },
+    {
+      "slug": "airgradient",
+      "name": "AirGradient",
+      "category": "Home sensing",
+      "summary": "Assemble an air-quality monitor from documented hardware and explore trends, placement and integrations using replaceable sensors and accessible data. Documented kits and assembly guides",
+      "source": {
+        "name": "airgradient.com",
+        "url": "https://www.airgradient.com/documentation/",
+        "kind": "documentation"
+      },
+      "pipelineStage": "FOUND",
+      "tags": [
+        "Home sensing",
+        "AirGradient"
+      ]
     },
     {
       "slug": "albert-apron",
@@ -297,6 +313,54 @@
       "lastChecked": "2 Sep 2026"
     },
     {
+      "slug": "audiomoth",
+      "name": "AudioMoth",
+      "category": "Environmental instruments",
+      "summary": "Configure an open acoustic recorder for scheduled field recordings and build a deployment around suitable power, storage, protection and analysis. Established open hardware ecosystem; configuration software updated in 2026",
+      "source": {
+        "name": "openacousticdevices.info",
+        "url": "https://www.openacousticdevices.info/open-source",
+        "kind": "creator"
+      },
+      "pipelineStage": "FOUND",
+      "tags": [
+        "Environmental instruments",
+        "AudioMoth"
+      ]
+    },
+    {
+      "slug": "awtrix-3",
+      "name": "AWTRIX 3",
+      "category": "Ambient displays",
+      "summary": "Give a compatible pixel clock or custom matrix build new firmware for showing notifications and small information apps on a dedicated desk display. Documented firmware and DIY route",
+      "source": {
+        "name": "github.com",
+        "url": "https://github.com/Blueforcer/awtrix3",
+        "kind": "repository"
+      },
+      "pipelineStage": "FOUND",
+      "tags": [
+        "Ambient displays",
+        "AWTRIX 3"
+      ]
+    },
+    {
+      "slug": "ayab",
+      "name": "AYAB",
+      "category": "Textiles and repair",
+      "summary": "Replace or supplement a compatible knitting machine's control electronics to send digital patterns from a computer and extend an existing tool's usefulness. Documented hardware generations; newer ESP32 design is distinct from established interfaces",
+      "source": {
+        "name": "github.com",
+        "url": "https://github.com/AllYarnsAreBeautiful/ayab-hardware",
+        "kind": "repository"
+      },
+      "pipelineStage": "FOUND",
+      "tags": [
+        "Textiles and repair",
+        "AYAB"
+      ]
+    },
+    {
       "slug": "bcn3d-moveo",
       "name": "BCN3D Moveo Robot Arm",
       "category": "Robotics",
@@ -330,6 +394,22 @@
         "Eurorack",
         "DIY kit",
         "synthesizer"
+      ]
+    },
+    {
+      "slug": "birdnet-go",
+      "name": "BirdNET-Go",
+      "category": "Nature and local AI",
+      "summary": "Run a listening station that classifies wildlife sounds locally and presents detections in a web interface, using a Raspberry Pi and suitable microphone. Documented self-hosted application",
+      "source": {
+        "name": "github.com",
+        "url": "https://github.com/tphakala/birdnet-go",
+        "kind": "repository"
+      },
+      "pipelineStage": "FOUND",
+      "tags": [
+        "Nature and local AI",
+        "BirdNET-Go"
       ]
     },
     {
@@ -605,6 +685,38 @@
       ]
     },
     {
+      "slug": "diy-thermocam-v3",
+      "name": "DIY-Thermocam V3",
+      "category": "Repair tools",
+      "summary": "Assemble a handheld thermal camera from published electronics and enclosure files, then explore heat patterns in repairs and household investigations. Documented V3 assembly and open hardware/firmware",
+      "source": {
+        "name": "diy-thermocam.net",
+        "url": "https://www.diy-thermocam.net/building-instructions/",
+        "kind": "creator"
+      },
+      "pipelineStage": "FOUND",
+      "tags": [
+        "Repair tools",
+        "DIY-Thermocam V3"
+      ]
+    },
+    {
+      "slug": "dune-weaver",
+      "name": "Dune Weaver",
+      "category": "Kinetic art",
+      "summary": "Build a table that draws changing patterns in sand with a magnetically driven ball, combining printed mechanics, motor control and a pattern library. Active software and documented mechanical variants",
+      "source": {
+        "name": "github.com",
+        "url": "https://github.com/tuanchris/dune-weaver",
+        "kind": "repository"
+      },
+      "pipelineStage": "FOUND",
+      "tags": [
+        "Kinetic art",
+        "Dune Weaver"
+      ]
+    },
+    {
       "slug": "esp32-air-quality-monitor",
       "name": "ESP32 Air Quality Monitor",
       "category": "Science & measurement",
@@ -723,6 +835,22 @@
       ]
     },
     {
+      "slug": "esp32-voice-satellite-for-home-assistant",
+      "name": "ESP32 voice satellite for Home Assistant",
+      "category": "Voice and smart home",
+      "summary": "Turn supported ESP32 hardware into a voice interface for Home Assistant, then customise its enclosure and the household tasks it controls. Official tutorial",
+      "source": {
+        "name": "home-assistant.io",
+        "url": "https://www.home-assistant.io/voice_control/s3_box_voice_assistant/",
+        "kind": "creator"
+      },
+      "pipelineStage": "FOUND",
+      "tags": [
+        "Voice and smart home",
+        "ESP32 voice satellite for Home Assistant"
+      ]
+    },
+    {
       "slug": "esp32-wifi-robot",
       "name": "ESP32 WiFi Robot",
       "category": "Robotics",
@@ -754,6 +882,22 @@
         "ESP32",
         "sensors",
         "home automation"
+      ]
+    },
+    {
+      "slug": "espresense",
+      "name": "ESPresense",
+      "category": "Smart home",
+      "summary": "Place ESP32 nodes around a home to estimate which room a supported Bluetooth device occupies and feed that information into Home Assistant. Documented open-source system",
+      "source": {
+        "name": "espresense.com",
+        "url": "https://espresense.com/",
+        "kind": "creator"
+      },
+      "pipelineStage": "FOUND",
+      "tags": [
+        "Smart home",
+        "ESPresense"
       ]
     },
     {
@@ -991,6 +1135,22 @@
         "ESP32",
         "robot",
         "motors"
+      ]
+    },
+    {
+      "slug": "forest-hub",
+      "name": "Forest Hub",
+      "category": "Assistive technology",
+      "summary": "Combine an analogue joystick and assistive switches into a configurable USB mouse or gamepad using a printed enclosure and custom circuit board. Documented v2.1; preceding hardware revision explicitly built and tested",
+      "source": {
+        "name": "github.com",
+        "url": "https://github.com/makersmakingchange/Forest-Joystick-Mouse-Hub",
+        "kind": "repository"
+      },
+      "pipelineStage": "FOUND",
+      "tags": [
+        "Assistive technology",
+        "Forest Hub"
       ]
     },
     {
@@ -1330,6 +1490,54 @@
       "lastChecked": "17 Aug 2026"
     },
     {
+      "slug": "immichframe",
+      "name": "ImmichFrame",
+      "category": "Home displays",
+      "summary": "Turn an existing screen into a photo frame connected to an Immich library, making a private photo collection visible around the home. Documented self-hosted application",
+      "source": {
+        "name": "github.com",
+        "url": "https://github.com/immichFrame/ImmichFrame",
+        "kind": "repository"
+      },
+      "pipelineStage": "FOUND",
+      "tags": [
+        "Home displays",
+        "ImmichFrame"
+      ]
+    },
+    {
+      "slug": "inkplate",
+      "name": "Inkplate",
+      "category": "Ambient displays",
+      "summary": "Use an integrated ESP32 e-paper board to prototype a household noticeboard, local transport display or custom status panel without assembling a separate display controller. Established development-board family",
+      "source": {
+        "name": "developer.espressif.com",
+        "url": "https://developer.espressif.com/blog/2026/05/inkplate-esp32-epaper-development-boards/",
+        "kind": "creator"
+      },
+      "pipelineStage": "FOUND",
+      "tags": [
+        "Ambient displays",
+        "Inkplate"
+      ]
+    },
+    {
+      "slug": "inkypi",
+      "name": "InkyPi",
+      "category": "Ambient displays",
+      "summary": "Combine a Raspberry Pi and supported e-paper display with a web interface for configuring plugins and changing what appears on screen. Documented open-source build",
+      "source": {
+        "name": "github.com",
+        "url": "https://github.com/fatihak/InkyPi",
+        "kind": "repository"
+      },
+      "pipelineStage": "FOUND",
+      "tags": [
+        "Ambient displays",
+        "InkyPi"
+      ]
+    },
+    {
       "slug": "jubilee",
       "name": "Jubilee V2.2.2",
       "category": "Workshop",
@@ -1524,6 +1732,22 @@
       ]
     },
     {
+      "slug": "lipsync",
+      "name": "LipSync",
+      "category": "Assistive technology",
+      "summary": "Build a sip-and-puff joystick with adjustable settings for computer access and adaptive gaming, using documented electronics, printed parts and a separate control hub. Version 4.1 documented; source flags a cable-sourcing issue",
+      "source": {
+        "name": "github.com",
+        "url": "https://github.com/makersmakingchange/LipSync",
+        "kind": "repository"
+      },
+      "pipelineStage": "FOUND",
+      "tags": [
+        "Assistive technology",
+        "LipSync"
+      ]
+    },
+    {
       "slug": "low-cost-toolchanger",
       "name": "Low Cost Toolchanger",
       "category": "Workshop",
@@ -1556,6 +1780,22 @@
         "CNC",
         "router",
         "large format"
+      ]
+    },
+    {
+      "slug": "lumenpnp",
+      "name": "LumenPnP",
+      "category": "Workshop production",
+      "summary": "Build or configure an open pick-and-place machine to move from manually assembled electronics toward repeatable small-batch circuit-board production. Documented production machine",
+      "source": {
+        "name": "docs.opulo.io",
+        "url": "https://docs.opulo.io/semi-assembly-4-0/",
+        "kind": "documentation"
+      },
+      "pipelineStage": "FOUND",
+      "tags": [
+        "Workshop production",
+        "LumenPnP"
       ]
     },
     {
@@ -1750,6 +1990,22 @@
       ]
     },
     {
+      "slug": "oak",
+      "name": "Oak",
+      "category": "Assistive technology",
+      "summary": "Build a proportional joystick with interchangeable tops and connect it to compatible adaptive gaming hardware or a USB interface hub. Documented and user-tested OpenAT design",
+      "source": {
+        "name": "github.com",
+        "url": "https://github.com/makersmakingchange/Oak-Compact-Joystick",
+        "kind": "repository"
+      },
+      "pipelineStage": "FOUND",
+      "tags": [
+        "Assistive technology",
+        "Oak"
+      ]
+    },
+    {
       "slug": "oomwoo",
       "name": "OomWoo",
       "category": "Robotics",
@@ -1930,6 +2186,22 @@
         "pick and place",
         "electronics",
         "machine"
+      ]
+    },
+    {
+      "slug": "open-press",
+      "name": "Open Press",
+      "category": "Printmaking",
+      "summary": "3D-print a small etching press, assemble it with simple hardware and use it to create physical prints away from a conventional studio. Established documented design; documented creator community and projects",
+      "source": {
+        "name": "openpressproject.com",
+        "url": "https://openpressproject.com/blogs/news/how-to-3d-print-your-own-printing-press",
+        "kind": "creator"
+      },
+      "pipelineStage": "FOUND",
+      "tags": [
+        "Printmaking",
+        "Open Press"
       ]
     },
     {
@@ -2621,6 +2893,22 @@
       ]
     },
     {
+      "slug": "openchess",
+      "name": "OpenChess",
+      "category": "Tabletop and play",
+      "summary": "Build a sensor-equipped chessboard that tracks moves, displays guidance and connects physical play to supported digital chess services. Documented build; fork modifications non-commercial, optional Bluetooth emulation proprietary",
+      "source": {
+        "name": "github.com",
+        "url": "https://github.com/joojoooo/OpenChess",
+        "kind": "repository"
+      },
+      "pipelineStage": "FOUND",
+      "tags": [
+        "Tabletop and play",
+        "OpenChess"
+      ]
+    },
+    {
       "slug": "opendesk-leap",
       "name": "Opendesk Leap",
       "category": "Furniture & woodworking",
@@ -2672,6 +2960,22 @@
         "sewing",
         "Arduino",
         "motion"
+      ]
+    },
+    {
+      "slug": "openepaperlink",
+      "name": "OpenEPaperLink",
+      "category": "Reuse and smart home",
+      "summary": "Repurpose compatible electronic shelf labels as wireless reminders, room information displays or tiny home dashboards using an access point and replacement firmware. Documented ecosystem; non-commercial project licence",
+      "source": {
+        "name": "github.com",
+        "url": "https://github.com/OpenEPaperLink/OpenEPaperLink",
+        "kind": "repository"
+      },
+      "pipelineStage": "FOUND",
+      "tags": [
+        "Reuse and smart home",
+        "OpenEPaperLink"
       ]
     },
     {
@@ -2851,6 +3155,22 @@
         "textiles",
         "digital fabrication",
         "machine"
+      ]
+    },
+    {
+      "slug": "openmetbuoy",
+      "name": "OpenMetBuoy",
+      "category": "Environmental instruments",
+      "summary": "Assemble an open buoy platform for measuring movement and waves, following published hardware, firmware and research documentation. Published open instrument with documented research deployments; specialist build",
+      "source": {
+        "name": "github.com",
+        "url": "https://github.com/jerabaul29/OpenMetBuoy-v2021a",
+        "kind": "repository"
+      },
+      "pipelineStage": "FOUND",
+      "tags": [
+        "Environmental instruments",
+        "OpenMetBuoy"
       ]
     },
     {
@@ -3092,6 +3412,22 @@
       "lastChecked": "29 Aug 2026"
     },
     {
+      "slug": "opensprinkler",
+      "name": "OpenSprinkler",
+      "category": "Garden automation",
+      "summary": "Use an open irrigation controller to schedule and adapt watering, with a route from a straightforward garden installation to customised integrations. Shipping open-source controller ecosystem",
+      "source": {
+        "name": "opensprinkler.com",
+        "url": "https://opensprinkler.com/",
+        "kind": "creator"
+      },
+      "pipelineStage": "FOUND",
+      "tags": [
+        "Garden automation",
+        "OpenSprinkler"
+      ]
+    },
+    {
       "slug": "otto-diy",
       "name": "Otto DIY",
       "category": "Robotics",
@@ -3238,6 +3574,54 @@
         "control",
         "motion",
         "desktop"
+      ]
+    },
+    {
+      "slug": "phoniebox",
+      "name": "Phoniebox",
+      "category": "Family and audio",
+      "summary": "Build a Raspberry Pi music player that starts albums, stories or streams from RFID cards, with room for custom buttons and a personal enclosure. Established documented DIY project",
+      "source": {
+        "name": "github.com",
+        "url": "https://github.com/MiczFlor/RPi-Jukebox-RFID",
+        "kind": "repository"
+      },
+      "pipelineStage": "FOUND",
+      "tags": [
+        "Family and audio",
+        "Phoniebox"
+      ]
+    },
+    {
+      "slug": "pikvm",
+      "name": "PiKVM",
+      "category": "Useful infrastructure",
+      "summary": "Add remote keyboard, video and mouse access to a computer so it can be controlled even before its operating system is working. Established project with commercial hardware options",
+      "source": {
+        "name": "pikvm.org",
+        "url": "https://pikvm.org/",
+        "kind": "creator"
+      },
+      "pipelineStage": "FOUND",
+      "tags": [
+        "Useful infrastructure",
+        "PiKVM"
+      ]
+    },
+    {
+      "slug": "pioreactor",
+      "name": "Pioreactor",
+      "category": "Open science",
+      "summary": "Explore controlled cultivation and measurement with an open bioreactor platform that links hardware, software and repeatable experiments. Commercial open-source platform",
+      "source": {
+        "name": "pioreactor.com",
+        "url": "https://pioreactor.com/",
+        "kind": "creator"
+      },
+      "pipelineStage": "FOUND",
+      "tags": [
+        "Open science",
+        "Pioreactor"
       ]
     },
     {
@@ -3496,6 +3880,22 @@
       ]
     },
     {
+      "slug": "recicleta",
+      "name": "RECICLETA",
+      "category": "Recycling and fabrication",
+      "summary": "Build a documented educational adaptation of Recreator3D using printed components and a wooden base to process suitable bottle material into filament. Educational workshop build with published parts; documentation less complete than a retail kit",
+      "source": {
+        "name": "github.com",
+        "url": "https://github.com/interaubis/RECICLETA-Recreator3D",
+        "kind": "repository"
+      },
+      "pipelineStage": "FOUND",
+      "tags": [
+        "Recycling and fabrication",
+        "RECICLETA"
+      ]
+    },
+    {
       "slug": "rgb-p4-matrix-clock",
       "name": "RGB P4 Matrix Clock",
       "category": "Electronics",
@@ -3510,6 +3910,22 @@
         "ESP32",
         "LED matrix",
         "clock"
+      ]
+    },
+    {
+      "slug": "riley-cox-s-punch-card-jacquard-loom",
+      "name": "Riley Cox's punch-card Jacquard loom",
+      "category": "Textiles and fabrication",
+      "summary": "Make a compact pattern-controlled loom from laser-cut and printed parts, then weave experiments that connect physical coding with textile craft. Documented 2024 creator build; creator invites functionality improvements",
+      "source": {
+        "name": "github.com",
+        "url": "https://github.com/Rileycoxx/Open-Jacquard-Loom-",
+        "kind": "repository"
+      },
+      "pipelineStage": "FOUND",
+      "tags": [
+        "Textiles and fabrication",
+        "Riley Cox's punch-card Jacquard loom"
       ]
     },
     {
@@ -3924,6 +4340,22 @@
       ]
     },
     {
+      "slug": "squeezelite-esp32",
+      "name": "Squeezelite-ESP32",
+      "category": "Audio and reuse",
+      "summary": "Turn compatible ESP32 audio hardware into a network player supporting several playback approaches, with scope for physical buttons, displays and synchronised rooms. Documented open-source firmware",
+      "source": {
+        "name": "github.com",
+        "url": "https://github.com/sle118/squeezelite-esp32",
+        "kind": "repository"
+      },
+      "pipelineStage": "FOUND",
+      "tags": [
+        "Audio and reuse",
+        "Squeezelite-ESP32"
+      ]
+    },
+    {
       "slug": "synthux-simple-touch",
       "name": "Synthux Simple Touch Instruments",
       "category": "Music & audio",
@@ -4308,6 +4740,22 @@
       ]
     },
     {
+      "slug": "trmnl",
+      "name": "TRMNL",
+      "category": "Ambient displays",
+      "summary": "Turn calendars, weather and chosen feeds into a dedicated e-paper companion, with ready-made plugins and a route to custom integrations. Shipping product and developer ecosystem",
+      "source": {
+        "name": "trmnl.com",
+        "url": "https://trmnl.com/",
+        "kind": "creator"
+      },
+      "pipelineStage": "FOUND",
+      "tags": [
+        "Ambient displays",
+        "TRMNL"
+      ]
+    },
+    {
       "slug": "verhobot",
       "name": "VerhoBot",
       "category": "Home & automation",
@@ -4577,6 +5025,22 @@
         }
       ],
       "lastChecked": "29 Aug 2026"
+    },
+    {
+      "slug": "whisplay",
+      "name": "Whisplay",
+      "category": "Physical AI",
+      "summary": "Build a button-operated Raspberry Pi chatbot with a small screen and speaker, then compare cloud-backed and suitably configured local-model approaches. Documented open-source build with multiple backends",
+      "source": {
+        "name": "github.com",
+        "url": "https://github.com/PiSugar/whisplay-ai-chatbot",
+        "kind": "repository"
+      },
+      "pipelineStage": "FOUND",
+      "tags": [
+        "Physical AI",
+        "Whisplay"
+      ]
     },
     {
       "slug": "wled",
