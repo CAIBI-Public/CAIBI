@@ -1,6 +1,6 @@
 {
   "contractVersion": "2.0",
-  "generatedAt": "2026-09-16T20:58:30.486Z",
+  "generatedAt": "2026-09-17T15:30:47.977Z",
   "records": [
     {
       "slug": "ai-on-the-edge-device",
@@ -614,6 +614,22 @@
       ]
     },
     {
+      "slug": "custom-bluetooth-gamepad",
+      "name": "Custom Bluetooth gamepad",
+      "category": "Games",
+      "summary": "Make a gamepad with a button layout that suits you. CAIBI suggests: Confirm host compatibility, test reconnects and prototype the grip before committing to a case.",
+      "source": {
+        "name": "Creator link from eTechnophiles",
+        "url": "https://www.youtube.com/watch?v=dODmsoAu0D4",
+        "kind": "creator"
+      },
+      "pipelineStage": "FOUND",
+      "tags": [
+        "ESP32",
+        "Source-led build"
+      ]
+    },
+    {
       "slug": "cyd-weather-clock",
       "name": "CYD Weather Clock",
       "category": "Electronics",
@@ -698,6 +714,22 @@
       "tags": [
         "Repair tools",
         "DIY-Thermocam V3"
+      ]
+    },
+    {
+      "slug": "door-left-open",
+      "name": "Door-left-open reminder",
+      "category": "Everyday tools",
+      "summary": "Get a reminder when a shed or garage door has stayed open. CAIBI suggests: Add a delay, bounded notifications, reconnection handling and aligned mounts.",
+      "source": {
+        "name": "Random Nerd Tutorials",
+        "url": "https://randomnerdtutorials.com/esp32-door-status-telegram/",
+        "kind": "creator"
+      },
+      "pipelineStage": "FOUND",
+      "tags": [
+        "ESP32",
+        "CAIBI guided build"
       ]
     },
     {
@@ -1386,6 +1418,22 @@
       "lastChecked": "29 Aug 2026"
     },
     {
+      "slug": "handheld-game-console",
+      "name": "Handheld game console",
+      "category": "Games",
+      "summary": "Build a small self-contained handheld around available game files. CAIBI suggests: Confirm the PCB and display revisions, then prototype button reach and charging access.",
+      "source": {
+        "name": "Creator link from eTechnophiles",
+        "url": "https://www.instructables.com/ESP32-Handheld-Game-Console/",
+        "kind": "creator"
+      },
+      "pipelineStage": "FOUND",
+      "tags": [
+        "ESP32",
+        "Source-led build"
+      ]
+    },
+    {
       "slug": "idda-knitting-machine",
       "name": "Idda Knitting Machine",
       "category": "Textiles & craft",
@@ -1538,6 +1586,22 @@
       ]
     },
     {
+      "slug": "internet-radio-with-physical-controls",
+      "name": "Internet radio with physical controls",
+      "category": "Music & audio",
+      "summary": "Listen to a few favourite stations without opening an app. CAIBI suggests: Verify playable stream URLs, add presets and volume controls, then design the speaker case.",
+      "source": {
+        "name": "How To Electronics",
+        "url": "https://how2electronics.com/simple-esp32-internet-web-radio-with-oled-display/",
+        "kind": "creator"
+      },
+      "pipelineStage": "FOUND",
+      "tags": [
+        "ESP32",
+        "CAIBI guided build"
+      ]
+    },
+    {
       "slug": "jubilee",
       "name": "Jubilee V2.2.2",
       "category": "Workshop",
@@ -1680,6 +1744,22 @@
       "lastChecked": "5 Sep 2026"
     },
     {
+      "slug": "led-matrix-clock",
+      "name": "LED matrix clock",
+      "category": "Displays",
+      "summary": "Build a clock whose digits are visible across a room. CAIBI suggests: Check the published hardware files, then adapt brightness and the case to its final location.",
+      "source": {
+        "name": "Creator link from eTechnophiles",
+        "url": "https://www.instructables.com/ESP32-LED-Matrix-Clock/",
+        "kind": "creator"
+      },
+      "pipelineStage": "FOUND",
+      "tags": [
+        "ESP32",
+        "Source-led build"
+      ]
+    },
+    {
       "slug": "led-sequin-wearable",
       "name": "LED Sequin Wearable",
       "category": "Textiles & craft",
@@ -1745,6 +1825,22 @@
       "tags": [
         "Assistive technology",
         "LipSync"
+      ]
+    },
+    {
+      "slug": "lora-garden-weather-station",
+      "name": "LoRa garden weather station",
+      "category": "Garden & outdoors",
+      "summary": "Send readings from an outdoor node to an indoor receiver. CAIBI suggests: Confirm regional radio settings, range at the actual site and weather protection.",
+      "source": {
+        "name": "How To Electronics",
+        "url": "https://how2electronics.com/lora-based-wireless-weather-station-with-arduino-esp32/",
+        "kind": "creator"
+      },
+      "pipelineStage": "FOUND",
+      "tags": [
+        "ESP32",
+        "Source-led build"
       ]
     },
     {
@@ -2003,6 +2099,22 @@
       "tags": [
         "Assistive technology",
         "Oak"
+      ]
+    },
+    {
+      "slug": "offline-music-player",
+      "name": "Offline music player",
+      "category": "Music & audio",
+      "summary": "Play your own audio files from a compact device. CAIBI suggests: Add clear file navigation, volume control and a serviceable speaker enclosure.",
+      "source": {
+        "name": "How To Electronics",
+        "url": "https://how2electronics.com/esp32-music-audio-mp3-player/",
+        "kind": "creator"
+      },
+      "pipelineStage": "FOUND",
+      "tags": [
+        "ESP32",
+        "Source-led build"
       ]
     },
     {
@@ -3577,6 +3689,22 @@
       ]
     },
     {
+      "slug": "phone-controlled-rover",
+      "name": "Phone-controlled rover",
+      "category": "Robotics",
+      "summary": "Drive a small rover from a local phone interface. CAIBI suggests: Add a stop-on-disconnect rule, a power switch and a chassis with protected wiring.",
+      "source": {
+        "name": "Random Nerd Tutorials",
+        "url": "https://randomnerdtutorials.com/esp32-wi-fi-car-robot-arduino/",
+        "kind": "creator"
+      },
+      "pipelineStage": "FOUND",
+      "tags": [
+        "ESP32",
+        "Source-led build"
+      ]
+    },
+    {
       "slug": "phoniebox",
       "name": "Phoniebox",
       "category": "Family and audio",
@@ -3625,6 +3753,22 @@
       ]
     },
     {
+      "slug": "pixel-status-lamp",
+      "name": "Desk status lamp",
+      "category": "Displays",
+      "summary": "Show focus, availability or a simple countdown as clear pixel icons. CAIBI suggests: Choose the states and controls; add a diffuser, enclosure and reliable power.",
+      "source": {
+        "name": "Random Nerd Tutorials",
+        "url": "https://randomnerdtutorials.com/esp32-8x8-matrix-shape-editor-web-server/",
+        "kind": "creator"
+      },
+      "pipelineStage": "FOUND",
+      "tags": [
+        "ESP32",
+        "CAIBI guided build"
+      ]
+    },
+    {
       "slug": "plasma-clock",
       "name": "Plasma Clock",
       "category": "Electronics",
@@ -3657,6 +3801,22 @@
         "clock",
         "servo",
         "3D printed"
+      ]
+    },
+    {
+      "slug": "pocket-thermal-viewer",
+      "name": "Pocket thermal viewer",
+      "category": "Photography",
+      "summary": "See a coarse heat map of objects around the workshop. CAIBI suggests: Design a sensor window and grip, check temperature scaling and document resolution limits.",
+      "source": {
+        "name": "How To Electronics",
+        "url": "https://how2electronics.com/diy-esp32-mlx90640-ir-thermal-camera-with-live-web-display/",
+        "kind": "creator"
+      },
+      "pipelineStage": "FOUND",
+      "tags": [
+        "ESP32",
+        "CAIBI guided build"
       ]
     },
     {
@@ -3960,6 +4120,22 @@
         "ESP32",
         "animatronic",
         "robot"
+      ]
+    },
+    {
+      "slug": "room-comfort-display",
+      "name": "Room comfort display",
+      "category": "Everyday tools",
+      "summary": "See temperature and humidity from two rooms on one small screen. CAIBI suggests: Add room names, last-seen times, sensor placement guidance and vented cases.",
+      "source": {
+        "name": "Random Nerd Tutorials",
+        "url": "https://randomnerdtutorials.com/esp32-cyd-esp-now-receive-data/",
+        "kind": "creator"
+      },
+      "pipelineStage": "FOUND",
+      "tags": [
+        "ESP32",
+        "CAIBI guided build"
       ]
     },
     {
@@ -4722,6 +4898,22 @@
       "lastChecked": "5 Sep 2026"
     },
     {
+      "slug": "touchscreen-weather-station",
+      "name": "Touchscreen weather station",
+      "category": "Displays",
+      "summary": "Make a compact weather display for a hallway or desk. CAIBI suggests: Add a location-setting screen, update time and useful offline behaviour.",
+      "source": {
+        "name": "Random Nerd Tutorials",
+        "url": "https://randomnerdtutorials.com/esp32-cyd-lvgl-weather-station/",
+        "kind": "creator"
+      },
+      "pipelineStage": "FOUND",
+      "tags": [
+        "ESP32",
+        "Source-led build"
+      ]
+    },
+    {
       "slug": "trash-printer-v3",
       "name": "The Trash Printer V3",
       "category": "Recycling & materials",
@@ -4867,6 +5059,22 @@
         "EV",
         "skateboard",
         "electronics"
+      ]
+    },
+    {
+      "slug": "vga-arcade-console",
+      "name": "VGA arcade console",
+      "category": "Games",
+      "summary": "Give a spare compatible monitor a dedicated miniature arcade. CAIBI suggests: Confirm game rights and video timing, then add a stable joystick panel.",
+      "source": {
+        "name": "Creator link from eTechnophiles",
+        "url": "https://www.instructables.com/ESP32-VGA-Arcade-Games-and-Joystick/",
+        "kind": "creator"
+      },
+      "pipelineStage": "FOUND",
+      "tags": [
+        "ESP32",
+        "Source-led build"
       ]
     },
     {
@@ -5027,6 +5235,22 @@
       "lastChecked": "29 Aug 2026"
     },
     {
+      "slug": "weather-at-a-glance",
+      "name": "Outdoor temperature display",
+      "category": "Displays",
+      "summary": "Read the outdoor temperature on a small dedicated display. CAIBI suggests: Add a stale-data indicator, setup flow and readable enclosure.",
+      "source": {
+        "name": "Random Nerd Tutorials",
+        "url": "https://randomnerdtutorials.com/esp32-temperature-tm1637-display/",
+        "kind": "creator"
+      },
+      "pipelineStage": "FOUND",
+      "tags": [
+        "ESP32",
+        "CAIBI guided build"
+      ]
+    },
+    {
       "slug": "whisplay",
       "name": "Whisplay",
       "category": "Physical AI",
@@ -5040,6 +5264,22 @@
       "tags": [
         "Physical AI",
         "Whisplay"
+      ]
+    },
+    {
+      "slug": "wireless-desk-remote",
+      "name": "Wireless desk remote",
+      "category": "Controls",
+      "summary": "Use a small touchscreen to control two nearby low-voltage devices. CAIBI suggests: Choose real actions; add acknowledgements, connection state and a stand.",
+      "source": {
+        "name": "Random Nerd Tutorials",
+        "url": "https://randomnerdtutorials.com/esp32-cyd-esp-now-control-multiple-boards/",
+        "kind": "creator"
+      },
+      "pipelineStage": "FOUND",
+      "tags": [
+        "ESP32",
+        "CAIBI guided build"
       ]
     },
     {
@@ -5057,6 +5297,22 @@
         "ESP32",
         "lighting",
         "LED"
+      ]
+    },
+    {
+      "slug": "workshop-dust-display",
+      "name": "Workshop dust trend display",
+      "category": "Workshop",
+      "summary": "See how particulate readings change during workshop activities. CAIBI suggests: Check the sensor claims; design airflow and compare repeatable measurements.",
+      "source": {
+        "name": "How To Electronics",
+        "url": "https://how2electronics.com/iot-based-pm-air-quality-monitoring-system-using-esp32/",
+        "kind": "creator"
+      },
+      "pipelineStage": "FOUND",
+      "tags": [
+        "ESP32",
+        "CAIBI guided build"
       ]
     },
     {
