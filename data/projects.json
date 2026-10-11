@@ -1,7 +1,26 @@
 {
   "contractVersion": "2.0",
-  "generatedAt": "2026-09-18T21:25:30.773Z",
+  "generatedAt": "2026-10-11T08:24:03.586Z",
   "records": [
+    {
+      "slug": "adsb-receiver",
+      "name": "ADS-B feeder (adsb.im)",
+      "category": "Transport trackers",
+      "summary": "Chosen over tar1090 because adsb.im is a complete, maintained build path (image, hardware list, setup); tar1090 is only the map interface. Source covers supported boards, SDRs and setup. Not covered: costs, antenna installation. No CAIBI build or full assessment yet.",
+      "source": {
+        "name": "adsb.im (dirkhh)",
+        "url": "https://github.com/dirkhh/adsb-feeder-image",
+        "kind": "repository"
+      },
+      "pipelineStage": "REVIEWED SOURCE",
+      "tags": [
+        "ADS-B",
+        "RTL-SDR",
+        "Raspberry Pi",
+        "radio",
+        "aircraft"
+      ]
+    },
     {
       "slug": "ai-on-the-edge-device",
       "name": "AI-on-the-edge-device",
@@ -77,19 +96,57 @@
       "lastChecked": "17 Aug 2026"
     },
     {
+      "slug": "ai-trail-camera",
+      "name": "Mini AI Wildlife Camera",
+      "category": "Home cameras and local AI",
+      "summary": "Source covers software install, configuration and USB storage. A video is linked. Not covered: enclosure, power, parts list, field results. Title reflects the README's wildlife monitor, not a verified trail-camera build. No CAIBI build or full assessment yet.",
+      "source": {
+        "name": "Luke Ditria",
+        "url": "https://github.com/LukeDitria/mini_ai_camera",
+        "kind": "repository"
+      },
+      "pipelineStage": "REVIEWED SOURCE",
+      "tags": [
+        "Raspberry Pi",
+        "AI Camera",
+        "IMX500",
+        "wildlife",
+        "birds"
+      ]
+    },
+    {
       "slug": "airgradient",
       "name": "AirGradient",
       "category": "Home sensing",
-      "summary": "Assemble an air-quality monitor from documented hardware and explore trends, placement and integrations using replaceable sensors and accessible data. Documented kits and assembly guides",
+      "summary": "Air-quality monitor sold as a kit (ONE indoor USD 138, Open Air outdoor USD 125) or assembled for about USD 90 to 100 more. The saving is real but the kit loses warranty and certification. UK delivered cost unverified. No CAIBI build or full assessment yet.",
       "source": {
         "name": "airgradient.com",
         "url": "https://www.airgradient.com/documentation/",
         "kind": "documentation"
       },
-      "pipelineStage": "FOUND",
+      "pipelineStage": "REVIEWED SOURCE",
       "tags": [
         "Home sensing",
         "AirGradient"
+      ]
+    },
+    {
+      "slug": "ais-ship-tracker",
+      "name": "AIS-catcher",
+      "category": "Transport trackers",
+      "summary": "Source covers supported SDRs, output options, community sharing and a legal disclaimer. Not covered: antenna choice in detail, expected range, costs. No CAIBI build or full assessment yet.",
+      "source": {
+        "name": "jvde-github (AIS-catcher)",
+        "url": "https://github.com/jvde-github/AIS-catcher",
+        "kind": "repository"
+      },
+      "pipelineStage": "REVIEWED SOURCE",
+      "tags": [
+        "AIS",
+        "RTL-SDR",
+        "ships",
+        "radio",
+        "Raspberry Pi"
       ]
     },
     {
@@ -330,19 +387,184 @@
     },
     {
       "slug": "awtrix-3",
-      "name": "AWTRIX 3",
-      "category": "Ambient displays",
-      "summary": "Give a compatible pixel clock or custom matrix build new firmware for showing notifications and small information apps on a dedicated desk display. Documented firmware and DIY route",
+      "name": "AWTRIX Pixel Clock",
+      "category": "Electronics",
+      "summary": "Open firmware that turns a 32x8 WS2812 pixel clock into a local notification and information display for Home Assistant, MQTT or HTTP. AWTRIX 3 was archived in August 2026; its author now directs every new install to the rewrite, AWTRIX NG, which runs on the same Ulanzi TC001 or on a self-built ESP32 and LED matrix.",
       "source": {
-        "name": "github.com",
+        "name": "Stephan Mühl (Blueforcer)",
         "url": "https://github.com/Blueforcer/awtrix3",
         "kind": "repository"
       },
-      "pipelineStage": "FOUND",
+      "pipelineStage": "ASSESSED",
       "tags": [
-        "Ambient displays",
-        "AWTRIX 3"
-      ]
+        "Electronics",
+        "Computer with Chrome, Edge or Opera for the browser flasher",
+        "USB-C data cable",
+        "Python with esptool to back up the stock firmware",
+        "Soldering iron and multimeter (scratch build only)",
+        "3D printer or print service (scratch build case, optional)",
+        "USEFUL",
+        "PLATFORM",
+        "CUSTOM",
+        "REUSE"
+      ],
+      "assessment": {
+        "verdict": "WORTH CONSIDERING",
+        "reason": "A 32x8 pixel clock with open firmware becomes a glanceable local display for a smart home: the time, sensor readings, notifications from doorbells or washing machines, and small apps pushed over MQTT or HTTP, with no cloud and no telemetry according to the source. Home Assistant finds it through MQTT discovery. AWTRIX NG adds scripts that run on the clock itself, so a display can fetch and show data without a server. The flash route costs little more than a stock clock and a fraction of a LaMetric TIME. Tidbyt no longer sells hardware.",
+        "cost": "The cheapest route is buying a Ulanzi TC001 (£37 / $45.99 at Ulanzi) and flashing it for free. A scratch build costs roughly £50–£65 / $55–$65 in core parts, before a case or diffuser.",
+        "costGuidance": {
+          "label": "CAIBI estimate",
+          "gbp": "~£50–£65",
+          "usd": "~$55–$65",
+          "basis": "caibi-estimate",
+          "confidence": "low",
+          "checkedOn": "24 Sep 2026",
+          "explanation": "Scratch-build core parts from current retailer prices. The verified UK items total £36.70 at The Pi Hut. The UK panel price is an approximate conversion from BTF-Lighting USD prices because no UK retailer price could be verified, which is why confidence is low. The US figure uses Adafruit and BTF-Lighting prices plus a small capacitor allowance. None of this is needed on the bought route: a Ulanzi TC001 costs £37 / $45.99 at Ulanzi and the firmware is free.",
+          "includes": [
+            "ESP32 or ESP32-S3 development board",
+            "WS2812B 8x32 flexible panel",
+            "Certified plug-in 5 V 4 A supply (and UK mains lead)",
+            "2.1 mm DC jack",
+            "Series data resistor",
+            "1000 µF capacitor and wire (allowance)"
+          ],
+          "excludes": [
+            "Enclosure or 3D printing",
+            "Diffuser acrylic",
+            "Optional buttons, light sensor, temperature sensor, buzzer and level shifter",
+            "Battery and charger",
+            "Shipping and any UK import charges on the panel",
+            "MQTT broker or Home Assistant host",
+            "Computer and USB cable"
+          ]
+        },
+        "buildVsBuy": {
+          "status": "priced",
+          "outcome": "buy-costs-less",
+          "headline": "The bought Ulanzi TC001 costs less than the parts for a scratch build.",
+          "note": "The Ulanzi TC001 runs the same firmware and adds a case, diffuser, buttons, light and temperature sensors, a buzzer and a battery. The scratch-build estimate leaves all of those out and still costs more, so the comparison does not favour buying unfairly. Flashing the Ulanzi is free, which makes it the cheapest route in both markets. The UK Ulanzi price is Ulanzi's own GBP storefront price. The UK DIY figure depends on an approximate panel conversion. Shipping is excluded on both sides. For premium context, LaMetric TIME is £159 in the UK and $199.99 in the US. Tidbyt no longer sells new units; its store lists Gen 2 at $189 and the original at $199, both unavailable.",
+          "boughtAlternative": "Ulanzi TC001 Smart Pixel Clock, 1 pc (flashed with AWTRIX NG)",
+          "boughtGbp": "£37.00",
+          "boughtUsd": "$45.99",
+          "differenceGbp": "~£13–£28",
+          "differenceUsd": "~$9–$19",
+          "differenceLabel": "Buying is cheaper by",
+          "checkedOn": "24 Sep 2026",
+          "sources": [
+            {
+              "region": "UK",
+              "url": "https://www.ulanzi.com/en-gb/products/ulanzi-pixel-smart-clock-2882"
+            },
+            {
+              "region": "US",
+              "url": "https://www.ulanzi.com/products/ulanzi-pixel-smart-clock-2882"
+            },
+            {
+              "region": "UK",
+              "url": "https://store-uk.lametric.com/products/lametric"
+            },
+            {
+              "region": "US",
+              "url": "https://store.lametric.com/products/lametric"
+            },
+            {
+              "region": "US",
+              "url": "https://tidbyt.com/products/tidbyt-gen-2"
+            }
+          ]
+        },
+        "time": "Under an hour to flash; weekend to scratch build (CAIBI estimate)",
+        "difficulty": 2,
+        "aiLeverage": 4,
+        "evidenceStatus": "Strong",
+        "aiCanHelp": [
+          "Explain the difference between AWTRIX 3 and AWTRIX NG and which documentation applies to a given device",
+          "Walk through the esptool backup and browser flashing steps and interpret error messages",
+          "Write Home Assistant automations and MQTT or HTTP payloads that push apps and notifications to the display",
+          "Write and debug Berry scripts for on-device apps, using the AI prompt and agent skill the NG project publishes",
+          "Port existing AWTRIX 3 automations to the NG API v1 from the published migration guide",
+          "Check a scratch-build pin map against the published GPIO rules before it is written to the device",
+          "Size a supply and a brightness cap for a chosen panel from the current figures in the documentation"
+        ],
+        "aiCantDo": [
+          "Plug the device in and hold the right buttons while flashing",
+          "Solder the panel power, ground, capacitor and data resistor on a scratch build",
+          "Judge whether the Ulanzi internal cell is swollen, and remove it safely if needed",
+          "Fit the diffuser and enclosure so the text reads cleanly",
+          "Watch a bright full-white frame and confirm the supply and wiring stay cool"
+        ],
+        "mainCatch": "The software has been replaced by its own author. AWTRIX 3 stopped development and was archived in August 2026. AWTRIX NG is a from-scratch rewrite with a new API, so existing v3 automations do not carry over, and NG has only weeks of public history. Both licences are non-commercial. On the bought route the Ulanzi TC001 holds a 4400mAh lithium cell that sits at full charge while plugged in, and Ulanzi has said non-standard fast chargers can destroy its 3.3 V regulator. On the scratch route the panel can draw far more current than the firmware limits, so the supply and brightness cap matter more than the software.",
+        "checkedOn": "24 Sep 2026"
+      },
+      "resources": [
+        {
+          "name": "AWTRIX 3 (archived)",
+          "url": "https://github.com/Blueforcer/awtrix3",
+          "type": "repo",
+          "note": "Original firmware. Archived in August 2026, last release 0.98 in January 2025, CC BY-NC-SA 4.0. Still the reference for devices already running it."
+        },
+        {
+          "name": "AWTRIX NG",
+          "url": "https://github.com/Blueforcer/awtrix-ng",
+          "type": "repo",
+          "note": "Current successor by the same author. Rewritten from scratch, PolyForm Noncommercial 1.0.0, v1.1.2 tagged 20 Sep 2026. Supports ESP32 and ESP32-S3 and panels from 32 to 128 pixels wide."
+        },
+        {
+          "name": "Tronbyt server",
+          "url": "https://github.com/tronbyt/server",
+          "type": "repo",
+          "note": "Community self-hosted backend and firmware route that keeps Tidbyt Gen 1 and Gen 2 units working without Tidbyt servers. Commits to 22 Sep 2026."
+        },
+        {
+          "name": "AWTRIX NG documentation",
+          "url": "https://blueforcer.github.io/awtrix-ng/",
+          "type": "docs",
+          "note": "Current documentation for flashing, the API, scripting and hardware."
+        },
+        {
+          "name": "AWTRIX NG DIY build guide",
+          "url": "https://blueforcer.github.io/awtrix-ng/advanced/diy-build/",
+          "type": "docs",
+          "note": "Bill of materials, pinouts, power sizing, wiring rules and a verification and troubleshooting table for scratch builds."
+        },
+        {
+          "name": "AWTRIX NG flashing guide",
+          "url": "https://blueforcer.github.io/awtrix-ng/getting-started/flashing/",
+          "type": "docs",
+          "note": "Browser flasher, esptool backup of TC001 stock firmware and image selection."
+        },
+        {
+          "name": "AWTRIX NG Home Assistant guide",
+          "url": "https://blueforcer.github.io/awtrix-ng/guides/home-assistant/",
+          "type": "docs",
+          "note": "MQTT discovery setup. Requires Home Assistant 2024.11 or newer."
+        },
+        {
+          "name": "AWTRIX 3 documentation (archived)",
+          "url": "https://blueforcer.github.io/awtrix3/",
+          "type": "docs",
+          "note": "Kept online as a reference for AWTRIX 3 devices. Carries the end-of-maintenance notice."
+        },
+        {
+          "name": "DIY 8x32 LED Matrix Smart Clock With Awtrix 3.0",
+          "url": "https://www.instructables.com/DIY-8x32-LED-Matrix-Smart-Clock-With-Awtrix-30/",
+          "type": "docs",
+          "note": "Independent scratch build with a printed enclosure, also published on Hackster."
+        },
+        {
+          "name": "DIY Social Media Follower Display (Awtrix)",
+          "url": "https://hackaday.io/project/203160-diy-social-media-follower-display-awtrix",
+          "type": "docs",
+          "note": "Independent 2025 build on AWTRIX 3 with touch switches, sensor and printed housing."
+        },
+        {
+          "name": "How to Remove Battery from Ulanzi TC001 Clock",
+          "url": "https://www.youtube.com/watch?v=HIQl6D0DVNE",
+          "type": "other",
+          "note": "Community video on removing the internal cell. CAIBI has not verified the procedure."
+        }
+      ],
+      "lastChecked": "24 Sep 2026"
     },
     {
       "slug": "ayab",
@@ -397,16 +619,201 @@
       ]
     },
     {
+      "slug": "bird-feeder-species-camera",
+      "name": "Bird Feeder Species Camera",
+      "category": "Garden & growing",
+      "summary": "A 3D-printed feeder with a Raspberry Pi fisheye camera that streams to Frigate on a separate always-on computer, where a local bird classifier names the species of each visitor.",
+      "source": {
+        "name": "miak3D / BirdBrain on Printables, using Frigate NVR bird classification",
+        "url": "https://www.printables.com/model/519209-birdbrain-smart-bird-feeder-diy-bird-buddy",
+        "kind": "creator"
+      },
+      "pipelineStage": "ASSESSED",
+      "tags": [
+        "Garden & growing",
+        "3D printer or print service (PETG suggested for outdoor parts)",
+        "Computer to flash the microSD card and configure the Pi",
+        "Always-on Docker host for Frigate, MQTT and the web interface",
+        "Hot glue or outdoor-rated adhesive for the lens cover",
+        "Drill and fixings for the mounting position",
+        "LEARN",
+        "CUSTOM",
+        "PLATFORM",
+        "REUSE"
+      ],
+      "assessment": {
+        "verdict": "BUY INSTEAD",
+        "reason": "A reader who already runs Frigate or Home Assistant can add a species-identifying feeder camera for the cost of a small Raspberry Pi, a camera module and a printed housing. Identification runs on the local network, the footage stays on the owner's hardware, and there is no per-year charge for unlimited recognition. Frigate stores clips, labels each bird event with a species sub-label and can feed Home Assistant automations. The pieces are open and replaceable, so the classifier, camera or housing can be changed later.",
+        "cost": "No source total. CAIBI estimates about £90–£110 / $111–$135 for the feeder-end parts, before the always-on computer that runs Frigate and before 3D printer ownership.",
+        "costGuidance": {
+          "label": "CAIBI estimate",
+          "gbp": "£90–£110",
+          "usd": "$111–$135",
+          "basis": "caibi-estimate",
+          "confidence": "medium",
+          "checkedOn": "24 Sep 2026",
+          "explanation": "Current prices for the source-specified Pi, camera, cable, supply, card and one spool of filament. The low end is the listed parts; the high end allows for a lens cover, adhesive, fixings and outdoor cable management that the source does not price. The Raspberry Pi Zero 2 W was out of stock at The Pi Hut, Pimoroni, Adafruit and SparkFun on 24 Sep 2026; PiShop.us listed it with a one-per-order limit.",
+          "includes": [
+            "Raspberry Pi Zero 2 W",
+            "Waveshare 5MP Camera (G) with 160° fisheye lens",
+            "Pi Zero camera cable",
+            "Official 12.5W micro USB power supply",
+            "32GB microSD card",
+            "1 kg PETG filament",
+            "Allowance for lens cover, adhesive and fixings (high end only)"
+          ],
+          "excludes": [
+            "Always-on computer for Frigate (for example a Beelink EQ14 N150 mini PC, $385 pre-order on bee-link.com on 24 Sep 2026; no GBP price verified)",
+            "3D printer ownership or print service",
+            "Outdoor socket or any fixed electrical work",
+            "Bird seed, pole or bracket",
+            "Shipping"
+          ]
+        },
+        "buildVsBuy": {
+          "status": "not-like-for-like",
+          "outcome": "not-applicable",
+          "headline": "The feeder-end parts already cost more than the cheapest bought AI feeder camera.",
+          "note": "The closest bought equivalent is the Birdfy Feeder Rookie: one camera, a small feeder and AI species recognition. It costs £79.99 in the UK and $79.99 in the US. Its free tier allows 10 AI recognitions a day; unlimited recognition needs Birdfy Membership Plus at £75.99 or $79.99 a year, and the US store sells the Rookie with a first year of Plus for $139.99. That puts the UK first year at £155.98. Bird Buddy's Pro was £250 at John Lewis and the US Pro Solar was $189 (sale price, regular $339). Bird Buddy's free plan includes species ID, and its automatic AI+ recognition needs Individual Premium at $69.99 a year; no UK Premium price could be checked because Bird Buddy's European shop was offline. Birdfy is Netvue's bird-camera brand, and netvue.com lists the same range at higher prices. CAIBI does not claim a difference: the build's £90–£110 / $111–$135 covers only the feeder end and needs an always-on Frigate computer, while the bought feeders run on battery and solar and include a warranty and app. The build carries no subscription.",
+          "boughtAlternative": "Birdfy Feeder Rookie, with Birdfy Membership Plus for unlimited AI recognition",
+          "boughtGbp": "£79.99 + £75.99/yr Plus",
+          "boughtUsd": "$79.99, or $139.99 with 1 year of Plus ($79.99/yr after)",
+          "checkedOn": "24 Sep 2026",
+          "sources": [
+            {
+              "region": "UK",
+              "url": "https://uk.birdfy.com/products/birdfy-feeder-rookie-beginner-friendly-smart-bird-feeder"
+            },
+            {
+              "region": "UK",
+              "url": "https://uk.birdfy.com/products/birdfy-membership"
+            },
+            {
+              "region": "US",
+              "url": "https://www.birdfy.com/products/birdfy-feeder-rookie"
+            },
+            {
+              "region": "US",
+              "url": "https://www.birdfy.com/products/birdfy-feeder-rookie-1-year-plus-membership"
+            },
+            {
+              "region": "US",
+              "url": "https://www.birdfy.com/products/birdfy-membership"
+            },
+            {
+              "region": "UK",
+              "url": "https://www.johnlewis.com/bird-buddy-pro-camera-bird-feeder-blue/p113277881"
+            },
+            {
+              "region": "US",
+              "url": "https://mybirdbuddy.com/product/smart-bird-feeder-pro-solar-v2/"
+            },
+            {
+              "region": "US",
+              "url": "https://mybirdbuddy.com/memberships/"
+            }
+          ]
+        },
+        "time": "Multi-stage: printing plus Frigate setup (no source time)",
+        "difficulty": 3,
+        "aiLeverage": 4,
+        "evidenceStatus": "Limited",
+        "aiCanHelp": [
+          "Draft the Frigate configuration for one RTSP camera, bird-only tracking, snapshots and the built-in bird classification setting",
+          "Explain and debug MQTT, Docker Compose and Frigate log errors from pasted output",
+          "Help set up MediaMTX or an equivalent RTSP stream on the Pi and diagnose stream drop-outs",
+          "Suggest detect zones, masks and minimum object sizes to cut squirrel and leaf false positives, from real screenshots",
+          "Compare confidence thresholds against a reader's own labelled detections",
+          "Check the species label list for the birds that actually visit a UK or US garden",
+          "Draft a Home Assistant automation or notification from Frigate sub-label events",
+          "Summarise the ICO domestic CCTV rules and draft a simple camera notice where the view crosses a boundary"
+        ],
+        "aiCantDo": [
+          "Print, fit and seal the feeder so it survives rain and sun",
+          "Set the camera focus at the real perch distance",
+          "Run power safely to the feeder position from a suitable outdoor socket",
+          "Choose a mounting spot that keeps neighbours' property out of frame",
+          "Confirm that the species labels match the birds actually visiting",
+          "Keep the lens clean and the feeder filled through the year"
+        ],
+        "mainCatch": "The feeder is the easy part. The build depends on a separate always-on computer running Frigate, an MQTT broker and, in the source, WhosAtMyFeeder, which has not been updated since July 2023. The source instructions assume the reader already knows how to set up a Pi, RTSP streaming and Docker, and the creator reports squirrels being detected as birds. The bundled open classifier knows about 964 species from a 2017 dataset and is not state of the art. The mains supply to the feeder, weather sealing of a printed box and camera placement near a boundary are all left to the builder.",
+        "checkedOn": "24 Sep 2026"
+      },
+      "resources": [
+        {
+          "name": "WhosAtMyFeeder",
+          "url": "https://github.com/mmcc-xx/WhosAtMyFeeder",
+          "type": "repo",
+          "note": "The source's species add-on for Frigate. Uses Google's AIY birds V1 TFLite model with a 0.7 default threshold. No licence file, and last committed on 23 July 2023."
+        },
+        {
+          "name": "YetAnother-WhosAtMyFeeder",
+          "url": "https://github.com/Jellman86/YetAnother-WhosAtMyFeeder",
+          "type": "repo",
+          "note": "Actively maintained MIT-licensed successor (last commit 18 Sep 2026). Publishes its own small model-accuracy tests. Raspberry Pi image not yet validated on real Pi hardware."
+        },
+        {
+          "name": "Frigate NVR",
+          "url": "https://github.com/blakeblackshear/frigate",
+          "type": "repo",
+          "note": "Open-source NVR that detects birds and, from v0.16, adds species sub-labels with a local MobileNet V2 iNaturalist bird model. Latest tag v0.18.0."
+        },
+        {
+          "name": "BirdBox (ESP32-S3)",
+          "url": "https://github.com/SEspe/BirdBox",
+          "type": "repo",
+          "note": "ESP32-S3 feeder or nest-box camera. Species ID uses iNaturalist's online API; the creator removed an on-device model because web training photos did not transfer to low-resolution feeder views."
+        },
+        {
+          "name": "BirdBrain feeder files and instructions",
+          "url": "https://www.printables.com/model/519209-birdbrain-smart-bird-feeder-diy-bird-buddy",
+          "type": "docs",
+          "note": "Creator's parts list, printed files, Pi, Frigate and WhosAtMyFeeder steps, and notes on squirrels and weather. CC BY."
+        },
+        {
+          "name": "Frigate bird classification",
+          "url": "https://docs.frigate.video/configuration/bird_classification",
+          "type": "docs",
+          "note": "How to enable species sub-labels, the model used, the 0.9 default threshold and the one-time model download."
+        },
+        {
+          "name": "Frigate recommended hardware",
+          "url": "https://docs.frigate.video/frigate/hardware",
+          "type": "docs",
+          "note": "Host and detector guidance for the always-on computer."
+        },
+        {
+          "name": "YA-WAMF model accuracy notes",
+          "url": "https://github.com/Jellman86/YetAnother-WhosAtMyFeeder/blob/main/docs/features/model-accuracy.md",
+          "type": "docs",
+          "note": "The only published accuracy tests found for the MobileNet bird model and alternatives, with method and limits stated."
+        },
+        {
+          "name": "Tom's Hardware coverage",
+          "url": "https://www.tomshardware.com/news/raspberry-pi-smart-bird-feeder-identifies-feathered-dinner-guests",
+          "type": "docs",
+          "note": "July 2023 coverage of the BirdBrain build by Ash Hill, confirming the Pi, fisheye camera, Frigate and WhosAtMyFeeder chain."
+        },
+        {
+          "name": "ICO: Home CCTV systems",
+          "url": "https://ico.org.uk/for-the-public/domestic-cctv-systems/",
+          "type": "docs",
+          "note": "UK rules when a home camera captures a neighbour's property, a public area or communal space."
+        }
+      ],
+      "lastChecked": "24 Sep 2026"
+    },
+    {
       "slug": "birdnet-go",
       "name": "BirdNET-Go",
       "category": "Nature and local AI",
-      "summary": "Run a listening station that classifies wildlife sounds locally and presents detections in a web interface, using a Raspberry Pi and suitable microphone. Documented self-hosted application",
+      "summary": "Self-hosted Go application running BirdNET, Perch and bat classifiers locally on a Raspberry Pi 5 or 4B with a USB microphone. Licence is non-commercial (CC BY-NC-SA 4.0). The microphone and its weatherproofing decide results. No CAIBI build or full assessment yet.",
       "source": {
         "name": "github.com",
         "url": "https://github.com/tphakala/birdnet-go",
         "kind": "repository"
       },
-      "pipelineStage": "FOUND",
+      "pipelineStage": "REVIEWED SOURCE",
       "tags": [
         "Nature and local AI",
         "BirdNET-Go"
@@ -684,6 +1091,22 @@
       ]
     },
     {
+      "slug": "deskimon-printed-companion",
+      "name": "Deskimon: print and assemble a desk companion",
+      "category": "Playful objects",
+      "summary": "A character display with offline animations, a clock and timer, housed in a modular printed body. CAIBI suggests: Confirm the exact Waveshare ESP32-S3-Touch-AMOLED-1.75 and purchased file terms. Follow the creator build first; use the separate RoboEyes route for independently editable behaviour.",
+      "source": {
+        "name": "Paid creator build",
+        "url": "https://creative-chance.com/products/poko-deskimon",
+        "kind": "creator"
+      },
+      "pipelineStage": "FOUND",
+      "tags": [
+        "ESP32",
+        "Source-led build"
+      ]
+    },
+    {
       "slug": "diy-robocars",
       "name": "DIY Robocars",
       "category": "Robotics",
@@ -870,16 +1293,35 @@
       "slug": "esp32-voice-satellite-for-home-assistant",
       "name": "ESP32 voice satellite for Home Assistant",
       "category": "Voice and smart home",
-      "summary": "Turn supported ESP32 hardware into a voice interface for Home Assistant, then customise its enclosure and the household tasks it controls. Official tutorial",
+      "summary": "The S3-BOX tutorial still works, but Home Assistant's own Voice Preview Edition (USD 59 to 69, GBP 56) is now the maintained route and is cheaper than most DIY hardware. Speech quality depends on local compute or a cloud plan. No CAIBI build or full assessment yet.",
       "source": {
         "name": "home-assistant.io",
         "url": "https://www.home-assistant.io/voice_control/s3_box_voice_assistant/",
         "kind": "creator"
       },
-      "pipelineStage": "FOUND",
+      "pipelineStage": "REVIEWED SOURCE",
       "tags": [
         "Voice and smart home",
         "ESP32 voice satellite for Home Assistant"
+      ]
+    },
+    {
+      "slug": "esp32-weather-epd",
+      "name": "ESP32 E-Paper Weather Display",
+      "category": "Ambient displays",
+      "summary": "Source covers components, supported panels, wiring, enclosures, configuration and API setup in detail. Not covered: parts prices, measured battery life by other builders. No CAIBI build or full assessment yet.",
+      "source": {
+        "name": "Luke Marzen",
+        "url": "https://github.com/lmarzen/esp32-weather-epd",
+        "kind": "repository"
+      },
+      "pipelineStage": "REVIEWED SOURCE",
+      "tags": [
+        "ESP32",
+        "e-paper",
+        "weather",
+        "battery",
+        "low power"
       ]
     },
     {
@@ -920,13 +1362,13 @@
       "slug": "espresense",
       "name": "ESPresense",
       "category": "Smart home",
-      "summary": "Place ESP32 nodes around a home to estimate which room a supported Bluetooth device occupies and feed that information into Home Assistant. Documented open-source system",
+      "summary": "ESP32 Bluetooth nodes report which room a phone or tag is in, via MQTT to Home Assistant. Nodes cost about GBP 9 each; accuracy depends on consistent branded boards and calibration. Last stable release Feb 2026. No CAIBI build or full assessment yet.",
       "source": {
         "name": "espresense.com",
         "url": "https://espresense.com/",
         "kind": "creator"
       },
-      "pipelineStage": "FOUND",
+      "pipelineStage": "REVIEWED SOURCE",
       "tags": [
         "Smart home",
         "ESPresense"
@@ -964,6 +1406,25 @@
         "ESP32",
         "VFD",
         "display"
+      ]
+    },
+    {
+      "slug": "fably",
+      "name": "Fably",
+      "category": "Voice and companions",
+      "summary": "Source covers laptop and Raspberry Pi installation, two sound cards, the streaming design and an experimental Ollama option. Not checked: current OpenAI model availability, cost per story, local model quality. No CAIBI build or full assessment yet.",
+      "source": {
+        "name": "Stefano Mazzocchi",
+        "url": "https://github.com/stefanom/fably",
+        "kind": "repository"
+      },
+      "pipelineStage": "REVIEWED SOURCE",
+      "tags": [
+        "Raspberry Pi",
+        "storytelling",
+        "OpenAI",
+        "children",
+        "voice"
       ]
     },
     {
@@ -1204,6 +1665,25 @@
       ]
     },
     {
+      "slug": "frigate-nvr",
+      "name": "Frigate",
+      "category": "Home cameras and local AI",
+      "summary": "Source covers features, detectors, recommended cameras and host hardware. Hardware page states Coral TPU is no longer recommended for new installations. Not covered: prices, storage sizing examples. No CAIBI build or full assessment yet.",
+      "source": {
+        "name": "Frigate, Inc.",
+        "url": "https://github.com/blakeblackshear/frigate",
+        "kind": "repository"
+      },
+      "pipelineStage": "REVIEWED SOURCE",
+      "tags": [
+        "NVR",
+        "object detection",
+        "Home Assistant",
+        "cameras",
+        "local AI"
+      ]
+    },
+    {
       "slug": "gridfinity-rebuilt",
       "name": "Gridfinity Rebuilt",
       "category": "Workshop",
@@ -1434,6 +1914,25 @@
       ]
     },
     {
+      "slug": "home-assistant-glow",
+      "name": "Home Assistant Glow",
+      "category": "Energy and monitoring",
+      "summary": "Source covers parts, firmware (ESP32, ESP32-C3, ESP8266), pulse-rate configuration and printable cases; full walkthrough is on glow-energy.io. Not checked: accuracy against bills, UK meter coverage. No CAIBI build or full assessment yet.",
+      "source": {
+        "name": "Klaas Schoute",
+        "url": "https://github.com/klaasnicolaas/home-assistant-glow",
+        "kind": "repository"
+      },
+      "pipelineStage": "REVIEWED SOURCE",
+      "tags": [
+        "energy monitoring",
+        "ESPHome",
+        "Home Assistant",
+        "electricity meter",
+        "ESP32"
+      ]
+    },
+    {
       "slug": "idda-knitting-machine",
       "name": "Idda Knitting Machine",
       "category": "Textiles & craft",
@@ -1541,13 +2040,13 @@
       "slug": "immichframe",
       "name": "ImmichFrame",
       "category": "Home displays",
-      "summary": "Turn an existing screen into a photo frame connected to an Immich library, making a private photo collection visible around the home. Documented self-hosted application",
+      "summary": "Docker web app that turns a browser, Android or TV device into a photo frame for an Immich library. Cheap if Immich and a spare screen already exist; the real cost and upkeep sit in the Immich server. No CAIBI build or full assessment yet.",
       "source": {
         "name": "github.com",
         "url": "https://github.com/immichFrame/ImmichFrame",
         "kind": "repository"
       },
-      "pipelineStage": "FOUND",
+      "pipelineStage": "REVIEWED SOURCE",
       "tags": [
         "Home displays",
         "ImmichFrame"
@@ -1573,13 +2072,13 @@
       "slug": "inkypi",
       "name": "InkyPi",
       "category": "Ambient displays",
-      "summary": "Combine a Raspberry Pi and supported e-paper display with a web interface for configuring plugins and changing what appears on screen. Documented open-source build",
+      "summary": "Raspberry Pi plus Pimoroni or Waveshare e-paper, driven by a local web interface and plugins. Display size sets most of the cost, from about GBP 50 to GBP 230 for the panel alone. No tagged releases. No CAIBI build or full assessment yet.",
       "source": {
         "name": "github.com",
         "url": "https://github.com/fatihak/InkyPi",
         "kind": "repository"
       },
-      "pipelineStage": "FOUND",
+      "pipelineStage": "REVIEWED SOURCE",
       "tags": [
         "Ambient displays",
         "InkyPi"
@@ -1599,6 +2098,25 @@
       "tags": [
         "ESP32",
         "CAIBI guided build"
+      ]
+    },
+    {
+      "slug": "iss-mimic",
+      "name": "ISS Mimic",
+      "category": "Kinetic models",
+      "summary": "Source covers software setup, STL files, a wiki BOM with prices, PCB ordering and frame. Build guide is marked incomplete. Not covered: total time, print volume, current prices. No CAIBI build or full assessment yet.",
+      "source": {
+        "name": "ISS Mimic Project",
+        "url": "https://github.com/ISS-Mimic/Mimic",
+        "kind": "repository"
+      },
+      "pipelineStage": "REVIEWED SOURCE",
+      "tags": [
+        "ISS",
+        "3D printing",
+        "Raspberry Pi",
+        "Arduino",
+        "motors"
       ]
     },
     {
@@ -1744,6 +2262,25 @@
       "lastChecked": "5 Sep 2026"
     },
     {
+      "slug": "kindle-dash",
+      "name": "kindle-dash",
+      "category": "Ambient displays",
+      "summary": "Source covers the on-device code, install and update steps. Not covered: jailbreaking, rendering server setup beyond tips, other Kindle models. Repo unchanged since 2022. No CAIBI build or full assessment yet.",
+      "source": {
+        "name": "Pascal Widdershoven",
+        "url": "https://github.com/pascalw/kindle-dash",
+        "kind": "repository"
+      },
+      "pipelineStage": "REVIEWED SOURCE",
+      "tags": [
+        "Kindle",
+        "e-ink",
+        "reuse",
+        "dashboard",
+        "jailbreak"
+      ]
+    },
+    {
       "slug": "led-matrix-clock",
       "name": "LED matrix clock",
       "category": "Displays",
@@ -1828,6 +2365,25 @@
       ]
     },
     {
+      "slug": "llm-vision-doorbell",
+      "name": "LLM Vision",
+      "category": "Home cameras and local AI",
+      "summary": "Source covers supported providers, features and install steps; detailed docs are on a separate GitBook. Not covered: per-request costs, latency, accuracy. No CAIBI build or full assessment yet.",
+      "source": {
+        "name": "valentinfrlch (LLM Vision)",
+        "url": "https://github.com/valentinfrlch/ha-llmvision",
+        "kind": "repository"
+      },
+      "pipelineStage": "REVIEWED SOURCE",
+      "tags": [
+        "Home Assistant",
+        "LLM",
+        "cameras",
+        "doorbell",
+        "notifications"
+      ]
+    },
+    {
       "slug": "lora-garden-weather-station",
       "name": "LoRa garden weather station",
       "category": "Garden & outdoors",
@@ -1892,6 +2448,25 @@
       "tags": [
         "Workshop production",
         "LumenPnP"
+      ]
+    },
+    {
+      "slug": "magicmirror",
+      "name": "MagicMirror²",
+      "category": "Ambient displays",
+      "summary": "Source covers software, requirements (Pi 2 to 5, full Raspberry Pi OS with desktop) and modules. Not covered: glass, monitor, frame construction, costs. No CAIBI build or full assessment yet.",
+      "source": {
+        "name": "Michael Teeuw and MagicMirror² contributors",
+        "url": "https://github.com/MagicMirrorOrg/MagicMirror",
+        "kind": "repository"
+      },
+      "pipelineStage": "REVIEWED SOURCE",
+      "tags": [
+        "smart mirror",
+        "Raspberry Pi",
+        "Electron",
+        "display",
+        "joinery"
       ]
     },
     {
@@ -2148,6 +2723,25 @@
         "quadruped",
         "robot",
         "open source"
+      ]
+    },
+    {
+      "slug": "open-duck-mini",
+      "name": "Open Duck Mini v2",
+      "category": "Robots",
+      "summary": "Source covers CAD (Onshape), BOM spreadsheet, print guide, an incomplete assembly guide, a Tnkr build guide, embedded runtime and training repositories. Not checked: current part prices, build success rate. No CAIBI build or full assessment yet.",
+      "source": {
+        "name": "Antoine Pirrone and contributors",
+        "url": "https://github.com/apirrone/Open_Duck_Mini",
+        "kind": "repository"
+      },
+      "pipelineStage": "REVIEWED SOURCE",
+      "tags": [
+        "bipedal robot",
+        "reinforcement learning",
+        "3D printing",
+        "servos",
+        "Raspberry Pi"
       ]
     },
     {
@@ -3527,13 +4121,13 @@
       "slug": "opensprinkler",
       "name": "OpenSprinkler",
       "category": "Garden automation",
-      "summary": "Use an open irrigation controller to schedule and adapt watering, with a route from a straightforward garden installation to customised integrations. Shipping open-source controller ecosystem",
+      "summary": "Open irrigation controller, now v3.4 in AC, DC and Latch versions, with open GPL firmware. The controller is the small part; valves, pipework and a 230V or 120V transformer are site-specific. UK pricing unverified. No CAIBI build or full assessment yet.",
       "source": {
         "name": "opensprinkler.com",
         "url": "https://opensprinkler.com/",
         "kind": "creator"
       },
-      "pipelineStage": "FOUND",
+      "pipelineStage": "REVIEWED SOURCE",
       "tags": [
         "Garden automation",
         "OpenSprinkler"
@@ -3573,6 +4167,171 @@
         "education",
         "Arduino"
       ]
+    },
+    {
+      "slug": "overhead-flight-tracker",
+      "name": "Overhead Flight Tracker",
+      "category": "Electronics",
+      "summary": "A Raspberry Pi drives a 64x32 HUB75 RGB LED matrix through an Adafruit RGB Matrix Bonnet to show the route, flight number and aircraft type of planes passing overhead, with a clock, weather and satellite passes when the sky is empty.",
+      "source": {
+        "name": "Colin Waddell / FlightTracker",
+        "url": "https://github.com/ColinWaddell/FlightTracker",
+        "kind": "repository"
+      },
+      "pipelineStage": "ASSESSED",
+      "tags": [
+        "Electronics",
+        "Computer with microSD card reader",
+        "Small screwdriver",
+        "Soldering iron (optional, for the PWM solder bridge)",
+        "3D printer or print service (optional, for the official case)",
+        "USEFUL",
+        "LEARN",
+        "CUSTOM",
+        "COOL"
+      ],
+      "assessment": {
+        "verdict": "RECOMMENDED",
+        "reason": "The build is mostly assembly and configuration, with no fabrication required unless you want a custom case. The software is open (GPL-3.0), configurable from a browser, and draws aircraft positions from several free sources at once, with a free OpenSky Network account, paid services or your own ADS-B receiver as options. The same hardware can be repurposed as any 64x32 LED display. The commodity parts cost well under half of a finished commercial tracker.",
+        "cost": "No source total. CAIBI estimates roughly £81–£130 / $95–$115 for the core Pi, bonnet, panel, plug-in power supply and microSD card, before any enclosure.",
+        "costGuidance": {
+          "label": "CAIBI estimate",
+          "gbp": "£81–£130",
+          "usd": "$95–$115",
+          "basis": "caibi-estimate",
+          "confidence": "medium",
+          "checkedOn": "24 Sep 2026",
+          "explanation": "Sum of current retailer prices for the core parts. The UK low end uses a Waveshare 1:16-scan panel and assumes a microSD card is already owned; the high end uses the Adafruit panel and a new card. The US range uses Adafruit and PiShop.us prices; the low end assumes a card is owned. The UK supply is a Mean Well desktop unit plus a separate UK mains cable. Several US Raspberry Pi and microSD listings were out of stock on the check date.",
+          "includes": [
+            "Raspberry Pi 3 Model A+",
+            "Adafruit RGB Matrix Bonnet",
+            "64x32 4 mm pitch HUB75 panel",
+            "Certified 5 V 4 A plug-in supply with 2.1 mm barrel",
+            "32GB microSD card (high end only)"
+          ],
+          "excludes": [
+            "Enclosure or 3D printing",
+            "Diffusion acrylic",
+            "Shipping",
+            "Optional local ADS-B receiver",
+            "Any paid flight data API",
+            "Computer used for setup"
+          ]
+        },
+        "buildVsBuy": {
+          "status": "priced",
+          "outcome": "build-costs-less",
+          "headline": "The core parts cost well under half the price of the nearest finished tracker.",
+          "note": "The FlightTrackerLED Mach 2 uses the same 64x32 panel format but runs on an ESP32-S3, comes in a solid maple enclosure and uses a managed cloud data service. The DIY estimate excludes an enclosure and shipping, and the bought prices exclude shipping; UK shipping and any import charges are calculated at checkout and were not checked. The UK price is the GBP storefront sale price (shown against a £422 compare-at price). The difference is parts cash only and does not price setup time or ongoing data-provider risk.",
+          "boughtAlternative": "FlightTrackerLED Mach 2 LED Flight Tracker Display",
+          "boughtGbp": "£306",
+          "boughtUsd": "$399",
+          "differenceGbp": "~£177–£225",
+          "differenceUsd": "~$284–$304",
+          "differenceLabel": "Potential cash saving",
+          "checkedOn": "24 Sep 2026",
+          "sources": [
+            {
+              "region": "UK",
+              "url": "https://checkout.flighttrackerled.com/products/led-flight-tracker-matrix-display?currency=GBP"
+            },
+            {
+              "region": "US",
+              "url": "https://flighttrackerled.com/products/led-flight-tracker-matrix-display"
+            },
+            {
+              "region": "GLOBAL",
+              "url": "https://www.flighttrackerled.com/policy"
+            }
+          ]
+        },
+        "time": "Evening to weekend (CAIBI estimate)",
+        "difficulty": 2,
+        "aiLeverage": 3,
+        "evidenceStatus": "Strong",
+        "aiCanHelp": [
+          "Explain the install script and the step-by-step guide for your Pi model before you run anything",
+          "Help choose between the default free sources, OpenSky Network and a local tar1090 receiver based on your needs and the providers' published limits",
+          "Work out the bounding box, radius and altitude filters for your location from coordinates you supply",
+          "Read error output and journalctl logs and suggest likely causes, with API keys removed first",
+          "Help adapt the display code, themes and scenes in the GPL-3.0 source",
+          "Check a panel listing for scan rate, HUB75 interface and power requirements before you buy",
+          "Draft an enclosure or mounting plan around measured panel and Pi dimensions"
+        ],
+        "aiCantDo": [
+          "Check the scan-rate marking on the physical panel",
+          "Seat the bonnet and connect the ribbon and power leads the right way round",
+          "Make the optional PWM solder bridge",
+          "Judge flicker, brightness and colour on the real display",
+          "Confirm the displayed flights match aircraft actually overhead",
+          "Secure the panel and cables in an enclosure"
+        ],
+        "mainCatch": "The display is only as good as its data sources. The current code enables three free community aggregators (ADS-B.fi, ADSB.lol and airplanes.live) by default, alongside FlightRadar24 through an unofficial Python library that its author says is for personal educational use and that has broken before. Route information (origin and destination) comes from further free community lookups with their own limits. None of these is a guaranteed service. Your own ADS-B receiver removes the dependence; a free OpenSky account is another option, though OpenSky's licence asks for written permission for operational use in an automated system. Hardware traps are minor but real: panels marked 32S (1:32 scan) are not fully supported by default, an underpowered supply turns the display red, and the source warns that powering the Pi by USB at the same time as the bonnet supply can damage the Pi.",
+        "checkedOn": "24 Sep 2026"
+      },
+      "resources": [
+        {
+          "name": "FlightTracker (v2, main branch)",
+          "url": "https://github.com/ColinWaddell/FlightTracker",
+          "type": "repo",
+          "note": "GPL-3.0 source by Colin Waddell. v2 rewrite June 2026, commits to 20 Sep 2026. FlightRadar24, OpenSky and tar1090 providers, web configuration, Pi 3/4/Zero and Pi 5 install guides."
+        },
+        {
+          "name": "plane-tracker-rgb-pi",
+          "url": "https://github.com/c0wsaysmoo/plane-tracker-rgb-pi",
+          "type": "repo",
+          "note": "Independent derivative by c0wsaysmoo, last commit 27 Aug 2026. Pi 3A+ build with hardware list, API waterfall across OpenSky, AirLabs, FlightAware and FlightRadar24, and setup guide for Bookworm and Trixie."
+        },
+        {
+          "name": "FlightTracker-Case",
+          "url": "https://github.com/ColinWaddell/FlightTracker-Case",
+          "type": "repo",
+          "note": "OpenSCAD source for the official two-piece case, CC BY-NC 4.0."
+        },
+        {
+          "name": "FlightTracker hardware guide",
+          "url": "https://flight-tracker.dev/build/",
+          "type": "docs",
+          "note": "Creator's current hardware list, power warning, solder bridge and case links."
+        },
+        {
+          "name": "Original build write-up",
+          "url": "https://blog.colinwaddell.com/flight-tracker/",
+          "type": "docs",
+          "note": "November 2021 write-up of the first build, including the wooden enclosure and parts."
+        },
+        {
+          "name": "Raspberry Pi Foundation coverage",
+          "url": "https://www.raspberrypi.com/news/giant-fridge-magnet-tracks-flights/",
+          "type": "docs",
+          "note": "February 2023 coverage of the original fridge-magnet build."
+        },
+        {
+          "name": "Tom's Hardware coverage of the c0wsaysmoo build",
+          "url": "https://www.tomshardware.com/news/raspberry-pi-tracks-flights-and-weather-in-one-convenient-project",
+          "type": "docs",
+          "note": "June 2023 coverage of the Pi 3A+ build based on the FlightTracker project."
+        },
+        {
+          "name": "Adafruit RGB Matrix Bonnet guide",
+          "url": "https://learn.adafruit.com/adafruit-rgb-matrix-bonnet-for-raspberry-pi",
+          "type": "docs",
+          "note": "Assembly, power and the PWM solder bridge for the bonnet."
+        },
+        {
+          "name": "OpenSky REST API limits",
+          "url": "https://openskynetwork.github.io/opensky-api/rest.html",
+          "type": "docs",
+          "note": "Credit allowances and OAuth2 requirement for the free OpenSky route."
+        },
+        {
+          "name": "Vibe Hardware Club: first nearest-aircraft display",
+          "url": "https://www.skool.com/vibehardwareclub/first-build-nearest-aircraft-display",
+          "type": "docs",
+          "note": "Public report by Matt Dalby of a working ESP32-S3 and 64x32 HUB75 display variant. Useful adjacent builder context, but it is not the Raspberry Pi route assessed here and CAIBI has not independently tested it."
+        }
+      ],
+      "lastChecked": "24 Sep 2026"
     },
     {
       "slug": "parol6",
@@ -3724,13 +4483,13 @@
       "slug": "pikvm",
       "name": "PiKVM",
       "category": "Useful infrastructure",
-      "summary": "Add remote keyboard, video and mouse access to a computer so it can be controlled even before its operating system is working. Established project with commercial hardware options",
+      "summary": "Raspberry Pi based KVM over IP. The DIY V2 route needs a Pi 4, an HDMI-CSI bridge and a careful USB power split; ready-made V4 units cost about USD 270 to 385 in the US and GBP 225 to 315 in the UK. No CAIBI build or full assessment yet.",
       "source": {
         "name": "pikvm.org",
         "url": "https://pikvm.org/",
         "kind": "creator"
       },
-      "pipelineStage": "FOUND",
+      "pipelineStage": "REVIEWED SOURCE",
       "tags": [
         "Useful infrastructure",
         "PiKVM"
@@ -4019,6 +4778,25 @@
         "steel",
         "3D printed",
         "router"
+      ]
+    },
+    {
+      "slug": "ratgdo",
+      "name": "ratgdo",
+      "category": "Take back from the cloud",
+      "summary": "Source covers board versions, protocols, firmware configs and US Chamberlain/LiftMaster compatibility. UK relevance not verified: the store ships to the UK in USD, but compatibility of UK-market openers is not stated. No CAIBI build or full assessment yet.",
+      "source": {
+        "name": "ratgdo project (Paul Wieland and contributors)",
+        "url": "https://github.com/ratgdo/esphome-ratgdo",
+        "kind": "repository"
+      },
+      "pipelineStage": "REVIEWED SOURCE",
+      "tags": [
+        "garage door",
+        "ESPHome",
+        "Home Assistant",
+        "local control",
+        "HomeKit"
       ]
     },
     {
@@ -4393,6 +5171,25 @@
       "lastChecked": "29 Aug 2026"
     },
     {
+      "slug": "so-arm101",
+      "name": "SO-101 arm",
+      "category": "Robots",
+      "summary": "Source covers the BOM with US, EU, CN and JP links, print settings, STL files, kit sellers and assembly via LeRobot docs. Not checked: training compute and time, UK pricing, servo durability. No CAIBI build or full assessment yet.",
+      "source": {
+        "name": "The Robot Studio with Hugging Face",
+        "url": "https://github.com/TheRobotStudio/SO-ARM100",
+        "kind": "repository"
+      },
+      "pipelineStage": "REVIEWED SOURCE",
+      "tags": [
+        "robot arm",
+        "LeRobot",
+        "imitation learning",
+        "3D printing",
+        "servos"
+      ]
+    },
+    {
       "slug": "split-flap-display",
       "name": "Split-Flap Display",
       "category": "Electronics",
@@ -4529,6 +5326,25 @@
       "tags": [
         "Audio and reuse",
         "Squeezelite-ESP32"
+      ]
+    },
+    {
+      "slug": "stack-chan",
+      "name": "Stack-chan",
+      "category": "Robots",
+      "summary": "Source covers firmware, web tools, simulator, case files and schematics; README states repository resources are Apache-2.0. Not checked: English conversation setup, self-built parts cost. No CAIBI build or full assessment yet.",
+      "source": {
+        "name": "Shinya Ishikawa and the Stack-chan community",
+        "url": "https://github.com/stack-chan/stack-chan",
+        "kind": "repository"
+      },
+      "pipelineStage": "REVIEWED SOURCE",
+      "tags": [
+        "M5Stack",
+        "desk robot",
+        "JavaScript",
+        "servos",
+        "open hardware"
       ]
     },
     {
@@ -4742,6 +5558,25 @@
       "lastChecked": "27 Aug 2026"
     },
     {
+      "slug": "theflightwall",
+      "name": "TheFlightWall",
+      "category": "Transport trackers",
+      "summary": "Source covers parts list, dimensions, a wiring diagram, bracket STLs and API setup. Not covered: total cost, API spend in practice, power distribution detail, UK part sources. No CAIBI build or full assessment yet.",
+      "source": {
+        "name": "AxisNimble (TheFlightWall)",
+        "url": "https://github.com/AxisNimble/TheFlightWall_OSS",
+        "kind": "repository"
+      },
+      "pipelineStage": "REVIEWED SOURCE",
+      "tags": [
+        "ESP32",
+        "LED matrix",
+        "ADS-B data",
+        "wall display",
+        "API keys"
+      ]
+    },
+    {
       "slug": "thor-robot-arm",
       "name": "Thor Open Robot Arm",
       "category": "Robotics",
@@ -4935,16 +5770,187 @@
       "slug": "trmnl",
       "name": "TRMNL",
       "category": "Ambient displays",
-      "summary": "Turn calendars, weather and chosen feeds into a dedicated e-paper companion, with ready-made plugins and a route to custom integrations. Shipping product and developer ecosystem",
+      "summary": "Retail e-paper dashboard with an open firmware and open self-hosted servers. The DIY route is a USD 48 Seeed kit plus either a USD 50 BYOD licence or your own server; TRMNL's own docs say a DIY build can cost more than retail. No CAIBI build or full assessment yet.",
       "source": {
         "name": "trmnl.com",
         "url": "https://trmnl.com/",
         "kind": "creator"
       },
-      "pipelineStage": "FOUND",
+      "pipelineStage": "REVIEWED SOURCE",
       "tags": [
         "Ambient displays",
         "TRMNL"
+      ]
+    },
+    {
+      "slug": "uk-train-departure-board",
+      "name": "UK Train Departure Board",
+      "category": "Home & automation",
+      "summary": "A desk-sized replica of a UK station departure board showing live departures for one chosen station, built from a Raspberry Pi Zero 2 W or an ESP32 and a 256x64 SSD1322 OLED panel in a 3D-printed case.",
+      "source": {
+        "name": "Chris Crocker-White (chrisys), building on work by Chris Hutchinson and Blake (ghostseven)",
+        "url": "https://github.com/chrisys/train-departure-display",
+        "kind": "repository"
+      },
+      "pipelineStage": "ASSESSED",
+      "tags": [
+        "Home & automation",
+        "3D printer or print service",
+        "Soldering iron (small jumper change on the panel; required throughout on the ESP32 route)",
+        "Multimeter",
+        "Small screwdrivers",
+        "Computer for flashing an SD card or ESP32",
+        "USEFUL",
+        "CUSTOM",
+        "LEARN",
+        "COOL"
+      ],
+      "assessment": {
+        "verdict": "WORTH CONSIDERING",
+        "reason": "A live departure board for your own station answers one daily question at a glance: is my train on time. The open code lets you filter by destination, set an offset for the walk to the station, blank the screen overnight and, on the ESP32 route, switch to London Underground or bus stops. Building it also gives full control over the data feed and no dependency on a vendor's servers or subscription.",
+        "cost": "No source total. CAIBI estimates roughly £52–£85 for the Raspberry Pi route's core parts, or $68–$70 in the US before a microSD card, all before 3D printing, screws and shipping; the display panel price is the least certain item.",
+        "costGuidance": {
+          "label": "CAIBI estimate",
+          "gbp": "£52–£85",
+          "usd": "$68–$70 + microSD",
+          "basis": "caibi-estimate",
+          "confidence": "low",
+          "checkedOn": "24 Sep 2026",
+          "explanation": "Built from current retailer prices for the Raspberry Pi route. The panel price is from Newhaven Display (US, USD); CAIBI could not read a current AliExpress, Amazon or UK distributor price, so the UK panel figure is an approximate conversion (~£28) and excludes international shipping. The low end assumes a microSD card is already owned. Several US items were listed out of stock on the check date. US range sums the priced US items (Pi Zero 2 W, panel, supply, jumper wires); no in-stock US microSD price was verified, so it is excluded.",
+          "includes": [
+            "Raspberry Pi Zero 2 W",
+            "256x64 SSD1322 OLED panel",
+            "Certified plug-in micro-USB power supply",
+            "Jumper wires",
+            "microSD card (upper end only)"
+          ],
+          "excludes": [
+            "3D printing, filament or print service",
+            "M1.2 and M1.7 self-tapping screws",
+            "Shipping and import charges, especially for the panel",
+            "Rail Data Marketplace access (free within the published limit)",
+            "Time to adapt the data code"
+          ]
+        },
+        "buildVsBuy": {
+          "status": "incomplete",
+          "outcome": "unclear",
+          "headline": "The parts estimate is close to the price of the cheapest bought board.",
+          "note": "The nearest bought equivalent is the Mini Train Departures Board from traindepartures.com at £89 (sale, regular £99), a National Rail departures board of similar size with a USB cable (rated 4.8/5 from 55 reviews on its page). The Miniature Desktop Departures Board from UK Departure Boards is £164.99 (sale, regular £184.99), rated 4.94/5 from 32 reviews, with a 12-month warranty, a USB cable but no plug adapter, Tube, bus and tram data, an internal speaker and paid Premium features; it relies on the vendor's servers. CAIBI's build estimate of £52–£85 excludes printing, screws and panel shipping, and its panel price is a US seller converted, so no saving is claimed. Neither seller lists a US price; the ESP32 creator's own pre-assembled board could not be checked (store blocked access).",
+          "boughtAlternative": "Mini Train Departures Board (traindepartures.com)",
+          "boughtGbp": "£89",
+          "boughtUsd": "No US listing found",
+          "checkedOn": "24 Sep 2026",
+          "sources": [
+            {
+              "region": "UK",
+              "url": "https://traindepartures.com/products/mini-train-departures-board"
+            },
+            {
+              "region": "UK",
+              "url": "https://ukdepartureboards.co.uk/store/product/desktop-departures/"
+            }
+          ]
+        },
+        "time": "One or two sessions, plus data-feed changes (CAIBI estimate)",
+        "difficulty": 3,
+        "aiLeverage": 4,
+        "evidenceStatus": "Strong",
+        "aiCanHelp": [
+          "Port the Pi code's SOAP request to the Rail Data Marketplace Live Departure Board REST endpoint when given the product documentation",
+          "Explain the difference between the legacy OpenLDBWS token and a Rail Data Marketplace consumer key",
+          "Check a wiring table against the specific panel's datasheet pinout before power is applied",
+          "Adjust configuration: station CRS code, destination filter, time offset, operating and blanking hours",
+          "Help resolve build failures such as the cbor2 Rust compiler error reported on balenaCloud",
+          "Suggest how to run the Python code on plain Raspberry Pi OS instead of balenaCloud",
+          "Help modify the case CAD for a 3.12 inch panel when given measured dimensions",
+          "Estimate request volume against the published 5 million requests per 4-week free allowance"
+        ],
+        "aiCantDo": [
+          "Move the panel's zero-ohm resistor or solder bridge to select SPI mode",
+          "Make and inspect the wiring between panel and board",
+          "Print the case and fit the panel so it sits centred in the window",
+          "Melt the mounting posts or solder the power leads inside the case",
+          "Confirm by watching the board that it matches the real station"
+        ],
+        "mainCatch": "The data feed is the fragile part, not the electronics. National Rail has moved token issue to the Rail Data Marketplace, and the canonical Pi code still uses the legacy SOAP endpoint; an open issue from July 2026 reports a legacy key stopping and has no maintainer reply. A new builder on the Pi route should expect to change the data code or use the ESP32 alternative. The original 2.8 inch panel is reported unavailable, the common 3.12 inch replacement does not fit the published case, and the panel usually needs a jumper or zero-ohm resistor moved to enable 4-wire SPI.",
+        "checkedOn": "24 Sep 2026"
+      },
+      "resources": [
+        {
+          "name": "train-departure-display (canonical Pi route)",
+          "url": "https://github.com/chrisys/train-departure-display",
+          "type": "repo",
+          "note": "Python, balenaCloud deployment, SSD1322 via luma.oled, STL case files. Release 0.7.0 (21 Apr 2026). No licence file. Data code still targets legacy OpenLDBWS."
+        },
+        {
+          "name": "departures-board (ESP32 alternative)",
+          "url": "https://github.com/gadec-uk/departures-board",
+          "type": "repo",
+          "note": "ESP32 D1 Mini firmware with web installer, Rail Data Marketplace support, Tube and bus modes, STL case. Updated 6 Sep 2026. CC BY-NC-SA 4.0."
+        },
+        {
+          "name": "Canonical build guide: getting started",
+          "url": "https://github.com/chrisys/train-departure-display/blob/main/docs/01-getting-started.md",
+          "type": "docs",
+          "note": "Parts list, software, balenaCloud deployment and print orientation."
+        },
+        {
+          "name": "Canonical build guide: connecting the display",
+          "url": "https://github.com/chrisys/train-departure-display/blob/main/docs/02-connecting-the-display-to-the-pi.md",
+          "type": "docs",
+          "note": "SPI mode jumper and wiring tables for one or two displays."
+        },
+        {
+          "name": "National Rail Darwin data feeds",
+          "url": "https://www.nationalrail.co.uk/developers/darwin-data-feeds/",
+          "type": "docs",
+          "note": "Registration via Rail Data Marketplace; free up to 5 million requests per 4-week period."
+        },
+        {
+          "name": "LDBWS documentation",
+          "url": "https://lite.realtime.nationalrail.co.uk/OpenLDBWS/",
+          "type": "docs",
+          "note": "Legacy SOAP service documentation used by the Pi code."
+        },
+        {
+          "name": "ESP32 setup video",
+          "url": "https://youtu.be/PZVyE_SoLBU",
+          "type": "other",
+          "note": "Creator walk-through of first-time setup (earlier firmware)."
+        },
+        {
+          "name": "Transit Tracker (US variant)",
+          "url": "https://transit-tracker.eastsideurbanism.org/docs/introduction",
+          "type": "docs",
+          "note": "ESP32-S3 and LED matrix arrivals board for transit agencies; creator states parts from about $70. CC BY-NC-SA 4.0."
+        },
+        {
+          "name": "Vibe Hardware Club: one-station ESP display",
+          "url": "https://www.skool.com/vibehardwareclub/sponsored-build-competition",
+          "type": "docs",
+          "note": "Public member report of a working one-station live board on a 2.8 inch ESP touchscreen, including a 2.4 GHz Wi-Fi setup failure. The member reports a working outcome; exact code, feed, parts and rights remain unverified."
+        }
+      ],
+      "lastChecked": "24 Sep 2026"
+    },
+    {
+      "slug": "valetudo",
+      "name": "Valetudo",
+      "category": "Take back from the cloud",
+      "summary": "Source covers the operating principle, supported vendors (Xiaomi, Dreame, MOVA, Roborock, Viomi, Eureka, Cecotec, Proscenic, Commodore, IKOHS) and per-model rooting notes. Not checked: which currently sold UK and US units are rootable. No CAIBI build or full assessment yet.",
+      "source": {
+        "name": "Sören Beye (Hypfer)",
+        "url": "https://github.com/Hypfer/Valetudo",
+        "kind": "repository"
+      },
+      "pipelineStage": "REVIEWED SOURCE",
+      "tags": [
+        "robot vacuum",
+        "rooting",
+        "Home Assistant",
+        "MQTT",
+        "cloud-free"
       ]
     },
     {
@@ -5313,6 +6319,44 @@
       "tags": [
         "ESP32",
         "CAIBI guided build"
+      ]
+    },
+    {
+      "slug": "xiaozhi-esp32",
+      "name": "XiaoZhi",
+      "category": "Voice and companions",
+      "summary": "Source covers firmware, supported boards, protocols and links to self-hosted servers (xinnan-tech server: FunASR local speech recognition, cloud LLM and TTS by default, Ollama supported). Not checked: English latency, fully local operation end to end. No CAIBI build or full assessment yet.",
+      "source": {
+        "name": "78 (Xiaoxia) and XiaoZhi contributors",
+        "url": "https://github.com/78/xiaozhi-esp32",
+        "kind": "repository"
+      },
+      "pipelineStage": "REVIEWED SOURCE",
+      "tags": [
+        "ESP32",
+        "voice assistant",
+        "LLM",
+        "MCP",
+        "self-hosting"
+      ]
+    },
+    {
+      "slug": "yoradio",
+      "name": "yoRadio",
+      "category": "Audio and reuse",
+      "summary": "Source covers supported modules and displays, pin configuration, flashing, MQTT and Home Assistant links, plus a separate PCB repository. Not checked: total parts cost, audio quality by DAC. No CAIBI build or full assessment yet.",
+      "source": {
+        "name": "e2002",
+        "url": "https://github.com/e2002/yoradio",
+        "kind": "repository"
+      },
+      "pipelineStage": "REVIEWED SOURCE",
+      "tags": [
+        "internet radio",
+        "ESP32",
+        "audio",
+        "reuse",
+        "Home Assistant"
       ]
     },
     {
