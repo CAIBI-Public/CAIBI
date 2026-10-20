@@ -1,6 +1,6 @@
 {
   "contractVersion": "2.0",
-  "generatedAt": "2026-10-11T08:24:03.586Z",
+  "generatedAt": "2026-10-19T23:31:08.250Z",
   "records": [
     {
       "slug": "adsb-receiver",
@@ -112,6 +112,22 @@
         "IMX500",
         "wildlife",
         "birds"
+      ]
+    },
+    {
+      "slug": "ai-usage-desk-display",
+      "name": "AI usage limits on a desk display",
+      "category": "Displays",
+      "summary": "Keep your AI account usage visible on a small screen beside your computer. CAIBI suggests: Prove one account can supply usage locally, then connect the matching display. Add a measured stand after the data path works.",
+      "source": {
+        "name": "Toby Marks: AI Monitor source and releases",
+        "url": "https://github.com/tobymarks/esp32-ai-monitor",
+        "kind": "repository"
+      },
+      "pipelineStage": "FOUND",
+      "tags": [
+        "ESP32",
+        "CAIBI guided build"
       ]
     },
     {
@@ -4528,6 +4544,22 @@
       ]
     },
     {
+      "slug": "pixlpal-desktop-display",
+      "name": "Pixlpal: a colourful desktop information display",
+      "category": "Displays",
+      "summary": "An RGB matrix display with a rotary control for information and audio experiments. CAIBI suggests: Choose a single useful screen first. Compare adapting the original electronics with a simpler existing matrix controller.",
+      "source": {
+        "name": "Stephen Gata and Fustinus Ubah on Hackster",
+        "url": "https://www.hackster.io/537143/pixlpal-interactive-aiot-display-db1c8d",
+        "kind": "creator"
+      },
+      "pipelineStage": "FOUND",
+      "tags": [
+        "ESP32",
+        "Source-led build"
+      ]
+    },
+    {
       "slug": "plasma-clock",
       "name": "Plasma Clock",
       "category": "Electronics",
@@ -4864,6 +4896,22 @@
       "tags": [
         "Textiles and fabrication",
         "Riley Cox's punch-card Jacquard loom"
+      ]
+    },
+    {
+      "slug": "roboeyes-desk-buddy",
+      "name": "A desk buddy with expressive eyes",
+      "category": "Playful objects",
+      "summary": "A small character that blinks, changes expression and responds to a button. Give it a personality through animation and an original printed shell. CAIBI suggests: Start with USB power, a supported display and three expressions. Add one input and idle sleep before considering voice or moving parts.",
+      "source": {
+        "name": "FluxGarage RoboEyes",
+        "url": "https://github.com/FluxGarage/RoboEyes",
+        "kind": "repository"
+      },
+      "pipelineStage": "FOUND",
+      "tags": [
+        "ESP32",
+        "CAIBI guided build"
       ]
     },
     {
@@ -5345,6 +5393,22 @@
         "JavaScript",
         "servos",
         "open hardware"
+      ]
+    },
+    {
+      "slug": "stationery-unit-d2",
+      "name": "Stationery Unit D2: an interactive desk organiser",
+      "category": "Playful objects",
+      "summary": "A printed pen holder with a screen, sounds and physical controls. CAIBI suggests: Try one screen animation on USB first. Develop an original organiser shape around your actual stationery and hardware.",
+      "source": {
+        "name": "Arnov Sharma on Hackster",
+        "url": "https://www.hackster.io/Arnov_Sharma_makes/stationery-unit-d2-1e7b8b",
+        "kind": "creator"
+      },
+      "pipelineStage": "FOUND",
+      "tags": [
+        "ESP32",
+        "Source-led build"
       ]
     },
     {
